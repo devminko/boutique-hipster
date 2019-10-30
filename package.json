@@ -1,0 +1,19 @@
+{
+  "name": "boutique-hipster",
+  "version": "1.0.0",
+  "description": "Online boutique & community",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mko5118/boutique-hipster.git"
+  },
+  "author": "Min Ko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mko5118/boutique-hipster/issues"
+  },
+  "homepage": "https://github.com/mko5118/boutique-hipster#readme"
+}
