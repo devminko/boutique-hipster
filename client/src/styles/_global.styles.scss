@@ -1,0 +1,30 @@
+// *************************** FONT VARIABLES *************************** //
+$title-font: 'Jomolhari', serif;
+$primary-font: 'Raleway', sans-serif;
+
+// *************************** COLOR VARIABLES *************************** //
+$primary-color: #ED1C24;
+$primary-color-light: lighten(#ED1C24, 15%);
+$primary-color-dark: darken(#ED1C24, 15%);
+
+$success: #5C9448;
+$danger: #FF4C4C;
+$warning: #d49424;
+$link: #3c3ccc;
+
+$black: #000000;
+$white: #FFFFFF;
+$grey: #808080;
+$lightgrey: #D3D3D3;
+$salmon: salmon;
+
+
+// *************************** GLOBAL SETTINGS *************************** //
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: $primary-font;
+}
