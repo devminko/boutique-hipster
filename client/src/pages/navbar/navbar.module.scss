@@ -1,0 +1,29 @@
+@import '../../styles/global.styles';
+
+// NAVBAR
+.navbar {
+  text-align: center;
+
+  // LOGO CONTAINER
+  .logoContainer {
+    display: flex;
+    flex-direction: column;
+    font-family: $title-font;
+    text-transform: uppercase;
+
+    .logoTitle {
+      color: $primary-color;
+      font-weight: bolder;
+    }
+
+    .logoSubtitle {
+      font-size: 1rem;
+      letter-spacing: 1.5px;
+    }
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+
+}
