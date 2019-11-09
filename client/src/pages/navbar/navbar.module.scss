@@ -4,6 +4,22 @@
 .navbar {
   text-align: center;
 
+  // TEXT CONTAINER
+  .textContainer {
+    border-bottom: 1px solid lighten($lightgrey, 7%);
+    text-align: center;
+
+    .text {
+      text-transform: uppercase;
+      font-family: $primary-font;
+      font-size: 1.2rem;
+      font-weight: lighter;
+      color: $primary-color;
+
+      padding: 1rem 0;
+    }
+  }
+
   // LOGO CONTAINER
   .logoContainer {
     display: flex;
@@ -13,12 +29,40 @@
 
     .logoTitle {
       color: $primary-color;
+      font-size: 2.4rem;
       font-weight: bolder;
+      margin-bottom: 0;
     }
 
     .logoSubtitle {
       font-size: 1rem;
       letter-spacing: 1.5px;
+      margin-top: 0;
+    }
+  }
+
+  // LINKS
+  .links {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+    .link {
+      text-decoration: none;
+      color: $black;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.3rem;
+
+      &:hover {
+        border-bottom: 1.5px solid $black;
+        transition: border-bottom 100ms ease-in;
+      }
     }
   }
 }
