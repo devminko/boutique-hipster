@@ -1,29 +1,35 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+
+import { registerUser } from '../../redux/auth/auth.actions';
 
 import style from './account-register.module.scss';
 
 // *************************** ACCOUNT REGISTER COMPONENT *************************** //
-const AccountRegister = () => {
+const AccountRegister = ({ registerUser }) => {
   const [ formData, setFormData ] = useState({
     name: '',
     email: '',
     password: '',
+    confirmPassword: '',
   });
 
-  const { name, email, password } = formData;
+  const { name, email, password, confirmPassword } = formData;
 
   const onChange = (e) => {
-    console.log('Changed');
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log('Submitted');
-    setFormData({
-      name: '',
-      email: '',
-      password: '',
-    });
+    if (password !== confirmPassword) {
+      alert('Passwords do not match!');
+    } else {
+      registerUser({ name, email, password });
+    }
   };
 
   return (
@@ -31,29 +37,36 @@ const AccountRegister = () => {
       
       <h2 className={style.title}>New Customer</h2>
 
-      <form onSubmit={(e) => onSubmit(e)} className={style.form}>
+      <form onSubmit={onSubmit} className={style.form}>
         <input 
           type='text'
           name='name'
           placeholder='Name'
           value={name}
-          onChange={(e) => onChange(e)}
+          onChange={onChange}
         />
         <input 
           type='email'
           name='email'
           placeholder='Email'
           value={email}
-          onChange={(e) => onChange(e)}
+          onChange={onChange}
         />
         <input 
           type='password'
           name='password'
           placeholder='Password'
           value={password}
-          onChange={(e) => onChange(e)}
+          onChange={onChange}
         />
-        <button type='submit'>Create Account</button>
+        <input 
+          type='password'
+          name='confirmPassword'
+          placeholder='Confirm Password'
+          value={confirmPassword}
+          onChange={onChange}
+        />
+        <button>Create Account</button>
       </form>
 
       <div className={style.socialLogins}>
@@ -68,4 +81,9 @@ const AccountRegister = () => {
   )
 };
 
-export default AccountRegister;
+// REDUX
+const mapDispatchToProps = (dispatch) => ({
+  registerUser: ({ name, email, password }) => dispatch(registerUser({ name, email, password })),
+});
+
+export default connect(null, mapDispatchToProps)(AccountRegister);
