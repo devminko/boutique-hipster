@@ -19,7 +19,7 @@ const createUser = async (name, email, password) => {
   })
 };
 
-// REGISTER VALIDATION CHECKS => validates name, email, password for new users
+// REGISTER VALIDATOR CHECKS => validates name, email, password for new users
 const registerValidatorChecks = () => {
   return [
     check('name', 'Name is required').not().isEmpty(),
@@ -29,4 +29,12 @@ const registerValidatorChecks = () => {
   ]
 };
 
-module.exports = { createAuthToken, createUser, registerValidatorChecks }
+// LOGIN VALIDATOR CHECKS => validates email & password
+const loginValidatorChecks = () => {
+  return [
+    check('email', 'Please include valid email').isEmail().normalizeEmail(),
+    check('password', 'Please include valid password').not().isEmpty(),
+  ]
+};
+
+module.exports = { createAuthToken, createUser, registerValidatorChecks, loginValidatorChecks }
