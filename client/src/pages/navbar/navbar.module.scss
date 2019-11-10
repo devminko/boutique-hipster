@@ -27,17 +27,27 @@
     font-family: $title-font;
     text-transform: uppercase;
 
-    .logoTitle {
-      color: $primary-color;
-      font-size: 2.4rem;
-      font-weight: bolder;
-      margin-bottom: 0;
-    }
+    .logoLink {
+      text-decoration: none;
 
-    .logoSubtitle {
-      font-size: 1rem;
-      letter-spacing: 1.5px;
-      margin-top: 0;
+      .logoTitle {
+        color: $primary-color;
+        font-size: 2.4rem;
+        font-weight: bolder;
+        margin-bottom: 0;
+      }
+  
+      .logoSubtitle {
+        color: $black;
+        font-size: 1.2rem;
+        font-weight: normal;
+        letter-spacing: 1.5px;
+        margin-top: 0;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
     }
   }
 
@@ -70,4 +80,19 @@
 // ********************************** MEDIA QUERIES ********************************** //
 @media screen and (min-width: 500px) {
 
+}
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+  // NAVBAR
+  .navbar {
+
+    // LINKS
+    .links {
+      max-width: 2200px;
+    }
+  }
 }

@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Navbar from '../pages/navbar/Navbar';
 import HomePage from '../pages/HomePage';
+import AccountPage from '../pages/AccountPage';
 
 // *************************** APP ROUTES *************************** //
 const App = () => {
@@ -12,7 +13,8 @@ const App = () => {
   
         <Navbar />
         <Switch>
-          <Route to='/' component={HomePage} />
+          <Route exact path='/' component={HomePage} />
+          <Route exact path='/account' component={AccountPage} />
         </Switch>
 
       </BrowserRouter>

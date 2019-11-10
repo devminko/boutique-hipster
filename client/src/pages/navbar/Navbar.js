@@ -8,8 +8,10 @@ const Navbar = () => {
 
   const logoContainer = (
     <div className={style.logoContainer}>
-      <h1 className={style.logoTitle}>Boutique Hipster</h1>
-      <h2 className={style.logoSubtitle}>Johnsonville</h2>
+      <Link to='/' className={style.logoLink}>
+        <h1 className={style.logoTitle}>Boutique Hipster</h1>
+        <h2 className={style.logoSubtitle}>Johnsonville</h2>
+      </Link>
     </div>
   );
 
@@ -31,7 +33,7 @@ const Navbar = () => {
         <Link to='/' className={style.link}>Forum</Link>
       </li>
       <li>
-        <Link to='/' className={style.link}>Account</Link>
+        <Link to='/account' className={style.link}>Account</Link>
       </li>
       <li>
         <Link to='/' className={style.link}>Cart (0)</Link>
