@@ -1,14 +1,18 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const database = require('./database/database');
 
-app.get('/', (req, res) => {
-  res.send('Welcome to the Boutique Hipster API!');
-});
+// Middleware
+app.use(express.json({ extended: false }));
+app.use(cors());
+
+// Routes
+app.use('/api/users', require('./routes/users'));
 
 // Sync Defined Models to DB Tables
-database.sync({ force: false })
-  .then(console.log('Defined models synced to DB'))
+database.sync({ force: true })
+  .then(() => console.log('Defined models synced to DB'))
   .catch(err => console.error(`Unable to sync database: ${err}`));
 
 const PORT = process.env.PORT || 5000;
