@@ -4,8 +4,11 @@
   "description": "Online boutique & community",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon src/server.js"
+    "bootstrap": "npm i",
+    "setup": "psql -U postgres -f ./config/dbSetup.sql",
+    "start": "node src/server.js",
+    "server": "nodemon -r dotenv/config src/server.js dotenv_config_path=./config/.env.local",
+    "test": "jest --watch --i verbose"
   },
   "repository": {
     "type": "git",
