@@ -70,8 +70,8 @@
       font-size: 1.3rem;
 
       &:hover {
-        border-bottom: 1.5px solid $black;
-        transition: border-bottom 100ms ease-in;
+        border-bottom: 2px solid $black;
+        transition: border-bottom 75ms ease-in-out;
       }
     }
   }

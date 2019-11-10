@@ -1,0 +1,22 @@
+@import '../../styles/global.styles';
+
+// ACCOUNT LOGIN
+.accountLogin {
+  border: 1px solid $black;
+  width: 100%;
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+
+}
+
+@media screen and (min-width: 800px) {
+  .accountLogin {
+    width: 50%;
+  }
+}
+
+@media screen and (min-widtdh: 1200px) {
+
+}

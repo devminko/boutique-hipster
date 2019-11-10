@@ -1,0 +1,53 @@
+@import '../../styles/global.styles';
+
+// ACCOUNT REGISTER
+.accountRegister {
+  border: 1px solid $black;
+  width: 100%;
+
+  .title {
+    text-align: center;
+    font-family: $title-font;
+    font-size: 4.4rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .socialLogins {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .text {
+      text-align: center;
+    }
+    
+    .buttons {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+
+}
+
+@media screen and (min-width: 800px) {
+  .accountRegister {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+}
