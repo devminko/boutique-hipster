@@ -1,9 +1,40 @@
 @import '../../styles/global.styles';
 
-// ACCOUNT LOGIN
+// ACCOUNT REGISTER
 .accountLogin {
   border: 1px solid $black;
   width: 100%;
+
+  .title {
+    text-align: center;
+    font-family: $title-font;
+    font-size: 4.4rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .socialLogins {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .text {
+      text-align: center;
+    }
+    
+    .buttons {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
 }
 
 // ********************************** MEDIA QUERIES ********************************** //
@@ -17,6 +48,6 @@
   }
 }
 
-@media screen and (min-widtdh: 1200px) {
+@media screen and (min-width: 1200px) {
 
 }

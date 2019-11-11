@@ -11,6 +11,7 @@ const INTIAL_STATE = {
 export const authReducer = (state = INTIAL_STATE, action) => {
   switch (action.type) {
     case REGISTRATION_SUCCESS :
+    case LOGIN_SUCCESS :
       localStorage.setItem('token', action.payload.token);
       return {
         ...state,
