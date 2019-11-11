@@ -4,6 +4,7 @@ import { IoLogoFacebook, IoLogoGoogle } from 'react-icons/io';
 
 import { loginUser } from '../../redux/auth/auth.actions';
 
+import FormInput from '../../components-ui/form-input/FormInput';
 import Button from '../../components-ui/button/Button';
 
 import style from './account-login.module.scss';
@@ -32,17 +33,16 @@ const AccountLogin = ({ loginUser }) => {
   return (
     <div className={style.accountLogin}>
 
-      <h2 className={style.title}>Registered Customer</h2>
-
       <form onSubmit={onSubmit} className={style.form}>
-        <input 
+        <h2 className={style.title}>Registered Customer</h2>
+        <FormInput 
           type='email'
           name='email'
           placeholder='Email'
           value={email}
           onChange={onChange}
         />
-        <input 
+        <FormInput 
           type='password'
           name='password'
           placeholder='Password'

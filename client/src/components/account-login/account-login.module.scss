@@ -4,13 +4,7 @@
 .accountLogin {
   border: 1px solid $black;
   width: 100%;
-
-  .title {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: $secondary-font;
-    font-size: 4.4rem;
-  }
+  padding-bottom: 10rem;
 
   .form {
     display: flex;
@@ -18,16 +12,28 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20%;
+
+    .title {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: $secondary-font;
+      font-size: 4.4rem;
+      margin-bottom: 3rem;
+    }
   }
 
+  // SOCIAL LOGINS
   .socialLogins {
     display: flex;
     flex-direction: column;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5rem;
 
     .text {
+      margin-bottom: 2rem;
       text-align: center;
       text-transform: uppercase;
       font-weight: bolder;
@@ -65,6 +71,34 @@
     width: 50%;
 
     .form {
+      width: 75%;
+    }
+    
+    .socialLogins {
+      width: 75%;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .accountLogin {
+    width: 50%;
+
+    .form {
+      width: 75%;
+    }
+    
+    .socialLogins {
+      width: 75%;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .accountLogin {
+    width: 50%;
+
+    .form {
       width: 50%;
     }
     
@@ -72,8 +106,4 @@
       width: 50%;
     }
   }
-}
-
-@media screen and (min-width: 1200px) {
-
 }

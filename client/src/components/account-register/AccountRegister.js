@@ -4,6 +4,7 @@ import { IoLogoFacebook, IoLogoGoogle } from 'react-icons/io';
 
 import { registerUser } from '../../redux/auth/auth.actions';
 
+import FormInput from '../../components-ui/form-input/FormInput';
 import Button from '../../components-ui/button/Button';
 
 import style from './account-register.module.scss';
@@ -38,31 +39,31 @@ const AccountRegister = ({ registerUser }) => {
   return (
     <div className={style.accountRegister}>
       
-      <h2 className={style.title}>New Customer</h2>
 
       <form onSubmit={onSubmit} className={style.form}>
-        <input 
+        <h2 className={style.title}>New Customer</h2>
+        <FormInput 
           type='text'
           name='name'
           placeholder='Name'
           value={name}
           onChange={onChange}
         />
-        <input 
+        <FormInput 
           type='email'
           name='email'
           placeholder='Email'
           value={email}
           onChange={onChange}
         />
-        <input 
+        <FormInput 
           type='password'
           name='password'
           placeholder='Password'
           value={password}
           onChange={onChange}
         />
-        <input 
+        <FormInput 
           type='password'
           name='confirmPassword'
           placeholder='Confirm Password'

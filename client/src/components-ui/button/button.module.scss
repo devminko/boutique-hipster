@@ -22,11 +22,12 @@
     background: lighten($primary-color, 10%);
     color: $white;
     transition: background-color 300ms ease-in-out;
-    transition: color 400ms ease-in-out;
+    transition: color 100ms ease-in-out;
 
     &:hover {
       background: $white;
       color: $black;
+      border: 1px solid $lightgrey;
     }
   }
 
@@ -34,12 +35,14 @@
   &.invert {
     background: $white;
     color: $black;
+    border: 1px solid $lightgrey;
     transition: background-color 300ms ease-in-out;
-    transition: color 200ms ease-in-out;
+    transition: color 100ms ease-in-out;
 
     &:hover {
       background: lighten($primary-color, 10%);
       color: $white;
+      border: none;
     }
   }
 
