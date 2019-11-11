@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { IoLogoFacebook, IoLogoGoogle } from 'react-icons/io';
 
 import { registerUser } from '../../redux/auth/auth.actions';
+
+import Button from '../../components-ui/button/Button';
 
 import style from './account-register.module.scss';
 
@@ -66,14 +69,20 @@ const AccountRegister = ({ registerUser }) => {
           value={confirmPassword}
           onChange={onChange}
         />
-        <button>Create Account</button>
+        <Button account>Create Account</Button>
       </form>
 
       <div className={style.socialLogins}>
         <h3 className={style.text}>Or Login With</h3>
         <div className={style.buttons}>
-          <button>Google</button>
-          <button>Facebook</button>
+          <Button social>
+            <span className={style.google}><IoLogoGoogle /></span>
+            <span className={style.buttonText}>Google</span>
+          </Button>
+          <Button social>
+            <span className={style.facebook}><IoLogoFacebook /></span>
+            <span className={style.buttonText}>Facebook</span>
+          </Button>
         </div>
       </div>
 
