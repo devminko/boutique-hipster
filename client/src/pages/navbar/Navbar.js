@@ -45,7 +45,7 @@ const Navbar = () => {
     <nav className={style.navbar}>
 
       <div className={style.textContainer}>
-        <h3 className={style.text}>Made for Hipsters!</h3>
+        <h3 className={style.text}>Authentic & Handmade</h3>
       </div>
       
       {

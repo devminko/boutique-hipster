@@ -24,7 +24,8 @@ export const registerUser = ({ name, email, password }) => async (dispatch) => {
     const errors = err.response.data.errors;
     if (errors) {
       errors.forEach(error => dispatch(
-        console.log(error.msg, 'danger')
+        // console.log(error.msg, 'danger')
+        console.log(error.msg)
       ));
     };
     dispatch({
@@ -55,7 +56,8 @@ export const loginUser = (email, password) => async (dispatch) => {
     const errors = err.response.data.errors;
     if (errors) {
       errors.forEach(error => dispatch(
-        console.log(error.msg, 'danger')
+        // console.log(error.msg, 'danger')
+        console.log(error.msg)
       ));
     };
     dispatch({
