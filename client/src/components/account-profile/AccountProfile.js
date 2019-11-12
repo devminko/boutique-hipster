@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import Button from '../../components-ui/button/Button';
-import FormInput from '../../components-ui/form-input/FormInput';
 import ProfileInformation from '../../components/profile-information/ProfileInformation';
 import ProfileHistory from '../../components/profile-history/ProfileHistory';
 
@@ -12,12 +11,12 @@ const AccountProfile = () => {
   const [ toggleInformation, setToggleInformation ] = useState(true);
   const [ toggleHistory, setToggleHistory ] = useState(false);
 
-  const onToggleInfo = (e) => {
+  const onClickInformation = () => {
     setToggleInformation(true);
     setToggleHistory(false);
   };
 
-  const onToggleHistory = (e) => {
+  const onClickHistory = () => {
     setToggleInformation(false);
     setToggleHistory(true);
   };
@@ -31,13 +30,23 @@ const AccountProfile = () => {
       </div>
 
       <div className={style.buttons}>
-        <Button onClick={onToggleInfo}>Update Profile</Button>
-        <Button onClick={onToggleHistory}>Order History</Button>
+        {
+          toggleInformation
+            ? <Button onClick={onClickInformation} profileRed>Update Profile</Button>
+            : <Button onClick={onClickInformation} profileGrey>Update Profile</Button>  
+        }
+        {
+          toggleHistory
+            ? <Button onClick={onClickHistory} profileRed>Order History</Button>
+            : <Button onClick={onClickHistory} profileGrey>Order History</Button>  
+        }
       </div>
 
-      {
-        toggleInformation ? <ProfileInformation /> : <ProfileHistory />
-      }
+      <div className={style.contentContainer}>
+        {
+          toggleInformation ? <ProfileInformation /> : <ProfileHistory />
+        }
+      </div>
 
     </div>
   )

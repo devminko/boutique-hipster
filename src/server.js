@@ -11,7 +11,7 @@ app.use(cors());
 app.use('/api/users', require('./routes/users'));
 
 // Sync Defined Models to DB Tables
-database.sync({ force: true })
+database.sync({ force: false })   // set to true to drop table on server start
   .then(() => console.log('Defined models synced to DB'))
   .catch(err => console.error(`Unable to sync database: ${err}`));
 
