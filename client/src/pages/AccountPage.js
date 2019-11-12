@@ -1,19 +1,41 @@
-import React, { } from 'react';
+import React, { Fragment } from 'react';
+import { connect } from 'react-redux';
 
 import PageContainer from './page-container/PageContainer';
 import AccountLogin from '../components/account-login/AccountLogin';
 import AccountRegister from '../components/account-register/AccountRegister';
+import AccountProfile from '../components/account-profile/AccountProfile';
 
 // *************************** ACCOUNT PAGE *************************** //
-const AccountPage = () => {
+const AccountPage = ({ user }) => {
+
+  const authView = (
+    <Fragment>
+      <AccountLogin />
+      <AccountRegister />
+    </Fragment>
+  );
+
+  const guestView = (
+    <AccountProfile />
+  );
+
   return (
     <PageContainer account>
       
-      <AccountLogin />
-      <AccountRegister />
+      {
+        user === null
+          ? authView
+          : guestView
+      }
 
     </PageContainer>
   )
 };
 
-export default AccountPage;
+// REDUX
+const mapStateToProps = (state) => ({
+  user: state.auth.user,
+});
+
+export default connect(mapStateToProps)(AccountPage);
