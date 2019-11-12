@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 const { check, validationResult } = require('express-validator');
+const auth = require('../middleware/auth');
 const { 
   createAuthToken, createUser, registerValidatorChecks, loginValidatorChecks, 
 } = require('../utils/utils');
@@ -27,10 +28,29 @@ router.get('/',
   }
 );
 
+/***************** GET CURRENT USER ****************
+  @route                ||      GET => api/users/current
+  @description          ||      Get current user
+  @access               ||      Private
+*************************************************/
+router.get('/current', auth, async (req, res) => {
+  try {
+    // query db for req user
+    let user = await User.findOne({
+      where: { id: req.user.id },
+      // attributes: ['id', 'name', 'email', 'password', 'shipping_address', 'billing_address']
+      attributes: ['id', 'name', 'email', 'shipping_address', 'billing_address']
+    })
+    res.json(user);
+  } catch (err) {
+    res.status(500).send('Server Error');
+  }
+});
+
 /***************** CREATE / REGISTER USER ****************
   @route                ||      POST => api/users/register
   @description          ||      Create / Register new user
-  @access               ||      Private
+  @access               ||      Public
 *********************************************************/
 router.post('/register',
   registerValidatorChecks(),
@@ -74,7 +94,7 @@ router.post('/register',
 /***************** LOGIN USER ***************************
   @route                ||      POST => api/users/login
   @description          ||      Login new user
-  @access               ||      Private
+  @access               ||      Public
 *********************************************************/
 router.post('/login', 
   loginValidatorChecks(),

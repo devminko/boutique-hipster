@@ -1,4 +1,4 @@
-import { REGISTRATION_SUCCESS, REGISTRATION_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, AUTH_ERROR } from './auth.types';
+import { USER_LOADED, REGISTRATION_SUCCESS, REGISTRATION_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, AUTH_ERROR } from './auth.types';
 
 const INTIAL_STATE = {
   token: localStorage.getItem('token'),
@@ -10,6 +10,13 @@ const INTIAL_STATE = {
 
 export const authReducer = (state = INTIAL_STATE, action) => {
   switch (action.type) {
+    case USER_LOADED :
+        return {
+          ...state,
+          isAuthenticated: true,
+          loading: false,
+          user: action.payload,
+        };
     case REGISTRATION_SUCCESS :
     case LOGIN_SUCCESS :
       localStorage.setItem('token', action.payload.token);

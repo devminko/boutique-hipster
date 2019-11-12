@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { IoLogoFacebook, IoLogoGoogle } from 'react-icons/io';
 
+import { setAlert } from '../../redux/alert/alert.actions';
 import { registerUser } from '../../redux/auth/auth.actions';
 
 import FormInput from '../../components-ui/form-input/FormInput';
@@ -10,7 +11,7 @@ import Button from '../../components-ui/button/Button';
 import style from './account-register.module.scss';
 
 // *************************** ACCOUNT REGISTER COMPONENT *************************** //
-const AccountRegister = ({ registerUser }) => {
+const AccountRegister = ({ setAlert, registerUser }) => {
   const [ formData, setFormData ] = useState({
     name: '',
     email: '',
@@ -30,9 +31,15 @@ const AccountRegister = ({ registerUser }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      alert('Passwords do not match!');
+      setAlert('Passwords do not match!', 'danger', 2000);
     } else {
       registerUser({ name, email, password });
+      setFormData({
+        name: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
+      })
     }
   };
 
@@ -93,6 +100,7 @@ const AccountRegister = ({ registerUser }) => {
 
 // REDUX
 const mapDispatchToProps = (dispatch) => ({
+  setAlert: (msg, alertType, timeout) => dispatch(setAlert(msg, alertType, timeout)),
   registerUser: ({ name, email, password }) => dispatch(registerUser({ name, email, password })),
 });
 

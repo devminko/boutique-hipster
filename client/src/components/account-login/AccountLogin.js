@@ -28,6 +28,10 @@ const AccountLogin = ({ loginUser }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     loginUser(email, password);
+    setFormData({
+      email: '',
+      password: '',
+    })
   };
 
   return (

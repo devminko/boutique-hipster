@@ -6,6 +6,8 @@ import HomePage from '../pages/HomePage';
 import AccountPage from '../pages/AccountPage';
 import Footer from '../pages/footer/Footer';
 
+import Alert from '../components-ui/alert/Alert';
+
 // *************************** APP ROUTES *************************** //
 const App = () => {
   return (
@@ -13,6 +15,7 @@ const App = () => {
       <BrowserRouter>
   
         <Navbar />
+        <Alert />
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route exact path='/account' component={AccountPage} />
