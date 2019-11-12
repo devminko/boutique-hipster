@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 
 import Button from '../../components-ui/button/Button';
 import ProfileInformation from '../../components/profile-information/ProfileInformation';
@@ -7,7 +8,7 @@ import ProfileHistory from '../../components/profile-history/ProfileHistory';
 import style from './account-profile.module.scss';
 
 // *************************** ACCOUNT PROFILE COMPONENT *************************** //
-const AccountProfile = () => {
+const AccountProfile = ({ user }) => {
   const [ toggleInformation, setToggleInformation ] = useState(true);
   const [ toggleHistory, setToggleHistory ] = useState(false);
 
@@ -44,7 +45,7 @@ const AccountProfile = () => {
 
       <div className={style.contentContainer}>
         {
-          toggleInformation ? <ProfileInformation /> : <ProfileHistory />
+          toggleInformation ? <ProfileInformation user={user} /> : <ProfileHistory user={user} />
         }
       </div>
 
@@ -52,4 +53,9 @@ const AccountProfile = () => {
   )
 };
 
-export default AccountProfile;
+// REDUX
+const mapStateToProps = (state) => ({
+  user: state.auth.user,
+})
+
+export default connect(mapStateToProps)(AccountProfile);
