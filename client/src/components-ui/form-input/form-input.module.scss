@@ -6,6 +6,12 @@
   margin-bottom: 1rem;
   color: $grey;
   border: 1px solid $lightgrey;
+
+  // PROFILE
+  &.profile {
+    width: 90%;
+    background: $midgrey;
+  }
 }
 
 // ********************************** MEDIA QUERIES ********************************** //

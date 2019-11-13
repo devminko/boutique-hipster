@@ -1,6 +1,7 @@
 import React, { } from 'react';
 
-import FormInput from './profile-information.module.scss';
+import FormInput from '../../components-ui/form-input/FormInput';
+import Button from '../../components-ui/button/Button';
 
 import style from './profile-information.module.scss';
 
@@ -11,18 +12,82 @@ const ProfileInformation = ({ user }) => {
 
   return (
     <div className={style.profileInformation}>
-      
-      <p>{email}</p>
-      {
-        shipping_address !== null
-          ? <p>{shipping_address}</p>
-          : <p>Enter Your Shipping Address</p> 
-      }
-      {
-        billing_address !== null
-          ? <p>{billing_address}</p>
-          : <p>Enter Your Billing Address</p>
-      }
+
+      <form className={style.accountForm}>
+        <h3 className={style.title}>Account Details</h3>
+        <FormInput
+          profile  
+          placeholder={email}
+        />
+        <h3 className={style.title}>Reset Password</h3>
+        <FormInput
+          profile 
+          placeholder='New Password'
+        />
+        <FormInput
+          profile  
+          placeholder='Confirm New Password'
+        />
+        <Button>Submit</Button>
+      </form>
+
+      <form className={style.accountForm}>
+        <h3 className={style.title}>Shipping Address</h3>
+        <FormInput
+          profile  
+          placeholder='Street Name'
+        />
+        <FormInput
+          profile  
+          placeholder='Street Name #2'
+        />
+        <FormInput
+          profile  
+          placeholder='City'
+        />
+        <FormInput
+          profile  
+          placeholder='State'
+        />
+        <FormInput
+          profile  
+          placeholder='Zip Code'
+        />
+        <FormInput
+          profile  
+          placeholder='Country'
+        />
+        <Button>Submit</Button>
+      </form>
+
+      <form className={style.accountForm}>
+        <h3 className={style.title}>Billing Address</h3>
+        <FormInput 
+          profile
+          placeholder='Street Name'
+        />
+        <FormInput
+          profile 
+          placeholder='Street Name #2'
+        />
+        <FormInput
+          profile 
+          placeholder='City'
+        />
+        <FormInput
+          profile 
+          placeholder='State'
+        />
+        <FormInput
+          profile 
+          placeholder='Zip Code'
+        />
+        <FormInput 
+          profile
+          placeholder='Country'
+        />
+        <Button>Submit</Button>
+      </form>
 
     </div>
   )
