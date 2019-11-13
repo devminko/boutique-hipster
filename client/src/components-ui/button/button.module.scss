@@ -31,6 +31,22 @@
     }
   }
 
+  // ACCOUNT INFO
+  &.accountInfo {
+    background: none;
+    color: $black;
+    border: none;
+    // width: 90%;
+    text-decoration: underline;
+    text-align: right;
+    font-size: 1.3rem;
+
+    margin-left: auto;
+    margin-right: 5%;
+    width: auto;
+    
+  }
+
   // INVERT
   &.invert {
     background: $white;

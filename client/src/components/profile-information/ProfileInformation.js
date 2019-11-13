@@ -15,14 +15,25 @@ const ProfileInformation = ({ user }) => {
     // Will use logoutUser action to replace this once created
   };
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log('Submitted');
+    // Will replace later with setState update
+  };
+
+  const onChecked = () => {
+    console.log('Checked / Unchecked');
+  };
+
   return (
     <div className={style.profileInformation}>
 
-      <form className={style.accountForm}>
+      <form onSubmit={onSubmit} className={style.accountForm}>
         <h3 className={style.title}>Account Details</h3>
         <FormInput
           profile  
           placeholder={email}
+          style={{ color: 'black '}}
         />
         <h3 className={style.title}>Reset Password</h3>
         <FormInput
@@ -36,10 +47,10 @@ const ProfileInformation = ({ user }) => {
         <p className={style.text}>
           Logged in as {email}. Not you? <span onClick={onLogout} className={style.link}>Logout.</span>
         </p>
-        <Button>Submit</Button>
+        <Button accountInfo>Submit</Button>
       </form>
 
-      <form className={style.accountForm}>
+      <form onSubmit={onSubmit} className={style.accountForm}>
         <h3 className={style.title}>Shipping Address</h3>
         <FormInput
           profile  
@@ -65,10 +76,10 @@ const ProfileInformation = ({ user }) => {
           profile  
           placeholder='Country'
         />
-        <Button>Submit</Button>
+        <Button accountInfo>Submit</Button>
       </form>
 
-      <form className={style.accountForm}>
+      <form onSubmit={onSubmit} className={style.accountForm}>
         <h3 className={style.title}>Billing Address</h3>
         <FormInput 
           profile
@@ -94,7 +105,11 @@ const ProfileInformation = ({ user }) => {
           profile
           placeholder='Country'
         />
-        <Button>Submit</Button>
+        <label onClick={onChecked} className={style.checkboxContainer}>
+          <input type='checkbox' className={style.checkmark} />
+          <span className={style.checkboxText}>Same as Shipping?</span>
+        </label>
+        <Button accountInfo>Submit</Button>
       </form>
 
     </div>
