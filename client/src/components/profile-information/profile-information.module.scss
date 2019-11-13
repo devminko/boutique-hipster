@@ -23,6 +23,19 @@
       font-family: $secondary-font;
       font-size: 1.6rem;
     }
+
+    .text {
+      width: 90%;
+      font-size: 1.1rem;
+      text-align: center;
+      margin: 1rem 0;
+
+      .link {
+        cursor: pointer;
+        color: $link;
+        text-decoration: underline;
+      }
+    }
   }
 
 }

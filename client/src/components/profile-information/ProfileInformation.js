@@ -10,6 +10,11 @@ const ProfileInformation = ({ user }) => {
   // 'user' prop passed down from AccountProfile
   const { email, shipping_address, billing_address } = user;
 
+  const onLogout = () => {
+    console.log('Logout');
+    // Will use logoutUser action to replace this once created
+  };
+
   return (
     <div className={style.profileInformation}>
 
@@ -28,6 +33,9 @@ const ProfileInformation = ({ user }) => {
           profile  
           placeholder='Confirm New Password'
         />
+        <p className={style.text}>
+          Logged in as {email}. Not you? <span onClick={onLogout} className={style.link}>Logout.</span>
+        </p>
         <Button>Submit</Button>
       </form>
 
