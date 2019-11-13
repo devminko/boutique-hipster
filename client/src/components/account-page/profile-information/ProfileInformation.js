@@ -34,21 +34,24 @@ const ProfileInformation = ({ user, logoutUser }) => {
       <form onSubmit={onSubmit} className={style.accountForm}>
         <h3 className={style.title}>Account Details</h3>
         <FormInput
-          profile  
+          profile
+          type='email'  
           placeholder={email}
           style={{ color: 'black '}}
         />
         <h3 className={style.title}>Reset Password</h3>
         <FormInput
-          profile 
+          profile
+          type='password' 
           placeholder='New Password'
         />
         <FormInput
-          profile  
+          profile
+          type='password'  
           placeholder='Confirm New Password'
         />
         <p className={style.text}>
-          Logged in as {email}. Not you? <span onClick={() => onLogout()} className={style.link}>Logout.</span>
+          Logged in as {email}. Not you? <span onClick={onLogout} className={style.link}>Logout.</span>
         </p>
         <Button accountInfo>Submit</Button>
       </form>

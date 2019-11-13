@@ -6,7 +6,14 @@ import style from './profile-history.module.scss';
 const ProfileHistory = () => {
   return (
     <div className={style.profileHistory}>
-      PROFILE HISTORY
+      
+      <div className={style.header}>
+        <h4 className={style.orderNumber}>Order Number</h4>
+        <h4 className={style.orderStatus}>Order Status</h4>
+        <h4 className={style.orderDate}>Order Date</h4>
+        <h4 className={style.amount}>Amount</h4>
+      </div>
+
     </div>
   )
 };
