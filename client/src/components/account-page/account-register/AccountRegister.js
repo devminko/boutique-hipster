@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { IoLogoFacebook, IoLogoGoogle } from 'react-icons/io';
 
-import { setAlert } from '../../redux/alert/alert.actions';
-import { registerUser } from '../../redux/auth/auth.actions';
+import { setAlert } from '../../../redux/alert/alert.actions';
+import { registerUser } from '../../../redux/auth/auth.actions';
 
-import FormInput from '../../components-ui/form-input/FormInput';
-import Button from '../../components-ui/button/Button';
+import FormInput from '../../../components-ui/form-input/FormInput';
+import Button from '../../../components-ui/button/Button';
 
 import style from './account-register.module.scss';
 

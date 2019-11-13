@@ -1,5 +1,8 @@
-import React, { } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import { loadUser } from '../redux/auth/auth.actions';
 
 import Navbar from '../pages/navbar/Navbar';
 import HomePage from '../pages/HomePage';
@@ -9,7 +12,11 @@ import Footer from '../pages/footer/Footer';
 import Alert from '../components-ui/alert/Alert';
 
 // *************************** APP ROUTES *************************** //
-const App = () => {
+const App = ({ loadUser }) => {
+  useEffect(() => {
+    loadUser();
+  },[]);
+
   return (
     <div>
       <BrowserRouter>
@@ -27,4 +34,9 @@ const App = () => {
   )
 };
 
-export default App;
+// REDUX
+const mapDispatchToProps = (dispatch) => ({
+  loadUser: () => dispatch(loadUser()),
+})
+
+export default connect(null, mapDispatchToProps)(App);

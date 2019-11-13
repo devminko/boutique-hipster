@@ -1,7 +1,7 @@
 import React, { } from 'react';
 
-import FormInput from '../../components-ui/form-input/FormInput';
-import Button from '../../components-ui/button/Button';
+import FormInput from '../../../components-ui/form-input/FormInput';
+import Button from '../../../components-ui/button/Button';
 
 import style from './profile-information.module.scss';
 

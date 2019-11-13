@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
-import Button from '../../components-ui/button/Button';
-import ProfileInformation from '../../components/profile-information/ProfileInformation';
-import ProfileHistory from '../../components/profile-history/ProfileHistory';
+import Button from '../../../components-ui/button/Button';
+import ProfileInformation from '../profile-information/ProfileInformation';
+import ProfileHistory from '../profile-history/ProfileHistory';
 
 import style from './account-profile.module.scss';
 
