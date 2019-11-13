@@ -26,8 +26,10 @@ const AccountProfile = ({ user }) => {
     <div className={style.accountProfile}>
       
       <div className={style.header}>
-        <h1 className={style.title}>ACCOUNT PROFILE</h1>
-        <p className={style.subtitle}>Update your Information Below</p>
+        <h1 className={style.title}>WELCOME</h1>
+        <p className={style.subtitle}>
+          Here's your account profile where you can update your personal information and view your recent purchases. Enjoy your stay with Boutique Hipster.
+        </p>
       </div>
 
       <div className={style.buttons}>
