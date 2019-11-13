@@ -1,4 +1,7 @@
 import React, { } from 'react';
+import { connect } from 'react-redux';
+
+import { logoutUser } from '../../../redux/auth/auth.actions';
 
 import FormInput from '../../../components-ui/form-input/FormInput';
 import Button from '../../../components-ui/button/Button';
@@ -6,13 +9,13 @@ import Button from '../../../components-ui/button/Button';
 import style from './profile-information.module.scss';
 
 // *************************** PROFILE INFORMATION COMPONENT *************************** //
-const ProfileInformation = ({ user }) => {
+const ProfileInformation = ({ user, logoutUser }) => {
   // 'user' prop passed down from AccountProfile
   const { email, shipping_address, billing_address } = user;
 
   const onLogout = () => {
-    console.log('Logout');
-    // Will use logoutUser action to replace this once created
+    logoutUser();
+    window.location.reload();
   };
 
   const onSubmit = (e) => {
@@ -45,7 +48,7 @@ const ProfileInformation = ({ user }) => {
           placeholder='Confirm New Password'
         />
         <p className={style.text}>
-          Logged in as {email}. Not you? <span onClick={onLogout} className={style.link}>Logout.</span>
+          Logged in as {email}. Not you? <span onClick={() => onLogout()} className={style.link}>Logout.</span>
         </p>
         <Button accountInfo>Submit</Button>
       </form>
@@ -116,4 +119,9 @@ const ProfileInformation = ({ user }) => {
   )
 };
 
-export default ProfileInformation;
+// REDUX
+const mapDispatchToProps = (dispatch) => ({
+  logoutUser: () => dispatch(logoutUser()),
+})
+
+export default connect(null, mapDispatchToProps)(ProfileInformation);

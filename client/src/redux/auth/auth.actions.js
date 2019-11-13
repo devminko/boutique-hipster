@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { setAlert } from '../alert/alert.actions';
 import { setAuthToken } from '../utils/setAuthToken';
-import { USER_LOADED, REGISTRATION_SUCCESS, REGISTRATION_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, AUTH_ERROR } from './auth.types';
+import { 
+  USER_LOADED, REGISTRATION_SUCCESS, REGISTRATION_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_USER, AUTH_ERROR 
+} from './auth.types';
 
 const route = 'http://localhost:5000';
 
@@ -83,3 +85,10 @@ export const loginUser = (email, password) => async (dispatch) => {
     });
   }
 }
+
+// *************************** LOGOUT USER *************************** //
+export const logoutUser = () => (dispatch) => {
+  dispatch({
+    type: LOGOUT_USER,
+  });
+};
