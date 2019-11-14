@@ -84,9 +84,9 @@
   &.profileRed {
     background: lighten($primary-color, 10%);
     color: $white;
-    height: 6rem;
+    height: 7rem;
     font-family: $secondary-font;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
   }
 
@@ -94,36 +94,16 @@
   &.profileGrey {
     background: $midgrey;
     color: $black;
-    height: 6rem;
+    height: 7rem;
     font-family: $secondary-font;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     letter-spacing: 1px;
   }
 }
 
 // ********************************** MEDIA QUERIES ********************************** //
 @media screen and (min-width: 500px) {
-  .button {
-    // PROFILE RED
-    &.profileRed {
-      background: lighten($primary-color, 10%);
-      color: $white;
-      height: 7rem;
-      font-family: $secondary-font;
-      font-size: 1.6rem;
-      letter-spacing: 1px;
-    }
 
-    // PROFILE GREY
-    &.profileGrey {
-      background: $midgrey;
-      color: $black;
-      height: 7rem;
-      font-family: $secondary-font;
-      font-size: 1.6rem;
-      letter-spacing: 1px;
-    }
-  }
 }
 
 @media screen and (min-width: 800px) {

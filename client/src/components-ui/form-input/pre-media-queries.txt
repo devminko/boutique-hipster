@@ -1,0 +1,28 @@
+@import '../../styles/global.styles';
+
+// FORM INPUT
+.formInput {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: $grey;
+  border: 1px solid $lightgrey;
+
+  // PROFILE
+  &.profile {
+    width: 90%;
+    background: $midgrey;
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+
+}
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+  
+}

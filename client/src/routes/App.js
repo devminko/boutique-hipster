@@ -15,7 +15,7 @@ import Alert from '../components-ui/alert/Alert';
 const App = ({ loadUser }) => {
   useEffect(() => {
     loadUser();
-  },[]);
+  },[loadUser]);
 
   return (
     <div>
@@ -27,7 +27,7 @@ const App = ({ loadUser }) => {
           <Route exact path='/' component={HomePage} />
           <Route exact path='/account' component={AccountPage} />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
 
       </BrowserRouter>
     </div>

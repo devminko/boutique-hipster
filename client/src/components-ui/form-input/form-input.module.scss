@@ -11,16 +11,43 @@
   &.profile {
     width: 90%;
     background: $midgrey;
+    font-size: 1.3rem;
   }
 }
 
 // ********************************** MEDIA QUERIES ********************************** //
 @media screen and (min-width: 500px) {
+  // FORM INPUT
+  .formInput {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: $grey;
+    border: 1px solid $lightgrey;
 
+    // PROFILE
+    &.profile {
+      width: 90%;
+      background: $midgrey;
+      font-size: 1.4rem;
+    }
+  }
 }
 
 @media screen and (min-width: 800px) {
+  // FORM INPUT
+  .formInput {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: $grey;
+    border: 1px solid $lightgrey;
 
+    // PROFILE
+    &.profile {
+      width: 90%;
+      background: $midgrey;
+      font-size: 1.5rem;
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {

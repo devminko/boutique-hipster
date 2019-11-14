@@ -1,20 +1,39 @@
 @import '../../../styles/global.styles';
 
-// PROFILE DETAILS
+// PROFILE SHIPPING
 .accountForm {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 33%;
+  width: 100%;
   background: $midgrey;
   margin-bottom: auto;
   padding-top: 3rem;
 
-  .title {
-    margin: 2rem 0;
-    text-transform: uppercase;
-    font-family: $secondary-font;
-    font-size: 1.6rem;
+  .header {
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+    width: 90%;
+
+    .headerTitle {
+      // margin: 2rem 0;
+      margin: 0 0 2rem 0;
+      text-transform: uppercase;
+      font-family: $secondary-font;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .addIcon {
+      color: $black;
+      font-size: 1.8rem;
+      cursor: pointer;
+
+      &:active {
+        color: $primary-color;
+      }
+    }
   }
 
   .text {
@@ -36,7 +55,7 @@
     align-items: center;
     margin-right: auto;
     margin-left: 5%;
-
+  
     .checkboxText {
       margin-left: 2px;
     }
@@ -45,11 +64,78 @@
 
 // ********************************** MEDIA QUERIES ********************************** //
 @media screen and (min-width: 500px) {
+  // PROFILE SHIPPING
+  .accountForm {
 
+  .header {
+
+      .headerTitle {
+        font-size: 1.6rem;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 800px) {
+  // PROFILE SHIPPING
+  .accountForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    background: $midgrey;
+    margin-bottom: auto;
+    padding-top: 3rem;
 
+    .header {
+      display: flex;
+      // align-items: center;
+      justify-content: space-between;
+      width: 90%;
+  
+      .headerTitle {
+        // margin: 2rem 0;
+        margin: 0 0 2rem 0;
+        text-transform: uppercase;
+        font-family: $secondary-font;
+        font-size: 1.6rem;
+      }
+  
+      .addIcon {
+        font-size: 1.8rem;
+        cursor: pointer;
+  
+        &:active {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .text {
+      width: 90%;
+      font-size: 1.1rem;
+      text-align: center;
+      margin: 1rem 0;
+
+      .link {
+        cursor: pointer;
+        color: $link;
+        text-decoration: underline;
+      }
+    }
+
+    .checkboxContainer {
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+      margin-left: 5%;
+    
+      .checkboxText {
+        margin-left: 2px;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {

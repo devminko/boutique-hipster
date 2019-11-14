@@ -1,6 +1,7 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { TiPlus } from 'react-icons/ti';
+import { TiPlus } from "react-icons/ti";
+
 
 import { logoutUser } from '../../../redux/auth/auth.actions';
 import { setAlert } from '../../../redux/alert/alert.actions';
@@ -17,8 +18,6 @@ const ProfileDetails = ({ email, logoutUser, setAlert }) => {
     password: '',
     confirmPassword: '',
   });
-
-  const [ toggleInputs, setToggleInputs ] = useState(false);
 
   const onChange = (e) => {
     setFormData({
@@ -45,44 +44,39 @@ const ProfileDetails = ({ email, logoutUser, setAlert }) => {
   return (
     <form onSubmit={onSubmit} className={style.accountForm}>
       <div className={style.header}>
-        <h3 onClick={() => setToggleInputs(!toggleInputs)} className={style.headerTitle}>Account Details</h3>
-        <span onClick={() => setToggleInputs(!toggleInputs)} className={style.addIcon}><TiPlus /></span>
+        <h3 className={style.title}>Account Details</h3>
+        <span className={style.addIcon}><TiPlus /></span>
       </div>
-      {
-        toggleInputs &&
-        <Fragment>
-          <FormInput
-            profile
-            style={{ color: 'black '}}
-            type='email'
-            name='email'  
-            placeholder='Change contact email'
-            value={formData.email}
-            onChange={onChange}
-          />
-          <h3 className={style.title}>Reset Password</h3>
-          <FormInput
-            profile
-            type='password'
-            name='password' 
-            placeholder='New Password'
-            value={formData.password}
-            onChange={onChange}
-          />
-          <FormInput
-            profile
-            type='password'  
-            name='confirmPassword'
-            placeholder='Confirm New Password'
-            value={formData.confirmPassword}
-            onChange={onChange}
-          />
-          <p className={style.text}>
-            Logged in as {formData.email}. Not you? <span onClick={onLogout} className={style.link}>Logout.</span>
-          </p>
-          <Button accountInfo>Submit</Button>
-        </Fragment>
-      }
+      <FormInput
+        profile
+        style={{ color: 'black '}}
+        type='email'
+        name='email'  
+        placeholder='Change contact email'
+        value={formData.email}
+        onChange={onChange}
+      />
+      <h3 className={style.title}>Reset Password</h3>
+      <FormInput
+        profile
+        type='password'
+        name='password' 
+        placeholder='New Password'
+        value={formData.password}
+        onChange={onChange}
+      />
+      <FormInput
+        profile
+        type='password'  
+        name='confirmPassword'
+        placeholder='Confirm New Password'
+        value={formData.confirmPassword}
+        onChange={onChange}
+      />
+      <p className={style.text}>
+        Logged in as {formData.email}. Not you? <span onClick={onLogout} className={style.link}>Logout.</span>
+      </p>
+      <Button accountInfo>Submit</Button>
     </form>
   )
 };

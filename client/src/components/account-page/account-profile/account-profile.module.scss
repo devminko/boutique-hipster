@@ -2,33 +2,33 @@
 
 // ACCOUNT PROFILE
 .accountProfile {
-  // border: 1px solid $grey;
-  width: 1200px;
+  // width: 1200px;
+  width: 100%;
 
   // HEADER 
   .header {
-    // border: 1px solid $grey;
-    height: 15rem;
+    height: 13rem;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 
     .title {
-      width: 35%;
-      text-align: right;
+      width: 100%;
+      margin-bottom: 1rem;
+      text-align: center;
       font-family: $secondary-font;
-      font-size: 4rem;
+      font-size: 3rem;
       color: $white;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: $primary-color;
     }
 
     .subtitle {
-      width: 65%;
-      padding: 0 14rem 0 8rem;
-      text-align: justify;
-      font-size: 1.5rem;
+      width: 100%;
+      padding: 0 2rem;
+      text-align: center;
+      font-size: 1.2rem;
       font-family: $primary-font;
       font-weight: lighter;
     }
@@ -38,18 +38,94 @@
   .buttons {
     display: flex;
     align-items: center;
-    margin-bottom: 4rem;
+    justify-content: center;
   }
-
 }
 
 // ********************************** MEDIA QUERIES ********************************** //
 @media screen and (min-width: 500px) {
-
+  .accountProfile {
+    width: 100%;
+  
+    // HEADER 
+    .header {
+      height: 15rem;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+  
+      .title {
+        width: 35%;
+        margin-bottom: 0;
+        text-align: right;
+        font-family: $secondary-font;
+        font-size: 4rem;
+        color: $white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $primary-color;
+      }
+  
+      .subtitle {
+        width: 65%;
+        padding: 0 6rem 0 6rem;
+        text-align: justify;
+        font-size: 1.3rem;
+        font-family: $primary-font;
+        font-weight: lighter;
+      }
+    }
+  
+    // BUTTONS
+    .buttons {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+  }
 }
 
 @media screen and (min-width: 800px) {
-
+  .accountProfile {
+    width: 1200px;
+  
+    // HEADER 
+    .header {
+      height: 15rem;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+  
+      .title {
+        width: 35%;
+        text-align: right;
+        font-family: $secondary-font;
+        font-size: 4rem;
+        color: $white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $primary-color;
+      }
+  
+      .subtitle {
+        width: 65%;
+        padding: 0 14rem 0 8rem;
+        text-align: justify;
+        font-size: 1.4rem;
+        font-family: $primary-font;
+        font-weight: lighter;
+      }
+    }
+  
+    // BUTTONS
+    .buttons {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
