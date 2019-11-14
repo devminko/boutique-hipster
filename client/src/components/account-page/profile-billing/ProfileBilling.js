@@ -18,7 +18,7 @@ const ProfileBilling = ({ shipping_address, billing_address }) => {
   });
 
   const [ toggleInputs, setToggleInputs ] = useState(false);
-  const [ isChecked, setIsChecked ] = useState(false);
+  const [ isChecked, setIsChecked ] = useState(false);      // true === same details as shipping_address
   
   const onChange = (e) => {
     setFormData({
@@ -46,9 +46,9 @@ const ProfileBilling = ({ shipping_address, billing_address }) => {
 
   return (
     <form onSubmit={onSubmit} className={style.accountForm}>
-      <div className={style.header}>
-        <h3 onClick={() => setToggleInputs(!toggleInputs)} className={style.headerTitle}>Billing Address</h3>
-        <span onClick={() => setToggleInputs(!toggleInputs)} className={style.addIcon}><TiPlus /></span>
+      <div onClick={() => setToggleInputs(!toggleInputs)} className={style.header}>
+        <h3 className={style.headerTitle}>Billing Address</h3>
+        <span className={style.addIcon}><TiPlus /></span>
       </div>
       {
         toggleInputs &&

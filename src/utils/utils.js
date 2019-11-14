@@ -36,4 +36,20 @@ const loginValidatorChecks = () => {
   ]
 };
 
-module.exports = { createAuthToken, createUser, registerValidatorChecks, loginValidatorChecks }
+// EMAIL VALIDATOR CHECKS => validates email
+const emailValidatorChecks = () => {
+  return [
+    check('email', 'Please enter valid email address').isEmail().normalizeEmail(),
+  ]
+};
+
+// PASSWORD VALIDATOR CHECKS => validates password
+const passwordValidatorChecks = () => {
+  return [
+    check('password', 'Please create password with 6 or more characters').isLength({ min: 6 }),
+  ]
+};
+
+module.exports = { 
+  createAuthToken, createUser, registerValidatorChecks, loginValidatorChecks, emailValidatorChecks, passwordValidatorChecks 
+}

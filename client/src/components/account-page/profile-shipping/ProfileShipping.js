@@ -34,9 +34,9 @@ const ProfileShipping = ({ shipping_address, billing_address }) => {
 
   return (
     <form onSubmit={onSubmit} className={style.accountForm}>
-      <div className={style.header}>
-        <h3 onClick={() => setToggleInputs(!toggleInputs)} className={style.headerTitle}>Shipping Address</h3>
-        <span onClick={() => setToggleInputs(!toggleInputs)} className={style.addIcon}><TiPlus /></span>
+      <div onClick={() => setToggleInputs(!toggleInputs)} className={style.header}>
+        <h3 className={style.headerTitle}>Shipping Address</h3>
+        <span className={style.addIcon}><TiPlus /></span>
       </div>
       {
         toggleInputs &&
