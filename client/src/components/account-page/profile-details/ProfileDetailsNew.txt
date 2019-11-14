@@ -2,7 +2,8 @@ import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
 import { TiPlus } from 'react-icons/ti';
 
-import { updateEmail, updatePassword, logoutUser } from '../../../redux/auth/auth.actions';
+import { updateEmail } from '../../../redux/account/account.actions';
+import { logoutUser } from '../../../redux/auth/auth.actions';
 import { setAlert } from '../../../redux/alert/alert.actions';
 
 import FormInput from '../../../components-ui/form-input/FormInput';
@@ -11,14 +12,12 @@ import Button from '../../../components-ui/button/Button';
 import style from './profile-details.module.scss';
 
 // *************************** PROFILE DETAILS COMPONENT *************************** //
-const ProfileDetails = ({ updateEmail, updatePassword, logoutUser, setAlert }) => {
+const ProfileDetails = ({ email, updateEmail, logoutUser, setAlert }) => {
   const [ formData, setFormData ] = useState({
-    email: '',
+    email: email,
     password: '',
     confirmPassword: '',
   });
-
-  const { email, password, confirmPassword } = formData;
 
   const [ toggleInputs, setToggleInputs ] = useState(false);
 
@@ -36,12 +35,13 @@ const ProfileDetails = ({ updateEmail, updatePassword, logoutUser, setAlert }) =
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    if (password !== confirmPassword) {
-      setAlert('Passwords do not match', 'danger', 2000);
-    } else {
-      await updatePassword({password});
-    }
+    // if (formData.password !== formData.confirmPassword) {
+    //   setAlert('Passwords do not match', 'danger', 2000);
+    // } else {
+    //   console.log('Submitted');
+    // }
     await updateEmail({email});
+    // Will replace later with setState update
   };
   
   return (
@@ -59,7 +59,7 @@ const ProfileDetails = ({ updateEmail, updatePassword, logoutUser, setAlert }) =
             type='email'
             name='email'  
             placeholder='Change email address'
-            value={email}
+            value={formData.email}
             onChange={onChange}
           />
           <h3 className={style.title}>Reset Password</h3>
@@ -68,7 +68,7 @@ const ProfileDetails = ({ updateEmail, updatePassword, logoutUser, setAlert }) =
             type='password'
             name='password' 
             placeholder='New Password'
-            value={password}
+            value={formData.password}
             onChange={onChange}
           />
           <FormInput
@@ -76,7 +76,7 @@ const ProfileDetails = ({ updateEmail, updatePassword, logoutUser, setAlert }) =
             type='password'  
             name='confirmPassword'
             placeholder='Confirm New Password'
-            value={confirmPassword}
+            value={formData.confirmPassword}
             onChange={onChange}
           />
           <p className={style.text}>
@@ -92,7 +92,6 @@ const ProfileDetails = ({ updateEmail, updatePassword, logoutUser, setAlert }) =
 // REDUX
 const mapDispatchToProps = (dispatch) => ({
   updateEmail: ({email}) => dispatch(updateEmail({email})),
-  updatePassword: ({password}) => dispatch(updatePassword({password})),
   logoutUser: () => dispatch(logoutUser()),
   setAlert: (msg, alertType, timeout) => dispatch(setAlert(msg, alertType, timeout)),
 })

@@ -5,7 +5,7 @@ const router = express.Router();
 const { check, validationResult } = require('express-validator');
 const auth = require('../middleware/auth');
 const { 
-  createAuthToken, createUser, registerValidatorChecks, loginValidatorChecks, emailValidatorChecks, passwordValidatorChecks,
+  createAuthToken, createUser, registerValidatorChecks, loginValidatorChecks, emailValidatorChecks, passwordValidatorChecks, fieldValidatorChecks,
 } = require('../utils/utils');
 
 // USER MODEL
@@ -136,11 +136,11 @@ router.post('/login', loginValidatorChecks(), async (req, res) => {
   }
 );
 
-/***************** PATCH USER EMAIL ****************
+/***************** PATCH USER EMAIL ********************
   @route                ||      PATCH => api/users/email
   @description          ||      PATCH user email
   @access               ||      Private
-*************************************************/
+********************************************************/
 router.patch('/email', [auth, emailValidatorChecks()], async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
@@ -167,11 +167,11 @@ router.patch('/email', [auth, emailValidatorChecks()], async (req, res) => {
   }
 });
 
-/***************** PATCH USER PASSWORD ****************
+/***************** PATCH USER PASSWORD *********************
   @route                ||      PATCH => api/users/password
   @description          ||      PATCH user password
   @access               ||      Private
-*************************************************/
+***********************************************************/
 router.patch('/password', [auth, passwordValidatorChecks()], async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
@@ -195,20 +195,41 @@ router.patch('/password', [auth, passwordValidatorChecks()], async (req, res) =>
       password,
     });
 
-    // res.status(200).json(password);
     res.status(200).json({ msg: 'Your password has been updated successfully' });
   } catch (err) {
     res.status(500).send('Server Error');
   }
 });
 
-/***************** PATCH USER SHIPPING ADDRESS ****************
+/***************** PATCH USER SHIPPING ADDRESS ********************
   @route                ||      PATCH => api/users/shipping_address
   @description          ||      PATCH user shipping address
   @access               ||      Private
-*************************************************/
-router.patch('/shipping_address', (req, res) => {
+*******************************************************************/
+router.patch('/shipping_address', [auth, fieldValidatorChecks('shipping_address')], async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  };
 
+  let { shipping_address } = req.body;
+
+  try {
+    // Query DB for req user
+    let user = await User.findOne({
+      wher: { id: req.user.id },
+      attributes: ['id'],
+    });
+
+    // Update the shipping address and insert into DB
+    user = await user.update({
+      shipping_address,
+    });
+
+    res.status(200).json(shipping_address);
+  } catch (err) {
+    res.status(500).send('Server Error');
+  }
 });
 
 /***************** PATCH USER BILLING ADDRESS ****************

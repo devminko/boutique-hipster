@@ -1,5 +1,5 @@
 import { 
-  USER_LOADED, REGISTRATION_SUCCESS, REGISTRATION_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_USER, UPDATE_EMAIL, UPDATE_PASSWORD,UPDATE_SHIPPING, UPDATE_BILLING, CLEAR_ACCOUNT, DELETE_ACCOUNT, ACCOUNT_ERROR, AUTH_ERROR,
+  USER_LOADED, REGISTRATION_SUCCESS, REGISTRATION_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_USER, AUTH_ERROR 
 } from './auth.types';
 
 const INTIAL_STATE = {
@@ -27,24 +27,10 @@ export const authReducer = (state = INTIAL_STATE, action) => {
         ...action.payload,
         isAuthenticated: true,
       };
-    case UPDATE_EMAIL :
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          email: action.payload,
-        },
-      };
-    case UPDATE_PASSWORD :
-      return {
-        ...state,
-        ...action.payload,
-      };
     case REGISTRATION_FAIL :
     case LOGIN_FAIL :
     case LOGOUT_USER :
     case AUTH_ERROR :
-    case ACCOUNT_ERROR :
       localStorage.removeItem('token');
       return {
         ...state,

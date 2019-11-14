@@ -2,7 +2,7 @@ import axios from 'axios';
 import { setAlert } from '../alert/alert.actions';
 import { setAuthToken } from '../utils/setAuthToken';
 import { 
-  USER_LOADED, REGISTRATION_SUCCESS, REGISTRATION_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_USER, UPDATE_EMAIL, UPDATE_PASSWORD,UPDATE_SHIPPING, UPDATE_BILLING, CLEAR_ACCOUNT, DELETE_ACCOUNT, ACCOUNT_ERROR, AUTH_ERROR, 
+  USER_LOADED, REGISTRATION_SUCCESS, REGISTRATION_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_USER, AUTH_ERROR 
 } from './auth.types';
 
 const route = 'http://localhost:5000';
@@ -91,77 +91,4 @@ export const logoutUser = () => (dispatch) => {
   dispatch({
     type: LOGOUT_USER,
   });
-};
-
-// *************************** UPDATE EMAIL *************************** //
-export const updateEmail = ({email}) => async (dispatch) => {
-  const config = {
-    headers: {
-      'Content-Type': 'application/json',
-    }
-  };
-
-  const body = JSON.stringify({email});
-
-  try {
-    const res = await axios.patch(`${route}/api/users/email`, body, config);
-    dispatch({
-      type: UPDATE_EMAIL,
-      payload: res.data,
-    });
-    dispatch(setAlert('Email updated successfully', 'success', 2000));
-  } catch (err) {
-    dispatch({
-      type: ACCOUNT_ERROR,
-      payload: {
-        msg: err.response.statusText,
-        status: err.response.status,
-      }
-    });
-    dispatch(setAlert('Error updating email address', 'danger', 2000));
-  }
-};
-
-// *************************** UPDATE PASSWORD *************************** //
-export const updatePassword = ({ password }) => async (dispatch) => {
-  const config = {
-    headers: {
-      'Content-Type': 'application/json',
-    }
-  };
-
-  const body = JSON.stringify({password});
-
-  try {
-    const res = await axios.patch(`${route}/api/users/password`, body, config);
-    dispatch({
-      type: UPDATE_PASSWORD,
-      payload: res.data,
-    });
-    dispatch(setAlert('Password updated', 'success', 2000));
-  } catch (err) {
-    dispatch({
-      type: ACCOUNT_ERROR,
-      payload: {
-        msg: err.response.statusText,
-        status: err.response.status,
-      }
-    });
-    dispatch(setAlert('Error updating password', 'danger', 2000));
-  }
-};
-
-// *************************** UPDATE SHIPPING ADDRESS *************************** //
-export const updateShipping = ({ shippingAddress }) => async (dispatch) => {
-  try {
-    
-  } catch (err) {
-    dispatch({
-      type: ACCOUNT_ERROR,
-      payload: {
-        msg: err.response.statusText,
-        status: err.response.status,
-      }
-    })
-  }
 };

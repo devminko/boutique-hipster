@@ -50,6 +50,13 @@ const passwordValidatorChecks = () => {
   ]
 };
 
+// FIELD VALIDATOR CHECKS => validates fields
+const fieldValidatorChecks = (fieldName) => {
+  return [
+    check(`${fieldName}`, `${fieldName} is required`).not().isEmpty(),
+  ]
+}
+
 module.exports = { 
-  createAuthToken, createUser, registerValidatorChecks, loginValidatorChecks, emailValidatorChecks, passwordValidatorChecks 
+  createAuthToken, createUser, registerValidatorChecks, loginValidatorChecks, emailValidatorChecks, passwordValidatorChecks, fieldValidatorChecks,
 }
