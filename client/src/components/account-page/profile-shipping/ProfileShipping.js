@@ -1,5 +1,8 @@
 import React, { Fragment, useState } from 'react';
+import { connect } from 'react-redux';
 import { TiPlus } from 'react-icons/ti';
+
+import { updateShipping } from '../../../redux/auth/auth.actions';
 
 import FormInput from '../../../components-ui/form-input/FormInput';
 import Button from '../../../components-ui/button/Button';
@@ -7,14 +10,17 @@ import Button from '../../../components-ui/button/Button';
 import style from './profile-shipping.module.scss';
 
 // *************************** PROFILE SHIPPING COMPONENT *************************** //
-const ProfileShipping = ({ shipping_address, billing_address }) => {
+const ProfileShipping = ({ user, updateShipping }) => {
+  // 'user' prop passed down from ProfileInformation.js
+  const { shipping_street, shipping_street2, shipping_city, shipping_state, shipping_zip, shipping_country } = user;
+
   const [ formData, setFormData ] = useState({
-    streetOne: '',
-    streetTwo: '',
-    city: '',
-    state: '',
-    zipcode: '',
-    country: '',
+    shipping_street: shipping_street ? shipping_street : '',
+    shipping_street2: shipping_street2 ? shipping_street2 : '',
+    shipping_city: shipping_city ? shipping_city : '',
+    shipping_state: shipping_state ? shipping_state : '',
+    shipping_zip: shipping_zip ? shipping_zip : '',
+    shipping_country: shipping_country ? shipping_country : '',
   });
 
   const [ toggleInputs, setToggleInputs ] = useState(false);
@@ -26,10 +32,9 @@ const ProfileShipping = ({ shipping_address, billing_address }) => {
     });
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log('Submitted');
-    // Will replace later with setState update
+    await updateShipping(formData);
   };
 
   return (
@@ -45,48 +50,48 @@ const ProfileShipping = ({ shipping_address, billing_address }) => {
               profile
               type='text'
               placeholder='Street Name'
-              name='streetOne'  
-              value={formData.streetOne}
+              name='shipping_street'  
+              value={formData.shipping_street}
               onChange={onChange}
             />
             <FormInput
               profile  
               type='text'
               placeholder='Street Name #2'
-              name='streetTwo'
-              value={formData.streetTwo}
+              name='shipping_street2'
+              value={formData.shipping_street2}
               onChange={onChange}
             />
             <FormInput
               profile  
               type='text'
               placeholder='City'
-              name='city'
-              value={formData.city}
+              name='shipping_city'
+              value={formData.shipping_city}
               onChange={onChange}
             />
             <FormInput
               profile  
               type='text'
               placeholder='State'
-              name='state'
-              value={formData.state}
+              name='shipping_state'
+              value={formData.shipping_state}
               onChange={onChange}
             />
             <FormInput
               profile  
               type='text'
               placeholder='Zip Code'
-              name='zipcode'
-              value={formData.zipcode}
+              name='shipping_zip'
+              value={formData.shipping_zip}
               onChange={onChange}
             />
             <FormInput
               profile  
               type='text'
               placeholder='Country'
-              name='country'
-              value={formData.country}
+              name='shipping_country'
+              value={formData.shipping_country}
               onChange={onChange}
             />
             <Button accountInfo>Submit</Button>
@@ -96,4 +101,9 @@ const ProfileShipping = ({ shipping_address, billing_address }) => {
   )
 };
 
-export default ProfileShipping;
+// REDUX
+const mapDispatchToProps = (dispatch) => ({
+  updateShipping: (formData) => dispatch(updateShipping(formData)),
+});
+
+export default connect(null, mapDispatchToProps)(ProfileShipping);

@@ -12,6 +12,7 @@ import style from './profile-details.module.scss';
 
 // *************************** PROFILE DETAILS COMPONENT *************************** //
 const ProfileDetails = ({ user, updateEmail, updatePassword, logoutUser, setAlert }) => {
+  // 'user' prop passed down from ProfileInformation.js
   const [ formData, setFormData ] = useState({
     email: '',
     password: '',

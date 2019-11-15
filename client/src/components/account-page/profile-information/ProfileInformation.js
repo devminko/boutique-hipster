@@ -9,14 +9,12 @@ import style from './profile-information.module.scss';
 // *************************** PROFILE INFORMATION COMPONENT *************************** //
 const ProfileInformation = ({ user }) => {
   // 'user' prop passed down from AccountProfile
-  const { email, shipping_address, billing_address } = user;
-
   return (
     <div className={style.profileInformation}>
 
       <ProfileDetails user={user} />
-      <ProfileShipping shipping_address={shipping_address} billing_address={billing_address} />
-      <ProfileBilling shipping_address={shipping_address} billing_address={billing_address} />
+      <ProfileShipping user={user} />
+      <ProfileBilling user={user} />
 
     </div>
   )

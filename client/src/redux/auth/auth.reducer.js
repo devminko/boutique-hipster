@@ -28,12 +28,13 @@ export const authReducer = (state = INTIAL_STATE, action) => {
         isAuthenticated: true,
       };
     case UPDATE_EMAIL :
+    case UPDATE_SHIPPING :
       return {
         ...state,
         user: {
           ...state.user,
-          email: action.payload,
-        },
+          ...action.payload,
+        }
       };
     case UPDATE_PASSWORD :
       return {
