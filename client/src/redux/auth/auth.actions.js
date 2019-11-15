@@ -166,7 +166,7 @@ export const updateShipping = (data) => async (dispatch) => {
       type: UPDATE_SHIPPING,
       payload: res.data,
     });
-    dispatch(setAlert('Shipping Address successfully updated', 'success', 2000));
+    dispatch(setAlert('Shipping Address updated successfully', 'success', 2000));
   } catch (err) {
     dispatch({
       type: ACCOUNT_ERROR,
@@ -176,5 +176,31 @@ export const updateShipping = (data) => async (dispatch) => {
       }
     });
     dispatch(setAlert('Error updating shipping address', 'danger', 2000));
+  }
+};
+
+// *************************** UPDATE BILLING ADDRESS *************************** //
+export const updateBilling = (data) => async (dispatch) => {
+  try {
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+    const res = await axios.patch(`${route}/api/users/billing_address`, data, config);
+    dispatch({
+      type: UPDATE_BILLING,
+      payload: res.data,
+    });
+    dispatch(setAlert('Billing Address updated successfully', 'success', 2000));
+  } catch (err) {
+    dispatch({
+      type: ACCOUNT_ERROR,
+      payload: {
+        msg: err.response.statusText,
+        status: err.response.status,
+      }
+    });
+    dispatch(setAlert('Error updating billing address', 'danger', 2000));
   }
 };

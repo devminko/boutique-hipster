@@ -216,7 +216,7 @@ router.patch('/shipping_address', [auth], async (req, res) => {
   try {
     // Query DB for req user
     let user = await User.findOne({
-      wher: { id: req.user.id },
+      where: { id: req.user.id },
       attributes: ['id'],
     });
 
@@ -236,13 +236,40 @@ router.patch('/shipping_address', [auth], async (req, res) => {
   }
 });
 
-/***************** PATCH USER BILLING ADDRESS ****************
+/***************** PATCH USER BILLING ADDRESS *******************
   @route                ||      PATCH => api/users/billing_address
   @description          ||      PATCH user billing address
   @access               ||      Private
-*************************************************/
-router.patch('/billing_address', (req, res) => {
+*****************************************************************/
+router.patch('/billing_address', [auth], async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  };
 
+  let { billing_street, billing_street2, billing_city, billing_state, billing_zip, billing_country } = req.body;
+
+  try {
+    // Query DB for req user
+    let user = await User.findOne({
+      where: { id: req.user.id },
+      attributes: ['id'],
+    });
+
+    // Update the billing address and insert into DB
+    user = await user.update({
+      billing_street,
+      billing_street2,
+      billing_city,
+      billing_state,
+      billing_zip,
+      billing_country,
+    });
+    
+    res.status(200).json({ billing_street, billing_street2, billing_city, billing_state, billing_zip, billing_country });
+  } catch (err) {
+    res.status(500).send('Server Error');
+  }
 });
 
 module.exports = router;

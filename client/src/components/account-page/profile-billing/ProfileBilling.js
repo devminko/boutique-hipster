@@ -1,5 +1,8 @@
 import React, { Fragment, useState } from 'react';
+import { connect } from 'react-redux';
 import { TiPlus } from 'react-icons/ti';
+
+import { updateBilling } from '../../../redux/auth/auth.actions';
 
 import FormInput from '../../../components-ui/form-input/FormInput';
 import Button from '../../../components-ui/button/Button';
@@ -7,15 +10,18 @@ import Button from '../../../components-ui/button/Button';
 import style from './profile-billing.module.scss';
 
 // *************************** PROFILE BILLING COMPONENT *************************** //
-const ProfileBilling = ({ user }) => {
+const ProfileBilling = ({ user, updateBilling }) => {
   // 'user' prop passed down from ProfileInformation.js
+
+  const { billing_street, billing_street2, billing_city, billing_state, billing_zip, billing_country } = user;
+
   const [ formData, setFormData ] = useState({
-    streetOne: '',
-    streetTwo: '',
-    city: '',
-    state: '',
-    zipcode: '',
-    country: '',
+    billing_street: billing_street ? billing_street : '',
+    billing_street2: billing_street2 ? billing_street2 : '',
+    billing_city: billing_city ? billing_city : '',
+    billing_state: billing_state ? billing_state : '',
+    billing_zip: billing_zip ? billing_zip : '',
+    billing_country: billing_country ? billing_country : '',
   }); 
 
   const [ toggleInputs, setToggleInputs ] = useState(false);
@@ -28,10 +34,9 @@ const ProfileBilling = ({ user }) => {
     });
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log('Submitted');
-    // Will replace later with setState update
+    await updateBilling(formData);
   };
 
   const onChecked = () => {
@@ -58,52 +63,52 @@ const ProfileBilling = ({ user }) => {
               profile
               type='text'
               placeholder='Street Name'
-              name='streetOne'  
-              value={formData.streetOne}
+              name='billing_street'  
+              value={formData.billing_street}
               onChange={onChange}
             />
             <FormInput
               profile  
               type='text'
               placeholder='Street Name #2'
-              name='streetTwo'
-              value={formData.streetTwo}
+              name='billing_street2'
+              value={formData.billing_street2}
               onChange={onChange}
             />
             <FormInput
               profile  
               type='text'
               placeholder='City'
-              name='city'
-              value={formData.city}
+              name='billing_city'
+              value={formData.billing_city}
               onChange={onChange}
             />
             <FormInput
               profile  
               type='text'
               placeholder='State'
-              name='state'
-              value={formData.state}
+              name='billing_state'
+              value={formData.billing_state}
               onChange={onChange}
             />
             <FormInput
               profile  
               type='text'
               placeholder='Zip Code'
-              name='zipcode'
-              value={formData.zipcode}
+              name='billing_zip'
+              value={formData.billing_zip}
               onChange={onChange}
             />
             <FormInput
               profile  
               type='text'
               placeholder='Country'
-              name='country'
-              value={formData.country}
+              name='billing_country'
+              value={formData.billing_country}
               onChange={onChange}
             />
             <label className={style.checkboxContainer}>
-              <input onClick={onChecked} type='checkbox' className={style.checkmark} disabled={user.shipping_address === null} />
+              <input onClick={onChecked} type='checkbox' className={style.checkmark} disabled={user.shipping_street === null && user.shipping_street === ''} />
               <span className={style.checkboxText}>Same as Shipping?</span>
             </label>
             <Button accountInfo>Submit</Button>
@@ -113,4 +118,9 @@ const ProfileBilling = ({ user }) => {
   )
 };
 
-export default ProfileBilling;
+// REDUX
+const mapDispatchToProps = (dispatch) => ({
+  updateBilling: (data) => dispatch(updateBilling(data)),
+})
+
+export default connect(null, mapDispatchToProps)(ProfileBilling);

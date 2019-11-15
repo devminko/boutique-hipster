@@ -29,6 +29,7 @@ export const authReducer = (state = INTIAL_STATE, action) => {
       };
     case UPDATE_EMAIL :
     case UPDATE_SHIPPING :
+    case UPDATE_BILLING :
       return {
         ...state,
         user: {
