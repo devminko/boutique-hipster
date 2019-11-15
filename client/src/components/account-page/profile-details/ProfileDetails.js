@@ -40,14 +40,26 @@ const ProfileDetails = ({ user, updateEmail, updatePassword, logoutUser, setAler
     e.preventDefault();
     if (password !== confirmPassword) {
       setAlert('Passwords do not match', 'danger', 2000);
-    } else {
+    } else if ((password === confirmPassword) && (email === '')) {
       await updatePassword({password});
       setFormData({
         password: '',
         confirmPassword: '',
       });
+    } else if (email !== '' && (password && confirmPassword) === '') {
+      await updateEmail({email});
+      setFormData({
+        email: '',
+      });
+    } else if ((password === confirmPassword) && (email !== '')) {
+      await updateEmail({email});
+      await updatePassword({password});
+      setFormData({
+        email: '',
+        password: '',
+        confirmPassword: '',
+      });
     }
-    await updateEmail({email});
   };
   
   return (
