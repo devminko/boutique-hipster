@@ -103,22 +103,24 @@ export const updateEmail = ({email}) => async (dispatch) => {
 
   const body = JSON.stringify({email});
 
-  try {
-    const res = await axios.patch(`${route}/api/users/email`, body, config);
-    dispatch({
-      type: UPDATE_EMAIL,
-      payload: res.data,
-    });
-    dispatch(setAlert('Email updated successfully', 'success', 2000));
-  } catch (err) {
-    dispatch({
-      type: ACCOUNT_ERROR,
-      payload: {
-        msg: err.response.statusText,
-        status: err.response.status,
-      }
-    });
-    dispatch(setAlert('Error updating email address', 'danger', 2000));
+  if (window.confirm(`Confirm you would like to update email to ${email}`)) {
+    try {
+      const res = await axios.patch(`${route}/api/users/email`, body, config);
+      dispatch({
+        type: UPDATE_EMAIL,
+        payload: res.data,
+      });
+      dispatch(setAlert('Email updated successfully', 'success', 2000));
+    } catch (err) {
+      dispatch({
+        type: ACCOUNT_ERROR,
+        payload: {
+          msg: err.response.statusText,
+          status: err.response.status,
+        }
+      });
+      dispatch(setAlert('Error updating email address', 'danger', 2000));
+    }
   }
 };
 
@@ -152,9 +154,19 @@ export const updatePassword = ({ password }) => async (dispatch) => {
 };
 
 // *************************** UPDATE SHIPPING ADDRESS *************************** //
-export const updateShipping = ({ shippingAddress }) => async (dispatch) => {
+export const updateShipping = (data) => async (dispatch) => {  
   try {
-    
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    };
+    const res = await axios.patch(`${route}/api/users/shipping_address`, data, config);
+    dispatch({
+      type: UPDATE_SHIPPING,
+      payload: res.data,
+    });
+    dispatch(setAlert('Shipping Address successfully updated', 'success', 2000));
   } catch (err) {
     dispatch({
       type: ACCOUNT_ERROR,
@@ -162,6 +174,7 @@ export const updateShipping = ({ shippingAddress }) => async (dispatch) => {
         msg: err.response.statusText,
         status: err.response.status,
       }
-    })
+    });
+    dispatch(setAlert('Error updating shipping address', 'danger', 2000));
   }
 };

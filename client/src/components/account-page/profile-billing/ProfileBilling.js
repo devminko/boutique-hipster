@@ -7,7 +7,8 @@ import Button from '../../../components-ui/button/Button';
 import style from './profile-billing.module.scss';
 
 // *************************** PROFILE BILLING COMPONENT *************************** //
-const ProfileBilling = ({ shipping_address, billing_address, }) => {
+const ProfileBilling = ({ user }) => {
+  // 'user' prop passed down from ProfileInformation.js
   const [ formData, setFormData ] = useState({
     streetOne: '',
     streetTwo: '',
@@ -36,9 +37,9 @@ const ProfileBilling = ({ shipping_address, billing_address, }) => {
   const onChecked = () => {
     setIsChecked(!isChecked);
     console.log(isChecked);
-    if (isChecked && shipping_address !== null && billing_address !== null) {
+    if (isChecked && user.shipping_address !== '' && user.billing_address !== '') {
       console.log('Checked / Unchecked');
-      return billing_address === shipping_address
+      return user.billing_address === user.shipping_address
     } else {
       console.log('No shipping address to copy')
     }
@@ -102,7 +103,7 @@ const ProfileBilling = ({ shipping_address, billing_address, }) => {
               onChange={onChange}
             />
             <label className={style.checkboxContainer}>
-              <input onClick={onChecked} type='checkbox' className={style.checkmark} disabled={shipping_address === null} />
+              <input onClick={onChecked} type='checkbox' className={style.checkmark} disabled={user.shipping_address === null} />
               <span className={style.checkboxText}>Same as Shipping?</span>
             </label>
             <Button accountInfo>Submit</Button>

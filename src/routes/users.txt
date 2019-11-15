@@ -36,8 +36,9 @@ router.get('/current', auth, async (req, res) => {
     // query db for req user
     let user = await User.findOne({
       where: { id: req.user.id },
-      attributes: ['id', 'name', 'email', 'shipping_street', 'shipping_street2', 'shipping_city', 'shipping_state', 'shipping_zip', 'shipping_country', 'billing_street', 'billing_street2', 'billing_city', 'billing_state', 'billing_zip', 'billing_country']
-    });
+      // attributes: ['id', 'name', 'email', 'password', 'shipping_address', 'billing_address']
+      attributes: ['id', 'name', 'email', 'shipping_address', 'billing_address']
+    })
     res.json(user);
   } catch (err) {
     res.status(500).send('Server Error');
@@ -205,13 +206,13 @@ router.patch('/password', [auth, passwordValidatorChecks()], async (req, res) =>
   @description          ||      PATCH user shipping address
   @access               ||      Private
 *******************************************************************/
-router.patch('/shipping_address', [auth], async (req, res) => {
+router.patch('/shipping_address', [auth, fieldValidatorChecks('shipping_address')], async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
   };
 
-  let { shipping_street, shipping_street2, shipping_city, shipping_state, shipping_zip, shipping_country } = req.body;
+  let { shipping_address } = req.body;
 
   try {
     // Query DB for req user
@@ -222,15 +223,10 @@ router.patch('/shipping_address', [auth], async (req, res) => {
 
     // Update the shipping address and insert into DB
     user = await user.update({
-      shipping_street,
-      shipping_street2,
-      shipping_city,
-      shipping_state,
-      shipping_zip,
-      shipping_country,
+      shipping_address,
     });
 
-    res.status(200).json({shipping_street, shipping_street2, shipping_city, shipping_state, shipping_zip, shipping_country});
+    res.status(200).json(shipping_address);
   } catch (err) {
     res.status(500).send('Server Error');
   }
