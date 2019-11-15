@@ -24,7 +24,6 @@ const ProfileShipping = ({ user, updateShipping }) => {
   });
 
   const [ toggleInputs, setToggleInputs ] = useState(false);
-  let [ isChecked, setIsChecked ] = useState(false);
 
   const onChange = (e) => {
     setFormData({
@@ -32,24 +31,11 @@ const ProfileShipping = ({ user, updateShipping }) => {
       [e.target.name]: e.target.value,
     });
   };
-  
-  const onChecked =  () => {
-    setIsChecked(isChecked);
-    setFormData({
-      shipping_street: '',
-      shipping_street2: '',
-      shipping_city: '',
-      shipping_state: '',
-      shipping_zip: '',
-      shipping_country: '',
-    });
-  };  
 
   const onSubmit = async (e) => {
     e.preventDefault();
     await updateShipping(formData);
   };
-
 
   return (
     <form onSubmit={onSubmit} className={style.accountForm}>
@@ -109,7 +95,7 @@ const ProfileShipping = ({ user, updateShipping }) => {
               onChange={onChange}
             />
             <label className={style.checkboxContainer}>
-              <input onClick={onChecked} type='checkbox' className={style.checkmark} disabled={formData.shipping_street === null || formData.shipping_street === ''} />
+              <input onClick={onChecked} type='checkbox' className={style.checkmark} disabled={shipping_street === null || shipping_street === ''} />
               <span className={style.checkboxText}>Clear All</span>
             </label>
             <Button accountInfo>Submit</Button>

@@ -48,6 +48,18 @@
       text-decoration: underline;
     }
   }
+
+  .checkboxContainer {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-left: 5%;
+  
+    .checkboxText {
+      margin-left: 2px;
+    }
+  }
 }
 
 // ********************************** MEDIA QUERIES ********************************** //
@@ -109,6 +121,18 @@
         cursor: pointer;
         color: $link;
         text-decoration: underline;
+      }
+    }
+    
+    .checkboxContainer {
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+      margin-left: 5%;
+    
+      .checkboxText {
+        margin-left: 2px;
       }
     }
   }

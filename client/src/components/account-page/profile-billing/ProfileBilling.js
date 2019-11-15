@@ -12,8 +12,9 @@ import style from './profile-billing.module.scss';
 // *************************** PROFILE BILLING COMPONENT *************************** //
 const ProfileBilling = ({ user, updateBilling }) => {
   // 'user' prop passed down from ProfileInformation.js
-
-  const { billing_street, billing_street2, billing_city, billing_state, billing_zip, billing_country } = user;
+  const { 
+    shipping_street, shipping_street2, shipping_city, shipping_state, shipping_zip, shipping_country, billing_street, billing_street2, billing_city, billing_state, billing_zip, billing_country 
+  } = user;
 
   const [ formData, setFormData ] = useState({
     billing_street: billing_street ? billing_street : '',
@@ -22,10 +23,10 @@ const ProfileBilling = ({ user, updateBilling }) => {
     billing_state: billing_state ? billing_state : '',
     billing_zip: billing_zip ? billing_zip : '',
     billing_country: billing_country ? billing_country : '',
-  }); 
+  });
 
   const [ toggleInputs, setToggleInputs ] = useState(false);
-  const [ isChecked, setIsChecked ] = useState(false);      // true === same details as shipping_address
+  const [ isChecked, setIsChecked ] = useState(true);      // true === same details as shipping_address
   
   const onChange = (e) => {
     setFormData({
@@ -39,16 +40,28 @@ const ProfileBilling = ({ user, updateBilling }) => {
     await updateBilling(formData);
   };
 
-  const onChecked = () => {
+  const onChecked =  () => {
     setIsChecked(!isChecked);
-    console.log(isChecked);
-    if (isChecked && user.shipping_address !== '' && user.billing_address !== '') {
-      console.log('Checked / Unchecked');
-      return user.billing_address === user.shipping_address
+    if (isChecked && (shipping_street !== '' || shipping_street !== null)) {
+      setFormData({
+        billing_street: shipping_street,
+        billing_street2: shipping_street2,
+        billing_city: shipping_city,
+        billing_state: shipping_state,
+        billing_zip: shipping_zip,
+        billing_country: shipping_country,
+      });
     } else {
-      console.log('No shipping address to copy')
+      setFormData({
+        billing_street: '',
+        billing_street2: '',
+        billing_city: '',
+        billing_state: '',
+        billing_zip: '',
+        billing_country: '',
+      });
     }
-  };
+  };  
 
   return (
     <form onSubmit={onSubmit} className={style.accountForm}>
@@ -108,7 +121,7 @@ const ProfileBilling = ({ user, updateBilling }) => {
               onChange={onChange}
             />
             <label className={style.checkboxContainer}>
-              <input onClick={onChecked} type='checkbox' className={style.checkmark} disabled={user.shipping_street === null && user.shipping_street === ''} />
+              <input onClick={onChecked} type='checkbox' className={style.checkmark} disabled={shipping_street === null || shipping_street === ''} />
               <span className={style.checkboxText}>Same as Shipping?</span>
             </label>
             <Button accountInfo>Submit</Button>
