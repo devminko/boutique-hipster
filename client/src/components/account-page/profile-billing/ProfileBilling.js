@@ -7,7 +7,7 @@ import Button from '../../../components-ui/button/Button';
 import style from './profile-billing.module.scss';
 
 // *************************** PROFILE BILLING COMPONENT *************************** //
-const ProfileBilling = ({ shipping_address, billing_address }) => {
+const ProfileBilling = ({ shipping_address, billing_address, }) => {
   const [ formData, setFormData ] = useState({
     streetOne: '',
     streetTwo: '',
@@ -15,7 +15,7 @@ const ProfileBilling = ({ shipping_address, billing_address }) => {
     state: '',
     zipcode: '',
     country: '',
-  });
+  }); 
 
   const [ toggleInputs, setToggleInputs ] = useState(false);
   const [ isChecked, setIsChecked ] = useState(false);      // true === same details as shipping_address
