@@ -11,7 +11,7 @@ import Button from '../../../components-ui/button/Button';
 import style from './profile-details.module.scss';
 
 // *************************** PROFILE DETAILS COMPONENT *************************** //
-const ProfileDetails = ({ updateEmail, updatePassword, logoutUser, setAlert }) => {
+const ProfileDetails = ({ user, updateEmail, updatePassword, logoutUser, setAlert }) => {
   const [ formData, setFormData ] = useState({
     email: '',
     password: '',
@@ -19,6 +19,8 @@ const ProfileDetails = ({ updateEmail, updatePassword, logoutUser, setAlert }) =
   });
 
   const { email, password, confirmPassword } = formData;
+
+  let currentEmail = user.email;
 
   const [ toggleInputs, setToggleInputs ] = useState(false);
 
@@ -40,6 +42,10 @@ const ProfileDetails = ({ updateEmail, updatePassword, logoutUser, setAlert }) =
       setAlert('Passwords do not match', 'danger', 2000);
     } else {
       await updatePassword({password});
+      setFormData({
+        password: '',
+        confirmPassword: '',
+      });
     }
     await updateEmail({email});
   };
@@ -80,7 +86,7 @@ const ProfileDetails = ({ updateEmail, updatePassword, logoutUser, setAlert }) =
             onChange={onChange}
           />
           <p className={style.text}>
-            Logged in as {email}. Not you? <span onClick={onLogout} className={style.link}>Logout.</span>
+            Logged in as {currentEmail}. Not you? <span onClick={onLogout} className={style.link}>Logout.</span>
           </p>
           <Button accountInfo>Submit</Button>
         </Fragment>

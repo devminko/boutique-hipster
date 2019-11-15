@@ -14,7 +14,7 @@ const ProfileInformation = ({ user }) => {
   return (
     <div className={style.profileInformation}>
 
-      <ProfileDetails email={email} />
+      <ProfileDetails user={user} />
       <ProfileShipping shipping_address={shipping_address} billing_address={billing_address} />
       <ProfileBilling shipping_address={shipping_address} billing_address={billing_address} />
 
