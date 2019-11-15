@@ -11,7 +11,7 @@ const ProfileHistory = () => {
         <h4 className={style.orderNumber}>Order Number</h4>
         <h4 className={style.orderStatus}>Order Status</h4>
         <h4 className={style.orderDate}>Order Date</h4>
-        <h4 className={style.amount}>Amount</h4>
+        <h4 className={style.orderAmount}>Amount</h4>
       </div>
 
     </div>

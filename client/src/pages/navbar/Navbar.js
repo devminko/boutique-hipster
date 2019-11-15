@@ -1,10 +1,19 @@
 import React, { } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import { logoutUser } from '../../redux/auth/auth.actions';
+
+import Button from '../../components-ui/button/Button';
 
 import style from './navbar.module.scss';
 
 // *************************** NAVBAR COMPONENT *************************** //
-const Navbar = () => {
+const Navbar = ({ isAuthenticated, logoutUser }) => {
+  const onClick = () => {
+    logoutUser();
+    window.location.reload();
+  };
 
   const logoContainer = (
     <div className={style.logoContainer}>
@@ -52,8 +61,24 @@ const Navbar = () => {
         links
       }
 
+      {
+        isAuthenticated &&
+          <div className={style.button}>
+            <Button onClick={onClick} navbar>Log Out</Button>
+          </div>
+      }
+
     </nav>
   )
 };
 
-export default Navbar;
+// REDUX
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  logoutUser: () => dispatch(logoutUser()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
