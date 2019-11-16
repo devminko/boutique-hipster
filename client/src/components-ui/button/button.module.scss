@@ -117,6 +117,21 @@
       border: none;
     }
   }
+
+  // NEWSLETTER
+  &.newsletter {
+    height: 3rem;
+    width: 35%;
+    background: $black;
+    color: $white;
+    font-family: $primary-font;
+    font-size: 1.2rem;
+
+    &:hover {
+      background: $black;
+      color: $white;
+    }
+  }
 }
 
 // ********************************** MEDIA QUERIES ********************************** //

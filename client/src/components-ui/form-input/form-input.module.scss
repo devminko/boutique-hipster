@@ -13,6 +13,15 @@
     background: $midgrey;
     font-size: 1.3rem;
   }
+
+  // NEWSLETTER
+  &.newsletter {
+    height: 3rem;
+    margin-bottom: 0;
+    border: none;
+    width: 25rem;
+    font-size: 1.2rem;
+  }
 }
 
 // ********************************** MEDIA QUERIES ********************************** //
