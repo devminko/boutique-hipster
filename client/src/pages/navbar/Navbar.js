@@ -10,7 +10,7 @@ import style from './navbar.module.scss';
 
 // *************************** NAVBAR COMPONENT *************************** //
 const Navbar = ({ isAuthenticated, logoutUser }) => {
-  const onClick = () => {
+  const onLogout = () => {
     logoutUser();
     window.location.reload();
   };
@@ -64,7 +64,7 @@ const Navbar = ({ isAuthenticated, logoutUser }) => {
       {
         isAuthenticated &&
           <div className={style.button}>
-            <Button onClick={onClick} navbar>Log Out</Button>
+            <Button onClick={onLogout} navbar>Log Out</Button>
           </div>
       }
 

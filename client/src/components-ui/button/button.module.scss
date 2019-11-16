@@ -101,9 +101,11 @@
 
   // NAVBAR
   &.navbar {
-    width: auto;
+    // width: auto;
+    width: 7rem;
     height: 3rem;
     font-size: 1.1rem;
+    background: $white;
     color: $black;
     border: 1px solid $black;
     font-weight: lighter;
@@ -112,6 +114,7 @@
     &:hover {
       background: $black;
       color: $white;
+      border: none;
     }
   }
 }
