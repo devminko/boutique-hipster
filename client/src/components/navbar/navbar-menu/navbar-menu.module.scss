@@ -14,10 +14,58 @@
     height: 60%;
   }
 
+  // MENU
   .menu {
-    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     height: 40%;
     background: $white;
+    text-align: center;
+    // padding-top: 3rem;
+    padding: 3rem;
+    font-size: 1.2rem;
+
+    .siteLinks {
+      width: 50%;
+      text-align: justify;
+      display: flex;
+      flex-direction: column;
+      
+      .links {
+        list-style: none;
+        
+        .link {
+          color: $black;
+          text-decoration: none;
+          cursor: pointer;
+
+          &:hover {
+            color: $primary-color-light;
+          }
+        }
+      }
+    }
+
+    .footerLinks {
+      width: 50%;
+      text-align: justify;
+      display: flex;
+      flex-direction: column;
+
+      .links {
+        list-style: none;
+        
+        .link {
+          color: $black;
+          text-decoration: none;
+
+          &:hover {
+            color: $primary-color-light;
+          }
+        }
+      }
+    }
   }
 }
 
