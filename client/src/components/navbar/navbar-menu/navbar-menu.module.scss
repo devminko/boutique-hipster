@@ -1,0 +1,35 @@
+@import '../../../styles/global.styles';
+
+// NAVBAR MENU
+.navbarMenu {
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .menuFiller {
+    background: $grey;
+    opacity: 0.25;
+    height: 60%;
+  }
+
+  .menu {
+    margin-top: auto;
+    height: 40%;
+    background: $white;
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+
+}
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}

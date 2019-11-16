@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { IoIosMenu, IoMdClose, IoMdHome, IoMdPerson } from "react-icons/io";
 import { AiFillShopping } from "react-icons/ai";
 
+import NavbarMenu from '../navbar-menu/NavbarMenu';
+
 import style from './navbar-mobile.module.scss';
 
 // *************************** NAVBAR MOBILE COMPONENT *************************** //
@@ -18,25 +20,32 @@ const NavbarMobile = () => {
 
       {
         toggleMenu 
-          ? <Link to='/'>
+          ? <div className={style.iconContainer}>
+              <NavbarMenu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
               <IoMdClose onClick={onClick} className={style.icon} /> 
-            </Link>
-          : <Link to='/'>
+            </div>
+          : <div className={style.iconContainer}>
               <IoIosMenu onClick={onClick} className={style.icon} />
-            </Link>
+            </div>
       }
       
-      <Link to='/'>
-        <IoMdHome className={style.icon} />
-      </Link>
+      <div className={style.iconContainer}>
+        <Link to='/'>
+          <IoMdHome className={style.icon} />
+        </Link>
+      </div>
 
-      <Link to='/account'>
-        <IoMdPerson className={style.icon} />
-      </Link>
+      <div className={style.iconContainer}>
+        <Link to='/account'>
+          <IoMdPerson className={style.icon} />
+        </Link>
+      </div>
 
-      <Link to='/'>
-        <AiFillShopping className={style.icon} />
-      </Link>
+      <div className={style.iconContainer}>
+        <Link to='/'>
+          <AiFillShopping className={style.icon} />
+        </Link>
+      </div>
 
     </nav>
   )

@@ -7,15 +7,20 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 1rem 0;
-  border: 1px solid $midgrey;
+  height: 5rem;
+  // border: 1px solid $midgrey;
+  border: 1px solid $black;
 
-  .icon {
-    color: $black;
-    font-size: 2.2rem;
-    cursor: pointer;
+  .iconContainer {
 
-    &:active {
-      color: $primary-color-light;
+    .icon {
+      color: $black;
+      font-size: 2.2rem;
+      cursor: pointer;
+  
+      &:active {
+        color: $primary-color-light;
+      }
     }
   }
 }

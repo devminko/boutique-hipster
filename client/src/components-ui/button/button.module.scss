@@ -101,21 +101,7 @@
 
   // NAVBAR
   &.navbar {
-    // width: auto;
-    width: 7rem;
-    height: 3rem;
-    font-size: 1.1rem;
-    background: $white;
-    color: $black;
-    border: 1px solid $black;
-    font-weight: lighter;
-    transition: background-color 200ms ease-in-out;
-
-    &:hover {
-      background: $black;
-      color: $white;
-      border: none;
-    }
+    display: none;
   }
 
   // NEWSLETTER
@@ -155,6 +141,25 @@
       font-family: $secondary-font;
       font-size: 1.6rem;
       letter-spacing: 1px;
+    }
+    
+    // NAVBAR
+    &.navbar {
+      display: inline-block;
+      width: 7rem;
+      height: 3rem;
+      font-size: 1.1rem;
+      background: $white;
+      color: $black;
+      border: 1px solid $black;
+      font-weight: lighter;
+      transition: background-color 200ms ease-in-out;
+
+      &:hover {
+        background: $black;
+        color: $white;
+        border: none;
+      }
     }
 
     // NEWSLETTER
