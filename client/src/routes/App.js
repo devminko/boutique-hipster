@@ -11,6 +11,8 @@ import Footer from '../pages/footer/Footer';
 
 import Alert from '../components-ui/alert/Alert';
 
+import style from './app.module.scss';
+
 // *************************** APP ROUTES *************************** //
 const App = ({ loadUser }) => {
   useEffect(() => {
@@ -18,16 +20,19 @@ const App = ({ loadUser }) => {
   },[loadUser]);
 
   return (
-    <div>
+    <div className={style.app}>
       <BrowserRouter>
   
-        <Navbar />
-        <Alert />
-        <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route exact path='/account' component={AccountPage} />
-        </Switch>
-        {/* <Footer /> */}
+        <div className={style.content}>
+          <Navbar />
+            <Alert />
+            <Switch>
+              <Route exact path='/' component={HomePage} />
+              <Route exact path='/account' component={AccountPage} />
+            </Switch>
+        </div>
+
+        <Footer />
 
       </BrowserRouter>
     </div>
