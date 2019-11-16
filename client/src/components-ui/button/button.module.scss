@@ -121,7 +121,7 @@
   // NEWSLETTER
   &.newsletter {
     height: 3rem;
-    width: 35%;
+    width: 40%;
     background: $black;
     color: $white;
     font-family: $primary-font;
@@ -155,6 +155,21 @@
       font-family: $secondary-font;
       font-size: 1.6rem;
       letter-spacing: 1px;
+    }
+
+    // NEWSLETTER
+    &.newsletter {
+      height: 3rem;
+      width: 35%;
+      background: $black;
+      color: $white;
+      font-family: $primary-font;
+      font-size: 1.2rem;
+
+      &:hover {
+        background: $black;
+        color: $white;
+      }
     }
   }
 }

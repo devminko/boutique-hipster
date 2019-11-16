@@ -19,7 +19,7 @@
     height: 3rem;
     margin-bottom: 0;
     border: none;
-    width: 25rem;
+    width: 20rem;
     font-size: 1.2rem;
   }
 }
@@ -39,6 +39,15 @@
       background: $midgrey;
       font-size: 1.4rem;
     }
+
+    // NEWSLETTER
+    &.newsletter {
+      height: 3rem;
+      margin-bottom: 0;
+      border: none;
+      width: 25rem;
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -55,6 +64,15 @@
       width: 90%;
       background: $midgrey;
       font-size: 1.5rem;
+    }
+
+    // NEWSLETTER
+    &.newsletter {
+      height: 3rem;
+      margin-bottom: 0;
+      border: none;
+      width: 25rem;
+      font-size: 1.2rem;
     }
   }
 }
