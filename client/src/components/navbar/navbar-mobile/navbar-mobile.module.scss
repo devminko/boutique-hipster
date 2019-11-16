@@ -1,0 +1,40 @@
+@import '../../../styles/global.styles';
+
+// NAVBAR MOBILE
+.navbarMobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+  border: 1px solid $midgrey;
+
+  .icon {
+    color: $black;
+    font-size: 2.2rem;
+    cursor: pointer;
+
+    &:active {
+      color: $primary-color-light;
+    }
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+  .navbarMobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .navbarMobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navbarMobile {
+    display: none;
+  }
+}

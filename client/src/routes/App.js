@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { loadUser } from '../redux/auth/auth.actions';
 
 import Navbar from '../pages/navbar/Navbar';
+import NavbarMobile from '../components/navbar/navbar-mobile/NavbarMobile';
 import HomePage from '../pages/HomePage';
 import AccountPage from '../pages/AccountPage';
 import Footer from '../pages/footer/Footer';
@@ -33,6 +34,7 @@ const App = ({ loadUser }) => {
         </div>
 
         <Footer />
+        <NavbarMobile />
 
       </BrowserRouter>
     </div>
