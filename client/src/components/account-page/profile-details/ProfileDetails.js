@@ -23,7 +23,7 @@ const ProfileDetails = ({ user, updateEmail, updatePassword, logoutUser, setAler
 
   let currentEmail = user.email;
 
-  const [ toggleInputs, setToggleInputs ] = useState(false);
+  const [ toggleInputs, setToggleInputs ] = useState(false);        // true === menu is opened to begin with
 
   const onChange = (e) => {
     setFormData({

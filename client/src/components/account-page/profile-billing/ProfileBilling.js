@@ -25,8 +25,8 @@ const ProfileBilling = ({ user, updateBilling }) => {
     billing_country: billing_country ? billing_country : '',
   });
 
-  const [ toggleInputs, setToggleInputs ] = useState(false);
-  const [ isChecked, setIsChecked ] = useState(true);      // true === same details as shipping_address
+  const [ toggleInputs, setToggleInputs ] = useState(false);      // true === menu is opened to begin with
+  const [ isChecked, setIsChecked ] = useState(true);             // true === same details as shipping_address
   
   const onChange = (e) => {
     setFormData({

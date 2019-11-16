@@ -23,7 +23,7 @@ const ProfileShipping = ({ user, updateShipping }) => {
     shipping_country: shipping_country ? shipping_country : '',
   });
 
-  const [ toggleInputs, setToggleInputs ] = useState(false);
+  const [ toggleInputs, setToggleInputs ] = useState(false);    // true === menu is opened to begin with
   let [ isChecked, setIsChecked ] = useState(false);
 
   const onChange = (e) => {
