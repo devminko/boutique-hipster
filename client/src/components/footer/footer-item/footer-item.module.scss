@@ -1,0 +1,68 @@
+@import '../../../styles/global.styles';
+
+// FOOTER ITEM
+.footerItem {
+  display: flex;
+  flex-direction: column;
+  
+  .title {
+    font-family: $secondary-font;
+    text-transform: uppercase;
+    color: $black;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+
+  .links {
+    list-style: none;
+    
+    .link {
+      color: $black;
+      font-size: 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $primary-color-light;
+      }
+    }
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+  .footerItem {
+    .title {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .links {
+
+      .link {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .footerItem {
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .links {
+
+      .link {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footerItem {
+
+  }
+}

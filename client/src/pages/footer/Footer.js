@@ -1,6 +1,7 @@
 import React, { } from 'react';
 
 import FooterNewsletter from '../../components/footer/footer-newsletter/FooterNewsletter';
+import FooterLinks from '../../components/footer/footer-links/FooterLinks';
 
 import style from './footer.module.scss';
 
@@ -10,8 +11,7 @@ const Footer = () => {
     <footer className={style.footer}>
       
       <FooterNewsletter />
-
-      FOOTER
+      <FooterLinks />
 
     </footer>
   )
