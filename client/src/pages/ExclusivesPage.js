@@ -2,6 +2,7 @@ import React, { } from 'react';
 
 import PageSidebar from '../components/page-sidebar/PageSidebar';
 import PageHeader from '../components/page-header/PageHeader';
+import ExclusivesContainer from '../components/exclusives-page/exclusives-container/ExclusivesContainer';
 
 import PageContainer from './page-container/PageContainer';
 
@@ -10,9 +11,9 @@ const ExclusivesPage = () => {
   return (
     <PageContainer>
 
-      {/* <PageSidebar>SIDEBAR</PageSidebar> */}
       <PageSidebar linkOne='Exclusives' linkTwo='Men' linkThree='Women' />
       <PageHeader>Exclusives</PageHeader>
+      <ExclusivesContainer />
       
     </PageContainer>
   )

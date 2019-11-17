@@ -62,7 +62,7 @@
       text-decoration: none;
       color: $black;
       text-transform: uppercase;
-      font-weight: bold;
+      font-weight: normal;
       font-size: 1.1rem;
       display: none;
 
@@ -84,10 +84,6 @@
 
       .link {
         display: inline;
-        text-decoration: none;
-        color: $black;
-        text-transform: uppercase;
-        font-weight: bold;
         font-size: 1.1rem;
       }
     }
