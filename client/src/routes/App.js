@@ -25,8 +25,8 @@ const App = ({ loadUser }) => {
       <BrowserRouter>
   
         <div className={style.content}>
+          <Alert />
           <Navbar />
-            <Alert />
             <Switch>
               <Route exact path='/' component={HomePage} />
               <Route exact path='/account' component={AccountPage} />
