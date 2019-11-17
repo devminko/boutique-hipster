@@ -11,7 +11,7 @@ const ExclusivesItems = ({ exclusives }) => {
     <div className={style.exclusivesItems}>
       {
         exclusives.map(exclusive => (
-          <ExclusivesItem exclusive={exclusive} />
+          <ExclusivesItem key={exclusive.id} exclusive={exclusive} />
         ))
       }
     </div>

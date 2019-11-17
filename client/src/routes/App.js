@@ -9,6 +9,7 @@ import NavbarMobile from '../components/navbar/navbar-mobile/NavbarMobile';
 import HomePage from '../pages/HomePage';
 import ExclusivesPage from '../pages/ExclusivesPage';
 import AccountPage from '../pages/AccountPage';
+import ProductPage from '../pages/ProductPage';
 import Footer from '../pages/footer/Footer';
 
 import Alert from '../components-ui/alert/Alert';
@@ -32,6 +33,7 @@ const App = ({ loadUser }) => {
               <Route exact path='/' component={HomePage} />
               <Route exact path='/exclusives' component={ExclusivesPage} />
               <Route exact path='/account' component={AccountPage} />
+              <Route exact path='/product/:product_name/:product_id' component={ProductPage} />
             </Switch>
         </div>
 

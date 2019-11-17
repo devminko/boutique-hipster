@@ -1,0 +1,15 @@
+import React, { } from 'react';
+import { withRouter } from 'react-router-dom';
+
+import PageContainer from './page-container/PageContainer';
+
+// *************************** PRODUCT PAGE *************************** //
+const ProductPage = () => {
+  return (
+    <PageContainer>
+      PRODUCT PAGE
+    </PageContainer>
+  )
+};
+
+export default ProductPage;
