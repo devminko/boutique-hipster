@@ -1,0 +1,29 @@
+@import '../../../styles/global.styles';
+
+// EXCLUSIVES HEADER
+.exclusivesHeader {
+  text-align: center;
+  font-family: $secondary-font;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  color: $white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $primary-color;
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+  .exclusivesHeader {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .exclusivesHeader {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+}

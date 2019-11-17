@@ -33,7 +33,7 @@ const Navbar = ({ isAuthenticated, logoutUser }) => {
         <Link to='/' className={style.link}>Women's</Link>
       </li>
       <li>
-        <Link to='/' className={style.link}>Exclusives</Link>
+        <Link to='/exclusives' className={style.link}>Exclusives</Link>
       </li>
       {
         logoContainer

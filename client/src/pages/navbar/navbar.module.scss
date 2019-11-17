@@ -68,7 +68,7 @@
 
       &:hover {
         border-bottom: 2px solid $black;
-        transition: border-bottom 75ms ease-in-out;
+        transition: border-bottom 50ms ease-in-out;
       }
     }
   }
@@ -84,6 +84,11 @@
 
       .link {
         display: inline;
+        text-decoration: none;
+        color: $black;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.1rem;
       }
     }
 

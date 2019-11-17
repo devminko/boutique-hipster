@@ -36,7 +36,7 @@ const NavbarMenu = ({ toggleMenu, setToggleMenu, isAuthenticated, logoutUser }) 
             </li>
             <br />
             <li>
-              <Link to='/' className={style.link}>Exclusives</Link>
+              <Link to='/exclusives' className={style.link}>Exclusives</Link>
             </li>
             <br />
             <li>

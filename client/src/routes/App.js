@@ -7,6 +7,7 @@ import { loadUser } from '../redux/auth/auth.actions';
 import Navbar from '../pages/navbar/Navbar';
 import NavbarMobile from '../components/navbar/navbar-mobile/NavbarMobile';
 import HomePage from '../pages/HomePage';
+import ExclusivesPage from '../pages/ExclusivesPage';
 import AccountPage from '../pages/AccountPage';
 import Footer from '../pages/footer/Footer';
 
@@ -29,6 +30,7 @@ const App = ({ loadUser }) => {
           <Navbar />
             <Switch>
               <Route exact path='/' component={HomePage} />
+              <Route exact path='/exclusives' component={ExclusivesPage} />
               <Route exact path='/account' component={AccountPage} />
             </Switch>
         </div>
