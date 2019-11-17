@@ -3,7 +3,7 @@ import React, { } from 'react';
 import style from './button.module.scss';
 
 // *************************** BUTTON COMPONENT *************************** //
-const Button = ({ account, accountInfo, invert, social, profileRed, profileGrey, navbar, newsletter, children, onClick, ...otherProps }) => {
+const Button = ({ account, accountInfo, invert, social, profileRed, profileGrey, navbar, newsletter, item, children, onClick, ...otherProps }) => {
   return (
     <button 
       className={`
@@ -15,6 +15,7 @@ const Button = ({ account, accountInfo, invert, social, profileRed, profileGrey,
         ${profileGrey ? style.profileGrey : ''}
         ${navbar ? style.navbar : ''}
         ${newsletter ? style.newsletter : ''}
+        ${item ? style.item : ''}
         ${style.button}
       `}
       onClick={onClick}

@@ -3,6 +3,7 @@ import React, { } from 'react';
 import PageSidebar from '../components/page-sidebar/PageSidebar';
 import PageHeader from '../components/page-header/PageHeader';
 import ExclusivesContainer from '../components/exclusives-page/exclusives-container/ExclusivesContainer';
+import ExclusivesItems from '../components/exclusives-page/exclusives-items/ExclusivesItems';
 
 import PageContainer from './page-container/PageContainer';
 
