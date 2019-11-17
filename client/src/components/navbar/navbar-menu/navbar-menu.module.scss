@@ -2,7 +2,7 @@
 
 // NAVBAR MENU
 .navbarMenu {
-  position: absolute;
+  position: fixed;
   bottom: 5rem;
   left: 0;
   width: 100%;
@@ -22,7 +22,6 @@
     height: 40%;
     background: $white;
     text-align: center;
-    // padding-top: 3rem;
     padding: 3rem;
     font-size: 1.2rem;
 

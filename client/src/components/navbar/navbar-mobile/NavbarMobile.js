@@ -18,33 +18,39 @@ const NavbarMobile = () => {
   return (
     <nav className={style.navbarMobile}>
 
-      {
-        toggleMenu 
-          ? <div className={style.iconContainer}>
-              <NavbarMenu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
-              <IoMdClose onClick={onClick} className={style.icon} /> 
-            </div>
-          : <div className={style.iconContainer}>
-              <IoIosMenu onClick={onClick} className={style.icon} />
-            </div>
-      }
-      
-      <div className={style.iconContainer}>
-        <Link to='/'>
-          <IoMdHome className={style.icon} />
-        </Link>
-      </div>
+      {/* MOBILE MENU */}
+      <div className={style.content}>
+        {
+          toggleMenu 
+            ? <div className={style.iconContainer}>
+                <NavbarMenu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
+                <IoMdClose onClick={onClick} className={style.icon} /> 
+              </div>
+            : <div className={style.iconContainer}>
+                <IoIosMenu onClick={onClick} className={style.icon} />
+              </div>
+        }
+        
+        {/* HOME */}
+        <div className={style.iconContainer}>
+          <Link to='/'>
+            <IoMdHome className={style.icon} />
+          </Link>
+        </div>
 
-      <div className={style.iconContainer}>
-        <Link to='/account'>
-          <IoMdPerson className={style.icon} />
-        </Link>
-      </div>
+        {/* ACCOUNT / LOGIN */}
+        <div className={style.iconContainer}>
+          <Link to='/account'>
+            <IoMdPerson className={style.icon} />
+          </Link>
+        </div>
 
-      <div className={style.iconContainer}>
-        <Link to='/'>
-          <AiFillShopping className={style.icon} />
-        </Link>
+        {/* CART */}
+        <div className={style.iconContainer}>
+          <Link to='/'>
+            <AiFillShopping className={style.icon} />
+          </Link>
+        </div>
       </div>
 
     </nav>

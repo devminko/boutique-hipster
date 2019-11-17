@@ -23,6 +23,7 @@ const NavbarMenu = ({ toggleMenu, setToggleMenu, isAuthenticated, logoutUser }) 
       
       <div onClick={onClick} className={style.menuFiller} />
 
+      {/* SITE LINKS */}
       <div className={style.menu}>
         <div className={style.siteLinks}>
           <ul className={style.links}>
@@ -52,6 +53,7 @@ const NavbarMenu = ({ toggleMenu, setToggleMenu, isAuthenticated, logoutUser }) 
           </ul>
         </div>
 
+        {/* FOOTER LINKS */}
         <div className={style.footerLinks}>
           <ul className={style.links}>
             <li>

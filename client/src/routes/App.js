@@ -33,8 +33,8 @@ const App = ({ loadUser }) => {
             </Switch>
         </div>
 
-        <Footer />
         <NavbarMobile />
+        <Footer />
 
       </BrowserRouter>
     </div>
