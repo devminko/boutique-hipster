@@ -46,8 +46,8 @@ const NavbarMenu = ({ toggleMenu, setToggleMenu, isAuthenticated, logoutUser }) 
             <li>
               {
                 isAuthenticated 
-                  ? <p onClick={onLogout} className={style.link}>Log Out</p> 
-                  : <Link to='/account' className={style.link}>Log In</Link>
+                  ? <span onClick={onLogout} className={style.userLink}>Log Out</span>
+                  : <Link to='/account' className={style.userLink}>Log In</Link>
               }
             </li>
           </ul>
