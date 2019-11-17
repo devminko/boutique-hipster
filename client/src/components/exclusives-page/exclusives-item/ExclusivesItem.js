@@ -15,12 +15,12 @@ const ExclusivesItem = ({ exclusive }) => {
       {/* ITEM CONTAINER */}
       <div className={style.itemContainer}>
         <div className={style.imageContainer}>
-          <img src={item_image} alt={`${item_name}_${item_color}`} className={style.itemImage} />
+          <img src={item_image[0]} alt={`${item_name}_${item_color}`} className={style.itemImage} />
         </div>
         <div className={style.buttonContainer}>
           <Button item>Add to Cart - ${item_price}.00</Button>
         </div>
-      </div>  
+      </div>
 
       {/* PRICE CONTAINER */}
       <div className={style.priceContainer}>
