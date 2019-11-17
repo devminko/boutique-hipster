@@ -1,7 +1,7 @@
-@import '../../../styles/global.styles';
+@import '../../styles/global.styles';
 
-// EXCLUSIVES HEADER
-.exclusivesHeader {
+// PAGE HEADER
+.pageHeader {
   text-align: center;
   font-family: $secondary-font;
   font-size: 2.4rem;
@@ -9,21 +9,28 @@
   color: $white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: $primary-color;
+
+  .title {
+    text-transform: uppercase;
+  }
 }
 
 // ********************************** MEDIA QUERIES ********************************** //
 @media screen and (min-width: 500px) {
-  .exclusivesHeader {
+  .pageHeader {
     font-size: 2.8rem;
+    padding-top: 1rem;
   }
 }
 
 @media screen and (min-width: 800px) {
-  .exclusivesHeader {
+  .pageHeader {
     font-size: 3.2rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
-
+  .pageHeader {
+    font-size: 4.4rem;
+  }
 }

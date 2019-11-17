@@ -1,7 +1,7 @@
 import React, { } from 'react';
 
-import ExclusivesSidebar from '../components/exclusives-page/exclusives-sidebar/ExclusivesSidebar';
-import ExclusivesHeader from '../components/exclusives-page/exclusives-header/ExclusivesHeader';
+import PageSidebar from '../components/page-sidebar/PageSidebar';
+import PageHeader from '../components/page-header/PageHeader';
 
 import PageContainer from './page-container/PageContainer';
 
@@ -10,7 +10,9 @@ const ExclusivesPage = () => {
   return (
     <PageContainer>
 
-      <ExclusivesHeader />
+      {/* <PageSidebar>SIDEBAR</PageSidebar> */}
+      <PageSidebar linkOne='Exclusives' linkTwo='Men' linkThree='Women' />
+      <PageHeader>Exclusives</PageHeader>
       
     </PageContainer>
   )
