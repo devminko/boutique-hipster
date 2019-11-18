@@ -134,6 +134,18 @@
       color: $white;
     }
   }
+
+  // PRODUCT (PRODUCT PAGE BUTTON)
+  &.product {
+    background: $primary-color-light;
+    color: $white;
+
+    &:hover {
+      background: $white;
+      color: $primary-color-light;
+      border: 1px solid $primary-color-light;
+    }
+  }
 }
 
 // ********************************** MEDIA QUERIES ********************************** //

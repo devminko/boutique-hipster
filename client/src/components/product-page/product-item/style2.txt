@@ -4,7 +4,6 @@
 .productItem {
   display: flex;
   flex-direction: column;
-  margin-bottom: 7rem;
 
   // IMAGE CONTAINER
   .imageContainer {
@@ -33,13 +32,12 @@
   // DESCRIPTION CONTAINER
   .descriptionContainer {
     width: 100%;
-    padding: 0 1rem;
 
     .productMain {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-evenly;
   
       .productName {
         color: $white;
@@ -60,19 +58,13 @@
     
     // SECONDARY
     .productSecondary {
-      margin-bottom: 1rem;
   
       .productColor {
-        font-family: $primary-font;
-        font-size: 1.3rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
+  
       }
   
       .productDescription {
-        font-size: 1.4rem;
-        font-style: italic;
+  
       }
     }
   
@@ -82,7 +74,6 @@
       flex-direction: row;
       align-items: center;
       height: 5rem;
-      margin-bottom: 1rem;
   
     .productQuantity {
       display: flex;
@@ -110,18 +101,7 @@
     .productTertiary {
   
       .productInfo {
-        font-weight: bold;
-        font-size: 1.4rem;
-        text-transform: uppercase;
-        margin-bottom: 0.5rem;
-      }
-
-      .fabric {
-        font-size: 1.2rem;
-      }
-
-      .fit {
-        font-size: 1.2rem;
+  
       }
     }
   }
@@ -131,15 +111,15 @@
 @media screen and (min-width: 500px) {
   .productItem {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
     // IMAGE CONTAINER
     .imageContainer {
-      width: 100%;
+      width: 60%;
       text-align: center;
   
       .galleryContainer {
-        height: 80rem;
+        height: 50rem;
       }
   
       .imageIndex {
@@ -158,12 +138,11 @@
 
     // DESCRIPTION CONTAINER
     .descriptionContainer {
-      width: 100%;
+      width: 40%;
 
       // MAIN
       .productMain {
         display: flex;
-        // flex-direction: column;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
@@ -217,22 +196,18 @@
       }
     }
   }
-
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
   .productItem {
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: row;
 
     // IMAGE CONTAINER
     .imageContainer {
-      width: 60%;
+      width: 50%;
       text-align: center;
   
       .galleryContainer {
-        height: 70rem;
+        height: 50rem;
       }
   
       .imageIndex {
@@ -251,41 +226,6 @@
 
     // DESCRIPTION CONTAINER
     .descriptionContainer {
-      width: 40%;
-      padding: 0 1rem;
-
-      // MAIN
-      .productMain {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 1rem;
-    
-        .productName {
-          font-size: 4.4rem;
-        }
-    
-        .productPrice {
-          font-family: $primary-font;
-          font-size: 2rem;
-          font-weight: lighter;
-        }
-      }
-
-      // SECONDARY
-      .productSecondary {
-        margin-bottom: 1rem;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid $grey;
-    
-        .productColor {
-          font-size: 1.4rem;
-        }
-    
-        .productDescription {
-          font-size: 1.5rem;
-        }
-      }
 
       // BUTTON
       .productButtons {
@@ -305,111 +245,37 @@
           }
         }
       }
-
-      // TERTIARY
-      .productTertiary {
-    
-        .productInfo {
-          font-size: 1.4rem;
-          text-transform: uppercase;
-          margin-bottom: 0.5rem;
-        }
-
-        .fabric {
-          font-size: 1.2rem;
-        }
-
-        .fit {
-          font-size: 1.2rem;
-        }
-      }
     }
   }
-
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
   .productItem {
-
     // IMAGE CONTAINER
     .imageContainer {
-      width: 50%;
-      text-align: center;
-      
-      .galleryContainer {
-        height: 100rem;
-      }
 
-      .imageIndex {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        margin: 1rem 0;
-
-        .icon {
-          font-size: 1.2rem;
-          margin-left: 1rem;
-          margin-right: 1rem;
-        }
-      }
     }
 
     // DESCRIPTION CONTAINER
     .descriptionContainer {
-      width: 50%;
-      padding: 0 1rem;
-  
-      // MAIN
-      .productMain {
-    
-        .productName {
-          font-size: 6rem;
-        }
-    
-        .productPrice {
-          font-size: 2.4rem;
-        }
-      }
-
-      // SECONDARY
-      .productSecondary {
-    
-        .productColor {
-          font-size: 1.5rem;
-        }
-    
-        .productDescription {
-          font-size: 1.6rem;
-        }
-      }
-
       // BUTTON
       .productButtons {
-        width: 50%;
         height: 5rem;
 
         .productQuantity {
-          width: 40%;
-        }
-      }
+          width: 20%;
 
-      // TERTIARY
-      .productTertiary {
-    
-        .productInfo {
-          font-size: 1.5rem;
-        }
+          .quantityIcon {
+            color: $black;
+            font-size: 2rem;
+            cursor: pointer;
 
-        .fabric {
-          font-size: 1.2rem;
-        }
-
-        .fit {
-          font-size: 1.2rem;
+            &:active {
+              color: $primary-color;
+            }
+          }
         }
       }
     }
   }
-
 }
