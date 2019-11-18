@@ -66,6 +66,8 @@
       font-size: 1.1rem;
       display: none;
 
+      cursor: pointer;
+
       &:hover {
         border-bottom: 2px solid $black;
         transition: border-bottom 50ms ease-in-out;

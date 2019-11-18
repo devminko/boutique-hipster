@@ -18,6 +18,7 @@ const INITIAL_STATE = {
         '../../assets/images/BALACLAVA_SAND_3.jpg',
       ],
       'item_url': '/product/balaclava/1',
+      'item_quantity': 20,
       'onSale': false,
     },
     {
@@ -37,6 +38,7 @@ const INITIAL_STATE = {
         '../../assets/images/BALACLAVA_CRIMSON_3.jpg',
       ],
       'item_url': '/product/balaclava/2',
+      'item_quantity': 20,
       'onSale': false,
     },
     {
@@ -56,6 +58,7 @@ const INITIAL_STATE = {
         '../../assets/images/BALACLAVA_SMOKE_3.jpg',
       ],
       'item_url': '/product/balaclava/3',
+      'item_quantity': 20,
       'onSale': false,
     },
     {
@@ -75,6 +78,7 @@ const INITIAL_STATE = {
         '../../assets/images/BALACLAVA_ONYX_3.jpg',
       ],
       'item_url': '/product/balaclava/4',
+      'item_quantity': 20,
       'onSale': false,
     },
     {
@@ -93,6 +97,7 @@ const INITIAL_STATE = {
         '../../assets/images/BALACLAVA_CROCO_2.jpg',
       ],
       'item_url': '/product/balaclava/5',
+      'item_quantity': 20,
       'onSale': false,
     },
     {
@@ -111,6 +116,7 @@ const INITIAL_STATE = {
         '../../assets/images/FILTED_SCARF_MIDNIGHT_CRIMSON_2.jpg',
       ],
       'item_url': '/product/felted_scarf/6',
+      'item_quantity': 20,
       'onSale': false,
     },
   ],

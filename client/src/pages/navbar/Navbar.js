@@ -2,6 +2,7 @@ import React, { } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import { toggleCart } from '../../redux/cart/cart.actions';
 import { logoutUser } from '../../redux/auth/auth.actions';
 
 import Button from '../../components-ui/button/Button';
@@ -9,7 +10,7 @@ import Button from '../../components-ui/button/Button';
 import style from './navbar.module.scss';
 
 // *************************** NAVBAR COMPONENT *************************** //
-const Navbar = ({ isAuthenticated, logoutUser }) => {
+const Navbar = ({ isAuthenticated, toggleCart, logoutUser }) => {
   const onLogout = () => {
     logoutUser();
     window.location.reload();
@@ -45,7 +46,7 @@ const Navbar = ({ isAuthenticated, logoutUser }) => {
         <Link to='/account' className={style.link}>Account</Link>
       </li>
       <li>
-        <Link to='/' className={style.link}>Cart (0)</Link>
+        <span onClick={toggleCart} className={style.link}>Cart (0)</span>
       </li>
     </ul>
   );
@@ -78,6 +79,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
+  toggleCart: () => dispatch(toggleCart()),
   logoutUser: () => dispatch(logoutUser()),
 });
 

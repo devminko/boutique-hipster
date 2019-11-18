@@ -7,7 +7,6 @@ import { loadUser } from '../redux/auth/auth.actions';
 import Navbar from '../pages/navbar/Navbar';
 import NavbarMobile from '../components/navbar/navbar-mobile/NavbarMobile';
 import HomePage from '../pages/HomePage';
-import CartPage from '../pages/cart-page/CartPage';
 import ExclusivesPage from '../pages/ExclusivesPage';
 import AccountPage from '../pages/AccountPage';
 import ProductPage from '../pages/ProductPage';
@@ -18,7 +17,7 @@ import Alert from '../components-ui/alert/Alert';
 import style from './app.module.scss';
 
 // *************************** APP ROUTES *************************** //
-const App = ({ toggleCart, loadUser }) => {
+const App = ({ loadUser }) => {
   useEffect(() => {
     loadUser();
   },[loadUser]);
@@ -30,9 +29,6 @@ const App = ({ toggleCart, loadUser }) => {
         <div className={style.content}>
           <Alert />
           <Navbar />
-          {
-            toggleCart && <CartPage />
-          }
             <Switch>
               <Route exact path='/' component={HomePage} />
               <Route exact path='/exclusives' component={ExclusivesPage} />
@@ -50,12 +46,8 @@ const App = ({ toggleCart, loadUser }) => {
 };
 
 // REDUX
-const mapStateToProps = (state) => ({
-  toggleCart: state.cart.toggleCart,
-});
-
 const mapDispatchToProps = (dispatch) => ({
   loadUser: () => dispatch(loadUser()),
-});
+})
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);
