@@ -1,13 +1,21 @@
 import React, { } from 'react';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { FaTimes } from "react-icons/fa";
 
 import { toggleCart } from '../../redux/cart/cart.actions';
 
+import Button from '../../components-ui/button/Button';
+
 import style from './cart-page.module.scss';
 
 // *************************** CART PAGE *************************** //
-const CartPage = ({ toggleCart }) => {
+const CartPage = ({ cartItems, toggleCart, history }) => {
+  const onCheckout = () => {
+    history.push('/');
+    toggleCart();
+  };
+
   return (
     <div className={style.cartPage}>
       
@@ -28,6 +36,7 @@ const CartPage = ({ toggleCart }) => {
             <h2 className={style.totalsTitle}>Total</h2>
             <p className={style.cartPrice}>$0.00</p>
           </div>
+          <Button onClick={onCheckout} checkout>Go to Checkout</Button>
         </div>
       </div>
 
@@ -36,8 +45,12 @@ const CartPage = ({ toggleCart }) => {
 };
 
 // REDUX
+const mapStateToProps = (state) => ({
+  cartItems: state.cart.cartItems,
+});
+
 const mapDispatchToProps = (dispatch) => ({
   toggleCart: () => dispatch(toggleCart()),
 });
 
-export default connect(null, mapDispatchToProps)(CartPage);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartPage));

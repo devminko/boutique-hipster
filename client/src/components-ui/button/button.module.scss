@@ -146,6 +146,19 @@
       border: 1px solid $primary-color-light;
     }
   }
+
+  // CHECKOUT
+  &.checkout {
+    background: $white;
+    color: $primary-color-light;
+    border: 1px solid $primary-color-light;
+
+    // &:hover {
+    //   background: $primary-color-light;
+    //   color: $white;
+    //   border: none;
+    // }
+  }
 }
 
 // ********************************** MEDIA QUERIES ********************************** //

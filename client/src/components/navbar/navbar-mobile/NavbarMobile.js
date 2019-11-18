@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { IoIosMenu, IoMdClose, IoMdHome, IoMdPerson } from "react-icons/io";
 import { AiFillShopping } from "react-icons/ai";
+
+import { toggleCart } from '../../../redux/cart/cart.actions';
 
 import NavbarMenu from '../navbar-menu/NavbarMenu';
 
 import style from './navbar-mobile.module.scss';
 
 // *************************** NAVBAR MOBILE COMPONENT *************************** //
-const NavbarMobile = () => {
+const NavbarMobile = ({ toggleCart }) => {
   const [ toggleMenu, setToggleMenu ] = useState(false);
 
   const onClick = () => {
     setToggleMenu(!toggleMenu);
+  };
+
+  const onToggleCart = () => {
+    toggleCart();
   };
 
   return (
@@ -47,9 +54,7 @@ const NavbarMobile = () => {
 
         {/* CART */}
         <div className={style.iconContainer}>
-          <Link to='/'>
-            <AiFillShopping className={style.icon} />
-          </Link>
+          <AiFillShopping onClick={onToggleCart} className={style.icon} />
         </div>
       </div>
 
@@ -57,4 +62,9 @@ const NavbarMobile = () => {
   )
 };
 
-export default NavbarMobile;
+// REDUX
+const mapDispatchToProps = (dispatch) => ({
+  toggleCart: () => dispatch(toggleCart()),
+});
+
+export default connect(null, mapDispatchToProps)(NavbarMobile);
