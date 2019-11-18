@@ -1,0 +1,40 @@
+@import '../../../styles/global.styles';
+
+// PRODUCT ITEM
+.productItem {
+
+  .imageContainer {
+    width: 50%;
+    text-align: center;
+
+    .galleryContainer {
+      height: 50rem;
+    }
+
+    .imageIndex {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .icon {
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+
+}
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}
