@@ -10,7 +10,7 @@ import Button from '../../components-ui/button/Button';
 import style from './navbar.module.scss';
 
 // *************************** NAVBAR COMPONENT *************************** //
-const Navbar = ({ isAuthenticated, toggleCart, logoutUser }) => {
+const Navbar = ({ isAuthenticated, cartItems, toggleCart, logoutUser }) => {
   const onLogout = () => {
     logoutUser();
     window.location.reload();
@@ -28,10 +28,10 @@ const Navbar = ({ isAuthenticated, toggleCart, logoutUser }) => {
   const links = (
     <ul className={style.links}>
       <li>
-        <Link to='/' className={style.link}>Men's</Link>
+        <Link to='/' className={style.link}>Men</Link>
       </li>
       <li>
-        <Link to='/' className={style.link}>Women's</Link>
+        <Link to='/' className={style.link}>Women</Link>
       </li>
       <li>
         <Link to='/exclusives' className={style.link}>Exclusives</Link>
@@ -40,13 +40,13 @@ const Navbar = ({ isAuthenticated, toggleCart, logoutUser }) => {
         logoContainer
       }
       <li>
-        <Link to='/' className={style.link}>Forum</Link>
+        <Link to='/' className={style.link}>Our Story</Link>
       </li>
       <li>
         <Link to='/account' className={style.link}>Account</Link>
       </li>
       <li>
-        <span onClick={toggleCart} className={style.link}>Cart (0)</span>
+        <span onClick={toggleCart} className={style.link}>Cart ({cartItems.length})</span>
       </li>
     </ul>
   );
@@ -76,6 +76,7 @@ const Navbar = ({ isAuthenticated, toggleCart, logoutUser }) => {
 // REDUX
 const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
+  cartItems: state.cart.cartItems,
 });
 
 const mapDispatchToProps = (dispatch) => ({

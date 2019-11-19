@@ -28,11 +28,11 @@ const NavbarMenu = ({ toggleMenu, setToggleMenu, isAuthenticated, logoutUser }) 
         <div className={style.siteLinks}>
           <ul className={style.links}>
             <li>
-              <Link to='/' className={style.link}>Men's</Link>
+              <Link to='/' className={style.link}>Men</Link>
             </li>
             <br />
             <li>
-              <Link to='/' className={style.link}>Women's</Link>
+              <Link to='/' className={style.link}>Women</Link>
             </li>
             <br />
             <li>
@@ -40,7 +40,7 @@ const NavbarMenu = ({ toggleMenu, setToggleMenu, isAuthenticated, logoutUser }) 
             </li>
             <br />
             <li>
-              <Link to='/' className={style.link}>Forum</Link>
+              <Link to='/' className={style.link}>Our Story</Link>
             </li>
             <br />
             <li>
