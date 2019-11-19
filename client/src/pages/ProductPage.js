@@ -11,7 +11,7 @@ const ProductPage = ({ exclusives, match }) => {
     <PageContainer>
       {
         exclusives.map(exclusive => (
-          exclusive.item_url === match.url
+          exclusive.product_url === match.url
             ? <ProductItem key={exclusive.id} exclusive={exclusive} />
             : ''
         ))
