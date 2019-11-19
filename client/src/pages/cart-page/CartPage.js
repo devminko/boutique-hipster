@@ -22,12 +22,14 @@ const CartPage = ({ cartItems, toggleCart, history }) => {
       
       <div onClick={() => toggleCart()} className={style.cartFiller} />
 
+      {/* CART HEADER */}
       <div className={style.cartContainer}>
         <div className={style.header}>
           <h1 className={style.title}>Cart</h1>
           <FaTimes onClick={() => toggleCart()} className={style.icon} />
         </div>
 
+        {/* CART ITEMS */}
         <div className={style.cartItems}>
           {
             cartItems.map(cartItem => (
@@ -37,7 +39,8 @@ const CartPage = ({ cartItems, toggleCart, history }) => {
             ))
           }
         </div>
-
+        
+        {/* CART FOOTER / TOTALS */}
         <div className={style.cartTotals}>
           <div className={style.totalsHeader}>
             <h2 className={style.totalsTitle}>Total</h2>

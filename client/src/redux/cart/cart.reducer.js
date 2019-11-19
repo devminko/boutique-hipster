@@ -62,6 +62,196 @@ const INITIAL_STATE = {
       'item_quantity': 40,
       'onSale': false,
     },
+    {
+      'id': 8,
+      'item_name': 'Travel Blanket',
+      'item_color': 'Midnight / Crimson',
+      'item_price': 250,
+      'item_description': 'Must have for those who travel a lot, amazingly warm and cosy blanket, which eventually becomes like a second skin. Limited edition. Only 40 pieces have been produced.',
+      'item_info': [
+        '100% lambswool',
+        '100 % bio degradable'
+      ],
+      'item_images': [
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON.png',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_1.jpg',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_2.jpg',
+      ],
+      'item_url': '/product/travel_blanket/8',
+      'item_quantity': 40,
+      'onSale': false,
+    },
+    {
+      'id': 8,
+      'item_name': 'Travel Blanket',
+      'item_color': 'Midnight / Crimson',
+      'item_price': 250,
+      'item_description': 'Must have for those who travel a lot, amazingly warm and cosy blanket, which eventually becomes like a second skin. Limited edition. Only 40 pieces have been produced.',
+      'item_info': [
+        '100% lambswool',
+        '100 % bio degradable'
+      ],
+      'item_images': [
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON.png',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_1.jpg',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_2.jpg',
+      ],
+      'item_url': '/product/travel_blanket/8',
+      'item_quantity': 40,
+      'onSale': false,
+    },
+    {
+      'id': 8,
+      'item_name': 'Travel Blanket',
+      'item_color': 'Midnight / Crimson',
+      'item_price': 250,
+      'item_description': 'Must have for those who travel a lot, amazingly warm and cosy blanket, which eventually becomes like a second skin. Limited edition. Only 40 pieces have been produced.',
+      'item_info': [
+        '100% lambswool',
+        '100 % bio degradable'
+      ],
+      'item_images': [
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON.png',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_1.jpg',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_2.jpg',
+      ],
+      'item_url': '/product/travel_blanket/8',
+      'item_quantity': 40,
+      'onSale': false,
+    },
+    {
+      'id': 8,
+      'item_name': 'Travel Blanket',
+      'item_color': 'Midnight / Crimson',
+      'item_price': 250,
+      'item_description': 'Must have for those who travel a lot, amazingly warm and cosy blanket, which eventually becomes like a second skin. Limited edition. Only 40 pieces have been produced.',
+      'item_info': [
+        '100% lambswool',
+        '100 % bio degradable'
+      ],
+      'item_images': [
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON.png',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_1.jpg',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_2.jpg',
+      ],
+      'item_url': '/product/travel_blanket/8',
+      'item_quantity': 40,
+      'onSale': false,
+    },
+    {
+      'id': 8,
+      'item_name': 'Travel Blanket',
+      'item_color': 'Midnight / Crimson',
+      'item_price': 250,
+      'item_description': 'Must have for those who travel a lot, amazingly warm and cosy blanket, which eventually becomes like a second skin. Limited edition. Only 40 pieces have been produced.',
+      'item_info': [
+        '100% lambswool',
+        '100 % bio degradable'
+      ],
+      'item_images': [
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON.png',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_1.jpg',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_2.jpg',
+      ],
+      'item_url': '/product/travel_blanket/8',
+      'item_quantity': 40,
+      'onSale': false,
+    },
+    {
+      'id': 8,
+      'item_name': 'Travel Blanket',
+      'item_color': 'Midnight / Crimson',
+      'item_price': 250,
+      'item_description': 'Must have for those who travel a lot, amazingly warm and cosy blanket, which eventually becomes like a second skin. Limited edition. Only 40 pieces have been produced.',
+      'item_info': [
+        '100% lambswool',
+        '100 % bio degradable'
+      ],
+      'item_images': [
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON.png',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_1.jpg',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_2.jpg',
+      ],
+      'item_url': '/product/travel_blanket/8',
+      'item_quantity': 40,
+      'onSale': false,
+    },
+    {
+      'id': 8,
+      'item_name': 'Travel Blanket',
+      'item_color': 'Midnight / Crimson',
+      'item_price': 250,
+      'item_description': 'Must have for those who travel a lot, amazingly warm and cosy blanket, which eventually becomes like a second skin. Limited edition. Only 40 pieces have been produced.',
+      'item_info': [
+        '100% lambswool',
+        '100 % bio degradable'
+      ],
+      'item_images': [
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON.png',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_1.jpg',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_2.jpg',
+      ],
+      'item_url': '/product/travel_blanket/8',
+      'item_quantity': 40,
+      'onSale': false,
+    },
+    {
+      'id': 8,
+      'item_name': 'Travel Blanket',
+      'item_color': 'Midnight / Crimson',
+      'item_price': 250,
+      'item_description': 'Must have for those who travel a lot, amazingly warm and cosy blanket, which eventually becomes like a second skin. Limited edition. Only 40 pieces have been produced.',
+      'item_info': [
+        '100% lambswool',
+        '100 % bio degradable'
+      ],
+      'item_images': [
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON.png',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_1.jpg',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_2.jpg',
+      ],
+      'item_url': '/product/travel_blanket/8',
+      'item_quantity': 40,
+      'onSale': false,
+    },
+    {
+      'id': 8,
+      'item_name': 'Travel Blanket',
+      'item_color': 'Midnight / Crimson',
+      'item_price': 250,
+      'item_description': 'Must have for those who travel a lot, amazingly warm and cosy blanket, which eventually becomes like a second skin. Limited edition. Only 40 pieces have been produced.',
+      'item_info': [
+        '100% lambswool',
+        '100 % bio degradable'
+      ],
+      'item_images': [
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON.png',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_1.jpg',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_2.jpg',
+      ],
+      'item_url': '/product/travel_blanket/8',
+      'item_quantity': 40,
+      'onSale': false,
+    },
+    {
+      'id': 8,
+      'item_name': 'Travel Blanket',
+      'item_color': 'Midnight / Crimson',
+      'item_price': 250,
+      'item_description': 'Must have for those who travel a lot, amazingly warm and cosy blanket, which eventually becomes like a second skin. Limited edition. Only 40 pieces have been produced.',
+      'item_info': [
+        '100% lambswool',
+        '100 % bio degradable'
+      ],
+      'item_images': [
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON.png',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_1.jpg',
+        '../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_2.jpg',
+      ],
+      'item_url': '/product/travel_blanket/8',
+      'item_quantity': 40,
+      'onSale': false,
+    },
   ],
 };
 

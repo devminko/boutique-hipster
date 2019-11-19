@@ -15,10 +15,12 @@ const CartItem = ({ cartItem }) => {
   return (
     <div className={style.cartItem}>
 
+      {/* IMAGE CONTAINER */}
       <div className={style.imageContainer}>
         <img src={item_images[0]} alt={`${item_name}_${item_color}_${id}`} className={style.itemImage} />
       </div>
 
+      {/* DESCRIPTION CONTAINER */}
       <div className={style.descriptionContainer}>
         <div className={style.descriptionHeader}>
           <h4 className={style.itemName}>{item_name}</h4>

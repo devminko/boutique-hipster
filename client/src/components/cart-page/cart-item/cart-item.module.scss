@@ -9,13 +9,14 @@
   width: 100%;
 
   // border-bottom: 1px solid $midgrey;
-  border-bottom: 1px solid $grey;
+  border-bottom: 1px solid $lightgrey;
 
   // ITEM CONTAINER
   .imageContainer {
     width: 30%;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     .itemImage {
       height: 10rem;
@@ -27,7 +28,7 @@
     width: 70%;
     padding-left: 1rem;
     padding-bottom: 0.5rem;
-    // border-bottom: 1px solid $grey;
+    margin-right: 1rem;
 
     .descriptionHeader {
       display: flex;
@@ -70,7 +71,6 @@
           cursor: pointer;
           
           &:active {
-            // color: $primary-color;
             color: $black;
           }
         }
