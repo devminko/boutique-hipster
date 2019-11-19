@@ -1,0 +1,106 @@
+@import '../../../styles/global.styles';
+
+// CART ITEM
+.cartItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.5rem 0;
+  width: 100%;
+
+  // border-bottom: 1px solid $midgrey;
+  border-bottom: 1px solid $grey;
+
+  // ITEM CONTAINER
+  .imageContainer {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+
+    .itemImage {
+      height: 10rem;
+    }
+  }
+
+  // DESCRIPTION CONTAINER
+  .descriptionContainer {
+    width: 70%;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    // border-bottom: 1px solid $grey;
+
+    .descriptionHeader {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+
+      .itemName {
+        text-transform: uppercase;
+        font-family: $primary-font;
+      }
+
+      .itemPrice {
+        font-size: 1.3rem;
+      }
+    }
+
+    .itemColor {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    // QUANTITY CONTAINER
+    .quantityContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      
+      .quantity {
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .quantityIcon {
+          color: $primary-color-light;
+          cursor: pointer;
+          
+          &:active {
+            // color: $primary-color;
+            color: $black;
+          }
+        }
+        
+        .quantityNumber {
+          margin: 0 1rem;
+        }
+      }
+
+      .delete {
+
+        .deleteIcon {
+          color: $primary-color-light;
+          font-size: 1.7rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+  
+}
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}

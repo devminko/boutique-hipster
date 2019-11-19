@@ -5,6 +5,7 @@ import { FaTimes } from "react-icons/fa";
 
 import { toggleCart } from '../../redux/cart/cart.actions';
 
+import CartItem from '../../components/cart-page/cart-item/CartItem';
 import Button from '../../components-ui/button/Button';
 
 import style from './cart-page.module.scss';
@@ -28,7 +29,13 @@ const CartPage = ({ cartItems, toggleCart, history }) => {
         </div>
 
         <div className={style.cartItems}>
-          CART ITEMS
+          {
+            cartItems.map(cartItem => (
+              <CartItem key={cartItem.id} cartItem={cartItem} >
+                CART ITEM {cartItem.id}
+              </CartItem>
+            ))
+          }
         </div>
 
         <div className={style.cartTotals}>
