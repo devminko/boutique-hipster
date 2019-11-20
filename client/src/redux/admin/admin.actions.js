@@ -56,7 +56,7 @@ export const createProduct = (formData) => async (dispatch) => {
 };
 
 // *************************** UPDATE PRODUCT *************************** //
-export const updateProduct = (product_id, data) => async (dispatch) => {
+export const updateProduct = (id, formData) => async (dispatch) => {
   try {
     const config = {
       headers: {
@@ -64,7 +64,9 @@ export const updateProduct = (product_id, data) => async (dispatch) => {
       },
     };
 
-    const res = await axios.patch(`${route}/api/products/edit/${product_id}`, data, config);
+    const body = JSON.stringify(formData);
+
+    const res = await axios.patch(`${route}/api/products/edit/${id}`, body, config);
     dispatch({
       type: EDIT_PRODUCT,
       payload: res.data,

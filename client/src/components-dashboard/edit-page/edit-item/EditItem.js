@@ -1,4 +1,4 @@
-import React, { } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import { updateProduct } from '../../../redux/admin/admin.actions';
@@ -13,13 +13,31 @@ const EditItem = ({ product, updateProduct }) => {
   // 'product' passed down as prop from EditPage.js
   const { id, product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, edit_url, product_quantity, on_sale, sale_discount } = product;
 
+  const [ formData, setFormData ] = useState({
+    'product_category': product_category,
+    'product_name': product_name,
+    'product_color': product_color,
+    'product_price': product_price,
+    'product_description': product_description,
+    'product_info': product_info,
+    'product_images': product_images,
+    'product_url': product_url,
+    'edit_url': edit_url,
+    'product_quantity': product_quantity,
+    'on_sale': on_sale,
+    'sale_discount': sale_discount,
+  });
+
   const onChange = (e) => {
-    console.log('Changed');
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log(id);
+    await updateProduct(id, formData);
   };
 
   return (
@@ -27,74 +45,89 @@ const EditItem = ({ product, updateProduct }) => {
 
       <form onSubmit={onSubmit} className={style.form}>
         <h2 className={style.title}>Product Category</h2>
-        <FormInput 
-          value={product_category}
+        <FormInput
+          name='product_category' 
+          value={formData.product_category}
           onChange={onChange}
         />
 
         <h2 className={style.title}>Product Name</h2>
-        <FormInput 
-          value={product_name}
+        <FormInput
+          name='product_name' 
+          value={formData.product_name}
           onChange={onChange}
         />
 
         <h2 className={style.title}>Product Color</h2>
-        <FormInput 
-          value={product_color}
+        <FormInput
+          name='product_color' 
+          value={formData.product_color}
           onChange={onChange}
         />
 
         <h2 className={style.title}>Product Price</h2>
         <FormInput 
-          value={product_price}
+          name='product_price'
+          value={formData.product_price}
           onChange={onChange}
         />
         
         <h2 className={style.title}>Product Description</h2>
-        <textarea 
-          value={product_description}
-          onChange={onChange}
-        />
-
-        <h2 className={style.title}>Product Info</h2>
-        <textarea 
-          value={product_info}
-          onChange={onChange}
-        />
-
-        <h2 className={style.title}>Product Images</h2>
         <textarea
-          value={product_images}
+          className={style.textArea} 
+          name='product_description'
+          value={formData.product_description}
+          onChange={onChange}
+        />
+
+        <h2 className={style.title}>Product Info (Fabric, Fit, etc | Separate by Comma)</h2>
+        <textarea
+          className={style.textArea} 
+          name='product_info' 
+          value={formData.product_info}
+          onChange={onChange}
+        />
+
+        <h2 className={style.title}>Product Images (Separate by Comma)</h2>
+        <textarea
+          className={style.textArea} 
+          name='product_images'
+          value={formData.product_images}
           onChange={onChange}
         />
 
         <h2 className={style.title}>Product URL</h2>
-        <FormInput 
-          value={product_url}
+        <FormInput
+          name='product_url' 
+          value={formData.product_url}
           onChange={onChange}
         />
 
         <h2 className={style.title}>Edit URL</h2>
         <FormInput 
-          value={edit_url}
+          name='edit_url'
+          value={formData.edit_url}
           onChange={onChange}
         />
 
         <h2 className={style.title}>Product Quantity</h2>
         <FormInput 
-          value={product_quantity}
+          name='product_quantity'
+          value={formData.product_quantity}
           onChange={onChange}
         />
 
         <h2 className={style.title}>On Sale</h2>
         <FormInput 
-          value={on_sale}
+          name='on_sale'
+          value={formData.on_sale}
           onChange={onChange}
         />
 
-        <h2 className={style.title}>Sale Discounts</h2>
+        <h2 className={style.title}>Sale Discounts (Separate by Comma)</h2>
         <FormInput 
-          value={sale_discount}
+          name='sale_discount'
+          value={formData.sale_discount}
           onChange={onChange}
         />
         <Button>Edit Product</Button>
@@ -106,7 +139,7 @@ const EditItem = ({ product, updateProduct }) => {
 
 // REDUX
 const mapDispatchToProps = (dispatch) => ({
-  updateProduct: (id, data) => dispatch(updateProduct(id, data)),
-})
+  updateProduct: (id, formData) => dispatch(updateProduct(id, formData)),
+});
 
 export default connect(null, mapDispatchToProps)(EditItem);

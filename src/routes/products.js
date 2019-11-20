@@ -68,7 +68,7 @@ router.post('/create', [auth, productValidatorChecks()], async (req, res) => {
   @description          ||      PATCH / EDIT product
   @access               ||      Private (For Admin)
 *****************************************************************************/
-router.patch('/edit/:id', [auth, productValidatorChecks()], async (req, res) => {
+router.patch('/edit/:id', [auth], async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
