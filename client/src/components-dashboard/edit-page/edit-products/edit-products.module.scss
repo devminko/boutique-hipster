@@ -2,7 +2,37 @@
 
 // EDIT PRODUCTS
 .editProducts {
+  max-width: 100%;
 
+  // HEADER
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+
+    .title {
+      text-align: center;
+      font-size: 1rem;
+      // width: 7.5%;     // 7.5% if all 13 items are in the header
+      width: 12.5%;
+      overflow: hidden;
+      border-left: 1px solid $grey;
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+
+  // PRODUCTS CONTAINER
+  .productsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 // ********************************** MEDIA QUERIES ********************************** //

@@ -1,0 +1,28 @@
+@import '../../../styles/global.styles';
+
+// CREATE PRODUCT
+.createProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // PRODUCT FORM
+  .productForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+  
+}
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}

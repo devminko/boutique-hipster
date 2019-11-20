@@ -152,12 +152,18 @@
     background: $white;
     color: $primary-color-light;
     border: 1px solid $primary-color-light;
+  }
 
-    // &:hover {
-    //   background: $primary-color-light;
-    //   color: $white;
-    //   border: none;
-    // }
+  // EDIT PRODUCT (ADMIN DASHBOARD PAGE
+  &.editProduct {
+    background: $primary-color-light;
+    color: $white;
+    width: 12.5%;       // 12.5% if 8 items in header
+    font-size: 1rem;
+
+    &:hover {
+      background: lighten($primary-color-light, 5%);
+    }
   }
 }
 

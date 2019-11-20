@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import PageContainer from '../../../pages/page-container/PageContainer';
 import ProductItem from '../product-item/ProductItem';
 
-// *************************** PRODUCT PAGE *************************** //
+// *************************** PRODUCT CONTAINER *************************** //
 const ProductContainer = ({ products, match }) => {
   return (
     <PageContainer>

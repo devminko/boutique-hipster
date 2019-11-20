@@ -8,6 +8,7 @@
 	"product_info": ["30% cashmere/ 70% merino wool", "Perfect fitted, can be worn as a normal beanie as well, when worn as balaclava provides extreme comfort."],
 	"product_images": ["../../assets/images/BALACLAVA_SAND.png", "../../assets/images/BALACLAVA_SAND_1.jpg", "../../assets/images/BALACLAVA_SAND_2.jpg", "../../assets/images/BALACLAVA_SAND_3.jpg"],
 	"product_url": "/product/balaclava/1",
+	"edit_url": "/admin/dashboard/products/edit-product/1",
 	"product_quantity": 40,
 	"on_sale": false,
 	"sale_discount": [0.10, 0.20, 0.30, 0.40]
@@ -23,6 +24,7 @@
 	"product_info": ["30% cashmere/ 70% merino wool", "Perfect fitted, can be worn as a normal beanie as well, when worn as balaclava provides extreme comfort."],
 	"product_images": ["../../assets/images/BALACLAVA_CRIMSON.png", "../../assets/images/BALACLAVA_CRIMSON_1.jpg", "../../assets/images/BALACLAVA_CRIMSON_2.jpg", "../../assets/images/BALACLAVA_CRIMSON_3.jpg"],
 	"product_url": "/product/balaclava/2",
+	"edit_url": "/admin/dashboard/products/edit-product/2",
 	"product_quantity": 40,
 	"on_sale": false,
 	"sale_discount": [0.10, 0.20, 0.30, 0.40]
@@ -38,6 +40,7 @@
 	"product_info": ["30% cashmere/ 70% merino wool", "Perfect fitted, can be worn as a normal beanie as well, when worn as balaclava provides extreme comfort."],
 	"product_images": ["../../assets/images/BALACLAVA_SMOKE.png", "../../assets/images/BALACLAVA_SMOKE_1.jpg", "../../assets/images/BALACLAVA_SMOKE_2.jpg", "../../assets/images/BALACLAVA_SMOKE_3.jpg"],
 	"product_url": "/product/balaclava/3",
+	"edit_url": "/admin/dashboard/products/edit-product/3",
 	"product_quantity": 40,
 	"on_sale": false,
 	"sale_discount": [0.10, 0.20, 0.30, 0.40]
@@ -53,6 +56,7 @@
 	"product_info": ["30% cashmere/ 70% merino wool", "Perfect fitted, can be worn as a normal beanie as well, when worn as balaclava provides extreme comfort."],
 	"product_images": ["../../assets/images/BALACLAVA_ONYX.png", "../../assets/images/BALACLAVA_ONYX_1.jpg", "../../assets/images/BALACLAVA_ONYX_2.jpg", "../../assets/images/BALACLAVA_ONYX_3.jpg"],
 	"product_url": "/product/balaclava/4",
+	"edit_url": "/admin/dashboard/products/edit-product/4",
 	"product_quantity": 40,
 	"on_sale": false,
 	"sale_discount": [0.10, 0.20, 0.30, 0.40]
@@ -68,6 +72,7 @@
 	"product_info": ["30% cashmere/ 70% merino wool", "Perfect fitted, can be worn as a normal beanie as well, when worn as balaclava provides extreme comfort."],
 	"product_images": ["../../assets/images/BALACLAVA_CROCO.png", "../../assets/images/BALACLAVA_CROCO_1.jpg", "../../assets/images/BALACLAVA_CROCO_2.jpg"],
 	"product_url": "/product/balaclava/5",
+	"edit_url": "/admin/dashboard/products/edit-product/5",
 	"product_quantity": 40,
 	"on_sale": false,
 	"sale_discount": [0.10, 0.20, 0.30, 0.40]
@@ -83,6 +88,7 @@
 	"product_info": ["100% lambswool", "100 % bio degradable"],
 	"product_images": ["../../assets/images/FILTED_SCARF_MIDNIGHT_CRIMSON.png", "../../assets/images/FILTED_SCARF_MIDNIGHT_CRIMSON_1.jpg", "../../assets/images/FILTED_SCARF_MIDNIGHT_CRIMSON_2.jpg"],
 	"product_url": "/product/felted_scarf/6",
+	"edit_url": "/admin/dashboard/products/edit-product/6",
 	"product_quantity": 40,
 	"on_sale": false,
 	"sale_discount": [0.10, 0.20, 0.30, 0.40]
@@ -98,6 +104,7 @@
 	"product_info": ["100% lambswool", "100 % bio degradable"],
 	"product_images": ["../../assets/images/FELTED_SCARF_ROYAL_SMOKE.png", "../../assets/images/FELTED_SCARF_ROYAL_SMOKE_1.jpg"],
 	"product_url": "/product/felted_scarf/7",
+	"edit_url": "/admin/dashboard/products/edit-product/7",
 	"product_quantity": 40,
 	"on_sale": false,
 	"sale_discount": [0.10, 0.20, 0.30, 0.40]
@@ -113,6 +120,7 @@
 	"product_info": ["100% lambswool", "100 % bio degradable"],
 	"product_images": ["../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON.png", "../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_1.jpg", "../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON_2.jpg"],
 	"product_url": "/product/travel_blanket/8",
+	"edit_url": "/admin/dashboard/products/edit-product/8",
 	"product_quantity": 40,
 	"on_sale": false,
 	"sale_discount": [0.10, 0.20, 0.30, 0.40]

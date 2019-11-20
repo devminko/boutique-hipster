@@ -36,7 +36,7 @@ router.post('/create', [auth, productValidatorChecks()], async (req, res) => {
   };
 
   let {
-    product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, product_quantity, on_sale, sale_discount
+    product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, edit_url, product_quantity, on_sale, sale_discount
   } = req.body;
 
   try {
@@ -50,6 +50,7 @@ router.post('/create', [auth, productValidatorChecks()], async (req, res) => {
       product_info,
       product_images,
       product_url,
+      edit_url,
       product_quantity,
       on_sale,
       sale_discount,
@@ -73,7 +74,7 @@ router.patch('/edit/:id', [auth, productValidatorChecks()], async (req, res) => 
     return res.status(400).json({ errors: errors.array() });
   };
 
-  let { product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, product_quantity, on_sale, sale_discount } = req.body;
+  let { product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, edit_url, product_quantity, on_sale, sale_discount } = req.body;
 
   try {
     // Query DB for req product (id pulled from params :id) 
@@ -92,12 +93,13 @@ router.patch('/edit/:id', [auth, productValidatorChecks()], async (req, res) => 
       product_info,
       product_images,
       product_url,
+      edit_url,
       product_quantity,
       on_sale,
       sale_discount,
     });
 
-    res.status(200).json({ product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, product_quantity, on_sale, sale_discount });
+    res.status(200).json({ product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, edit_url, product_quantity, on_sale, sale_discount });
   } catch (err) {
     res.status(500).send('Server Error');
   };

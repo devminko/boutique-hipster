@@ -1,0 +1,26 @@
+import React, { } from 'react';
+
+import style from './edit-product.module.scss';
+
+// *************************** EDIT PRODUCT (INDIVIDUAL ITEM) COMPONENT *************************** //
+const EditProduct = ({ product }) => {
+  return (
+    <div className={style.product}>
+      <p className={style.productField}>{product.id}</p>    
+      <p className={style.productField}>{product.product_category}</p>    
+      <p className={style.productField}>{product.product_name}</p>    
+      <p className={style.productField}>{product.product_color}</p>    
+      <p className={style.productField}>{product.product_price}</p>    
+      <p className={style.productField}>{product.product_description}</p>    
+      <p className={style.productField}>{product.product_info}</p>    
+      <p className={style.productField}>{product.product_images}</p>    
+      <p className={style.productField}>{product.product_url}</p>    
+      <p className={style.productField}>{product.product_quantity}</p>    
+      <p className={style.productField}>{product.on_sale ? 'true' : 'false'}</p>    
+      <p className={style.productField}>{product.sale_discount}</p>    
+      <Button editProduct>Edit Product</Button>
+    </div>
+  )
+};
+
+export default EditProduct;

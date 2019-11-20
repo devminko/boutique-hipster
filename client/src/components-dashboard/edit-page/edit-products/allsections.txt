@@ -23,8 +23,13 @@ const EditProducts = ({ products, getProducts }) => {
         <h2 className={style.title}>Name</h2>
         <h2 className={style.title}>Color</h2>
         <h2 className={style.title}>Price</h2>
+        <h2 className={style.title}>Description</h2>
+        <h2 className={style.title}>Info</h2>
+        <h2 className={style.title}>Images</h2>
+        <h2 className={style.title}>URL</h2>
         <h2 className={style.title}>Quantity</h2>
         <h2 className={style.title}>On Sale</h2>
+        <h2 className={style.title}>Sale Discount</h2>
         <h2 className={style.title}>Edit</h2>
       </div>
 

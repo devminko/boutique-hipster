@@ -34,6 +34,10 @@ const Product = database.define('product', {
     type: Sequelize.STRING,
     allowNull: false,
   },
+  edit_url: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
   product_quantity: {
     type: Sequelize.INTEGER,
     allowNull: false,

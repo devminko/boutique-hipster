@@ -15,8 +15,9 @@ import NotFoundPage from '../pages/NotFoundPage';
 import Footer from '../pages/footer/Footer';
 
 import DashboardPage from '../pages/DashboardPage';
-import DashboardProducts from '../components-dashboard/dashboard-products/DashboardProducts';
+import CreateProduct from '../components-dashboard/create-page/create-product/CreateProduct';
 import EditProducts from '../components-dashboard/edit-page/edit-products/EditProducts';
+import EditPage from '../components-dashboard/edit-page/edit-page/EditPage';
 
 import Alert from '../components-ui/alert/Alert';
 
@@ -44,8 +45,9 @@ const App = ({ toggleCart, loadUser }) => {
               <Route exact path='/account' component={AccountPage} />
               <Route exact path='/product/:product_name/:product_id' component={ProductPage} />
               <Route exact path='/admin/dashboard' component={DashboardPage} />
-              <Route exact path='/admin/dashboard/add-product' component={DashboardProducts} />
-              <Route exact path='/admin/dashboard/edit-product/:product_id' component={EditProducts} />
+              <Route exact path='/admin/dashboard/create-product' component={CreateProduct} />
+              <Route exact path='/admin/dashboard/products' component={EditProducts} />
+              <Route exact path='/admin/dashboard/products/edit-product/:product_id' component={EditPage} />
               <Route component={NotFoundPage} />
             </Switch>
         </div>
