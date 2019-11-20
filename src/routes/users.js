@@ -36,7 +36,7 @@ router.get('/current', auth, async (req, res) => {
     // query db for req user
     let user = await User.findOne({
       where: { id: req.user.id },
-      attributes: ['id', 'name', 'email', 'shipping_street', 'shipping_street2', 'shipping_city', 'shipping_state', 'shipping_zip', 'shipping_country', 'billing_street', 'billing_street2', 'billing_city', 'billing_state', 'billing_zip', 'billing_country']
+      attributes: ['id', 'name', 'email', 'shipping_street', 'shipping_street2', 'shipping_city', 'shipping_state', 'shipping_zip', 'shipping_country', 'billing_street', 'billing_street2', 'billing_city', 'billing_state', 'billing_zip', 'billing_country', 'cart']
     });
     res.json(user);
   } catch (err) {
