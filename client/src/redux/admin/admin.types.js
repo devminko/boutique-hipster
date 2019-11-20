@@ -1,6 +1,7 @@
 // PRODUCTS
 export const GET_PRODUCTS = 'GET_PRODUCTS';
 export const CREATE_PRODUCT = 'CREATE_PRODUCT';
+export const EDIT_PRODUCT = 'EDIT_PRODUCT';
 export const PRODUCT_ERROR = 'PRODUCT_ERROR';
 
 // NEWSLETTER
