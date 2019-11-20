@@ -1,28 +1,17 @@
 import React, { } from 'react';
-import { withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
 
 import PageContainer from './page-container/PageContainer';
-import ProductItem from '../components/product-page/product-item/ProductItem';
+import ProductContainer from '../components/product-page/product-container/ProductContainer';
 
 // *************************** PRODUCT PAGE *************************** //
-const ProductPage = ({ exclusives, match }) => {
+const ProductPage = () => {
   return (
     <PageContainer>
-      {
-        exclusives.map(exclusive => (
-          exclusive.product_url === match.url
-            ? <ProductItem key={exclusive.id} exclusive={exclusive} />
-            : ''
-        ))
-      }
+
+      <ProductContainer />
+
     </PageContainer>
   )
 };
 
-// REDUX
-const mapStateToProps = (state) => ({
-  exclusives: state.admin.exclusives,
-})
-
-export default withRouter(connect(mapStateToProps)(ProductPage));
+export default ProductPage;

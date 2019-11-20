@@ -1,17 +1,24 @@
-import React, { } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+
+import { getProducts } from '../../../redux/admin/admin.actions';
 
 import ExclusivesItem from '../exclusives-item/ExclusivesItem';
 
 import style from './exclusives-items.module.scss';
 
 // *************************** EXCLUSIVES ITEMS COMPONENT *************************** //
-const ExclusivesItems = ({ exclusives }) => {
+const ExclusivesItems = ({ products, getProducts }) => {
+  useEffect(() => {
+    getProducts();
+  },[getProducts]);
+
   return (
     <div className={style.exclusivesItems}>
       {
-        exclusives.map(exclusive => (
-          <ExclusivesItem key={exclusive.id} exclusive={exclusive} />
+        products.map(product => (
+          product.product_category === 'exclusives'
+            && <ExclusivesItem key={product.id} exclusive={product} />
         ))
       }
     </div>
@@ -21,6 +28,11 @@ const ExclusivesItems = ({ exclusives }) => {
 // REDUX
 const mapStateToProps = (state) => ({
   exclusives: state.admin.exclusives,
+  products: state.admin.products,
 });
 
-export default connect(mapStateToProps)(ExclusivesItems);
+const mapDispatchToProps = (dispatch) => ({
+  getProducts: () => dispatch(getProducts()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ExclusivesItems);

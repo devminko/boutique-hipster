@@ -51,6 +51,9 @@ const User = database.define('user', {
   billing_country: {
     type: Sequelize.STRING,
   },
+  cart: {
+    type: Sequelize.ARRAY(Sequelize.JSON),
+  },
 });
 
 module.exports = User;

@@ -8,9 +8,9 @@ import Button from '../../../components-ui/button/Button';
 import style from './product-item.module.scss';
 
 // *************************** PRODUCT ITEM COMPONENT *************************** //
-const ProductItem = ({ exclusive }) => {
-  // 'exclusive' passed as prop from ProductPage to render specific product details
-  const { id, product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, on_sale, sale_discount } = exclusive;
+const ProductItem = ({ product }) => {
+  // 'product' passed as prop from ProductPage to render specific product details
+  const { id, product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, on_sale, sale_discount } = product;
 
   const [ index, setIndex ] = useState(0);
 

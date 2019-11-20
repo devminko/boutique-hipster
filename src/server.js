@@ -9,6 +9,7 @@ app.use(cors());
 
 // Routes
 app.use('/api/users', require('./routes/users'));
+app.use('/api/products', require('./routes/products'));
 
 // Sync Defined Models to DB Tables
 database.sync({ force: false })   // set to true to drop table on server start
