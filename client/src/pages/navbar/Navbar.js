@@ -18,7 +18,7 @@ const Navbar = ({ isAuthenticated, cartItems, toggleCart, logoutUser }) => {
 
   const logoContainer = (
     <div className={style.logoContainer}>
-      <Link to='/' className={style.logoLink}>
+      <Link to='/admin/dashboard' className={style.logoLink}>     {/* CHANGE LINK TO / LATER THIS LEADS TO DASHBOARD*/}
         <h1 className={style.logoTitle}>Boutique Hipster</h1>
         <h2 className={style.logoSubtitle}>Johnsonville</h2>
       </Link>
@@ -28,10 +28,10 @@ const Navbar = ({ isAuthenticated, cartItems, toggleCart, logoutUser }) => {
   const links = (
     <ul className={style.links}>
       <li>
-        <Link to='/' className={style.link}>Men</Link>
+        <Link to='/' className={style.link}>Beanies</Link>
       </li>
       <li>
-        <Link to='/' className={style.link}>Women</Link>
+        <Link to='/' className={style.link}>Gloves</Link>
       </li>
       <li>
         <Link to='/exclusives' className={style.link}>Exclusives</Link>

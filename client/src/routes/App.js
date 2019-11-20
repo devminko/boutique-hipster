@@ -11,7 +11,12 @@ import CartPage from '../pages/cart-page/CartPage';
 import ExclusivesPage from '../pages/ExclusivesPage';
 import AccountPage from '../pages/AccountPage';
 import ProductPage from '../pages/ProductPage';
+import NotFoundPage from '../pages/NotFoundPage';
 import Footer from '../pages/footer/Footer';
+
+import DashboardPage from '../pages/DashboardPage';
+import DashboardProducts from '../components-dashboard/dashboard-products/DashboardProducts';
+import EditProducts from '../components-dashboard/edit-page/edit-products/EditProducts';
 
 import Alert from '../components-ui/alert/Alert';
 
@@ -38,6 +43,10 @@ const App = ({ toggleCart, loadUser }) => {
               <Route exact path='/exclusives' component={ExclusivesPage} />
               <Route exact path='/account' component={AccountPage} />
               <Route exact path='/product/:product_name/:product_id' component={ProductPage} />
+              <Route exact path='/admin/dashboard' component={DashboardPage} />
+              <Route exact path='/admin/dashboard/add-product' component={DashboardProducts} />
+              <Route exact path='/admin/dashboard/edit-product/:product_id' component={EditProducts} />
+              <Route component={NotFoundPage} />
             </Switch>
         </div>
 
