@@ -131,13 +131,13 @@ const EditItem = ({ product, updateProduct }) => {
           value={formData.sale_discount}
           onChange={onChange}
         />
-        <Button editProduct>Edit Product</Button>
+        <Button createProduct>Edit Product</Button>
       </form>
 
       <div className={style.linkContainer}>
         <Link to='/admin/dashboard/products' className={style.link}>Back to Products Page</Link>
       </div>
-      
+
     </div>
   )
 };

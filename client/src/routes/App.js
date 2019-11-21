@@ -8,6 +8,8 @@ import Navbar from '../pages/navbar/Navbar';
 import NavbarMobile from '../components/navbar/navbar-mobile/NavbarMobile';
 import HomePage from '../pages/HomePage';
 import CartPage from '../pages/cart-page/CartPage';
+import BeaniesPage from '../pages/BeaniesPage';
+import GlovesPage from '../pages/GlovesPage';
 import ExclusivesPage from '../pages/ExclusivesPage';
 import AccountPage from '../pages/AccountPage';
 import ProductPage from '../pages/ProductPage';
@@ -41,6 +43,8 @@ const App = ({ toggleCart, loadUser }) => {
           }
             <Switch>
               <Route exact path='/' component={HomePage} />
+              <Route exact path='/beanies' component={BeaniesPage} />
+              <Route exact path='/gloves' component={GlovesPage} />
               <Route exact path='/exclusives' component={ExclusivesPage} />
               <Route exact path='/account' component={AccountPage} />
               <Route exact path='/product/:product_name/:product_id' component={ProductPage} />

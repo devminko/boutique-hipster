@@ -21,7 +21,6 @@ const ExclusivesItems = ({ products }) => {
 
 // REDUX
 const mapStateToProps = (state) => ({
-  exclusives: state.admin.exclusives,
   products: state.admin.products,
 });
 

@@ -57,8 +57,8 @@ const CreateProduct = ({ createProduct }) => {
   return (
     <div className={style.createProduct}>
 
-      <form onSubmit={onSubmit} className={style.productForm}>
-        <h3 className={style.inputTitle}>Product Category</h3>
+      <form onSubmit={onSubmit} className={style.form}>
+        <h3 className={style.title}>Product Category</h3>
         <FormInput
           name='product_category' 
           placeholder='Product Category'
@@ -66,7 +66,7 @@ const CreateProduct = ({ createProduct }) => {
           onChange={onChange}
         />
 
-        <h3 className={style.inputTitle}>Product Name</h3>
+        <h3 className={style.title}>Product Name</h3>
         <FormInput
           name='product_name' 
           placeholder='Product Name'
@@ -74,7 +74,7 @@ const CreateProduct = ({ createProduct }) => {
           onChange={onChange}
         />
 
-        <h3 className={style.inputTitle}>Product Color</h3>
+        <h3 className={style.title}>Product Color</h3>
         <FormInput
           name='product_color' 
           placeholder='Product Color'
@@ -82,7 +82,7 @@ const CreateProduct = ({ createProduct }) => {
           onChange={onChange}
         />
 
-        <h3 className={style.inputTitle}>Product Price</h3>
+        <h3 className={style.title}>Product Price</h3>
         <FormInput
           name='product_price' 
           placeholder='Product Price'
@@ -90,7 +90,7 @@ const CreateProduct = ({ createProduct }) => {
           onChange={onChange}
         />
 
-        <h3 className={style.inputTitle}>Product Description (Separate by Comma)</h3>
+        <h3 className={style.title}>Product Description</h3>
         <textarea
           className={style.textArea} 
           name='product_description'
@@ -99,7 +99,7 @@ const CreateProduct = ({ createProduct }) => {
           onChange={onChange}
         />
 
-        <h3 className={style.inputTitle}>Product Info (Separate by Comma)</h3>
+        <h3 className={style.title}>Product Info (Fabric, Fit, etc | Separate by Comma)</h3>
         <textarea
           className={style.textArea} 
           name='product_info'
@@ -108,7 +108,7 @@ const CreateProduct = ({ createProduct }) => {
           onChange={onChange}
         />
 
-        <h3 className={style.inputTitle}>Product Images (Separate by Comma)</h3>
+        <h3 className={style.title}>Product Images (Separate by Comma)</h3>
         <textarea
           className={style.textArea} 
           name='product_images'
@@ -117,7 +117,7 @@ const CreateProduct = ({ createProduct }) => {
           onChange={onChange}
         />
 
-        <h3 className={style.inputTitle}>Product URL</h3>
+        <h3 className={style.title}>Product URL</h3>
         <FormInput
           name='product_url' 
           placeholder='Product URL'
@@ -125,7 +125,7 @@ const CreateProduct = ({ createProduct }) => {
           onChange={onChange}
         />
 
-        <h3 className={style.inputTitle}>Edit URL</h3>
+        <h3 className={style.title}>Edit URL</h3>
         <FormInput
           name='edit_url' 
           placeholder='Edit URL'
@@ -133,7 +133,7 @@ const CreateProduct = ({ createProduct }) => {
           onChange={onChange}
         />
 
-        <h3 className={style.inputTitle}>Product Quantity</h3>
+        <h3 className={style.title}>Product Quantity</h3>
         <FormInput
           name='product_quantity' 
           placeholder='Product Quantity'
@@ -141,7 +141,7 @@ const CreateProduct = ({ createProduct }) => {
           onChange={onChange}
         />
 
-        <h3 className={style.inputTitle}>On Sale?</h3>
+        <h3 className={style.title}>On Sale?</h3>
         <FormInput
           name='on_sale' 
           placeholder='On Sale'
@@ -149,14 +149,14 @@ const CreateProduct = ({ createProduct }) => {
           onChange={onChange}
         />
 
-        <h3 className={style.inputTitle}>Sale Discounts</h3>
+        <h3 className={style.title}>Sale Discounts (Separate by Comma)</h3>
         <FormInput
           name='sale_discount' 
           placeholder='Sale Discount'
           value={sale_discount}
           onChange={onChange}
         />
-        <Button editProduct>Create Product</Button>
+        <Button createProduct>Create Product</Button>
       </form>
 
       <div className={style.linkContainer}>

@@ -1,0 +1,70 @@
+@import '../../../styles/global.styles';
+
+// BEANIES ITEMS
+.beaniesItem {
+
+  .itemContainer {
+    cursor: pointer;
+    
+    .imageContainer {
+      overflow: hidden;
+
+      .itemImage {
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        -webkit-transition: all 3s ease;
+        -moz-transition: all 3s ease;
+        -ms-transition: all 3s ease;
+        transition: all 3s ease;
+      }
+    }
+
+    .buttonContainer {
+      display: none;
+    }
+
+    &:hover {
+      .itemImage {
+        transform: scale(1.25);
+      }
+
+      .buttonContainer {
+        display: inline;
+      }
+    }
+  }
+
+  .priceContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .itemName {
+      text-transform: uppercase;
+      font-family: $primary-font;
+      font-size: 1.4rem;
+    }
+
+    .itemPrice {
+      font-family: $primary-font;
+      font-size: 1.3rem;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+
+}
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}

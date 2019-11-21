@@ -26,3 +26,4 @@ false
 https://stackoverflow.com/questions/47078498/javascript-add-value-from-input-box-to-array
 https://codesandbox.io/s/00xq32n3pn?from-embed
 https://goshakkk.name/array-form-inputs/
+https://duckduckgo.com/?q=how+to+add+array+items+into+form+input&t=ffab&atb=v181-1&ia=web

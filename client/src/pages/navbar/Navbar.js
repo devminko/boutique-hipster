@@ -28,10 +28,10 @@ const Navbar = ({ isAuthenticated, cartItems, toggleCart, logoutUser }) => {
   const links = (
     <ul className={style.links}>
       <li>
-        <Link to='/' className={style.link}>Beanies</Link>
+        <Link to='/beanies' className={style.link}>Beanies</Link>
       </li>
       <li>
-        <Link to='/' className={style.link}>Gloves</Link>
+        <Link to='/gloves' className={style.link}>Gloves</Link>
       </li>
       <li>
         <Link to='/exclusives' className={style.link}>Exclusives</Link>

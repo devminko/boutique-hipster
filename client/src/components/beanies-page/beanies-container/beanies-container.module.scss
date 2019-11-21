@@ -1,0 +1,27 @@
+@import '../../../styles/global.styles';
+
+// BEANIES CONTAINER
+.beaniesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, min-max(20rem, 1fr));
+  grid-template-rows: auto;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+
+  // height: 100vh;
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+  .beaniesContainer {
+    margin-left: 4rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}

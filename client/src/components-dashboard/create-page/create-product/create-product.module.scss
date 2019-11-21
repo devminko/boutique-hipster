@@ -6,15 +6,23 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 5rem;
+  padding: 0 1rem;
 
   // PRODUCT FORM
-  .productForm {
+  .form {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    .title {
+      font-size: 1.3rem;
+    }
 
     .textArea {
-      height: 10rem;
+      height: 12rem;
+      margin-bottom: 1rem;
+      padding: 1rem;
     }
   }
 
@@ -29,7 +37,14 @@
 
 // ********************************** MEDIA QUERIES ********************************** //
 @media screen and (min-width: 500px) {
-  
+  .createProduct {
+    padding: 0;
+
+    // PRODUCT FORM
+    .form {
+      width: 50%;
+    }
+  }
 }
 
 @media screen and (min-width: 800px) {
