@@ -10,7 +10,7 @@ const ExclusivesPage = () => {
   return (
     <PageContainer>
 
-      <PageSidebar linkOne='Exclusives' linkTwo='Men' linkThree='Women' />
+      <PageSidebar linkOne='Exclusives' linkTwo='Beanies' linkThree='Gloves' />
       <PageHeader>Exclusives</PageHeader>
       <ExclusivesContainer />
       

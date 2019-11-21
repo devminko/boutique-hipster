@@ -32,6 +32,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    .link {
+      color: $link;
+      font-size: 1.3rem;
+    }
   }
 }
 

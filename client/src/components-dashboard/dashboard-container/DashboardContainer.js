@@ -1,8 +1,6 @@
 import React, { } from 'react';
 import { Link } from 'react-router-dom';
 
-import DashboardProducts from '../dashboard-products/DashboardProducts';
-
 import style from './dashboard-container.module.scss';
 
 // *************************** DASHBOARD CONTAINER COMPONENT *************************** //

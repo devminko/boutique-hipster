@@ -1,0 +1,63 @@
+// GLOVES MIDNIGHT
+{
+	"product_category": "gloves",
+	"product_name": "Gloves",
+	"product_color": "Midnight",
+	"product_price": 50,
+	"product_description": "Small pleasure which helps you get through those colder days.",
+	"product_info": ["100% Merino wool", "One size fits all"],
+	"product_images": ["../../assets/images/GLOVES_MIDNIGHT_1.png", "../../assets/images/GLOVES_MIDNIGHT_2.jpg"],
+	"product_url": "/product/gloves/11",
+	"edit_url": "/admin/dashboard/products/edit-product/11",
+	"product_quantity": 30,
+	"on_sale": false,
+	"sale_discount": [0.10, 0.20, 0.30, 0.40]
+}
+
+// GLOVES ONYX
+{
+    "product": {
+        "id": 12,
+        "product_category": "gloves",
+        "product_name": "Gloves",
+        "product_color": "Onyx",
+        "product_price": 50,
+        "product_description": "Small pleasure which helps you get through those colder days.",
+        "product_info": [
+            "100% Merino wool",
+            "One size fits all"
+        ],
+        "product_images": [
+            "../../assets/images/GLOVES_ONYX_1.png",
+            "../../assets/images/GLOVES_ONYX_2.jpg"
+        ],
+        "product_url": "/product/gloves/12",
+        "edit_url": "/admin/dashboard/products/edit-product/12",
+        "product_quantity": 30,
+        "on_sale": false,
+        "sale_discount": [
+            "0.10",
+            "0.20",
+            "0.30",
+            "0.40"
+        ],
+        "updatedAt": "2019-11-21T14:54:46.376Z",
+        "createdAt": "2019-11-21T14:54:46.376Z"
+    }
+}
+
+// GLOVES SMOKE
+{
+	"product_category": "gloves",
+	"product_name": "Gloves",
+	"product_color": "Smoke",
+	"product_price": 50,
+	"product_description": "Small pleasure which helps you get through those colder days.",
+	"product_info": ["100% Merino wool", "One size fits all"],
+	"product_images": ["../../assets/images/GLOVES_SMOKE_1.png"],
+	"product_url": "/product/gloves/13",
+	"edit_url": "/admin/dashboard/products/edit-product/13",
+	"product_quantity": 30,
+	"on_sale": false,
+	"sale_discount": [0.10, 0.20, 0.30, 0.40]
+}

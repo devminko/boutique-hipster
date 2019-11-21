@@ -11,3 +11,19 @@
 	"on_sale": false,
 	"sale_discount": [0.10, 0.20, 0.30, 0.40]
 }
+
+// BLONDE BEANIE
+{
+	"product_category": "beanies",
+	"product_name": "Beanie",
+	"product_color": "Blonde",
+	"product_price": 60,
+	"product_description": "Best beanie ever made by mankind. This product features the Caregora™ certificate.",
+	"product_info": ["75% Lambswool & 25% Caregora", "One size fits all"],
+	"product_images": ["../../assets/images/BEANIE_BLONDE_1.png", "../../assets/images/BEANIE_BLONDE_2.jpg", "../../assets/images/BEANIE_BLONDE_3.jpg"],
+	"product_url": "/product/beanie/10",
+	"edit_url": "/admin/dashboard/products/edit-product/10",
+	"product_quantity": 20,
+	"on_sale": false,
+	"sale_discount": [0.10, 0.20, 0.30, 0.40]
+}

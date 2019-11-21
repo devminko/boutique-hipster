@@ -10,7 +10,7 @@ const BeaniesPage = () => {
   return (
     <PageContainer>
 
-      <PageSidebar linkOne='Beanies' linkTwo='Gloves' linkThree='Exclusives' />
+      <PageSidebar linkOne='Beanies' linkTwo='Gloves' linkThree='Exclusives' beaniesPage />
       <PageHeader>Beanies</PageHeader>
       <BeaniesContainer />
 

@@ -160,7 +160,7 @@ const CreateProduct = ({ createProduct }) => {
       </form>
 
       <div className={style.linkContainer}>
-        <Link to='/admin/dashboard' className={style.link}>Back to Products Page</Link>
+        <Link to='/admin/dashboard' className={style.link}>Back to Dashboard</Link>
       </div>
 
     </div>

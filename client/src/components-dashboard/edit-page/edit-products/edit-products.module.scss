@@ -37,6 +37,20 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  // LINK CONTAINER
+  .linkContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .link {
+      color: $link;
+      font-size: 1.3rem;
+    }
   }
 }
 

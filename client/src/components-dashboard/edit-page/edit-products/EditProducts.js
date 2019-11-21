@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { getProducts } from '../../../redux/admin/admin.actions';
@@ -35,6 +36,10 @@ const EditProducts = ({ products, getProducts }) => {
             <EditProduct key={product.id} product={product} />
           ))
         }
+      </div>
+
+      <div className={style.linkContainer}>
+        <Link to='/admin/dashboard' className={style.link}>Back to Dashboard</Link>
       </div>
 
     </div>

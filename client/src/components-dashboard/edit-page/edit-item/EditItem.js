@@ -135,7 +135,7 @@ const EditItem = ({ product, updateProduct }) => {
       </form>
 
       <div className={style.linkContainer}>
-        <Link to='/admin/dashboard/products' className={style.link}>Back to Products Page</Link>
+        <Link to='/admin/dashboard/products' className={style.link}>Back to Products</Link>
       </div>
 
     </div>

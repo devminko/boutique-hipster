@@ -5,7 +5,7 @@ import Button from '../../components-ui/button/Button';
 
 import style from './dashboard-products.module.scss';
 
-// *************************** DASHBOARD PRODUCTS COMPONENT *************************** //
+// *************************** DASHBOARD PRODUCTS COMPONENT *************************** // (THIS MAY BE DELETED LATER NOT CURRENTLY IN USE)
 const DashboardProducts = () => {
 
   const onChange = (e) => {
