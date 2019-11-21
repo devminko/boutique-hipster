@@ -1,0 +1,28 @@
+beanies
+
+Beanie
+
+Sand
+
+60
+
+Best beanie ever made by mankind. This product features the Caregora™ certificate. Sourced and manufactured in Scotland.
+
+[75% Lambswool & 25% Caregora,One size fits all]
+
+[../../assets/images/BEANIE_SAND_1.png,../../assets/images/BEANIE_SAND_2.jpg,../../assets/images/BEANIE_SAND_3.jpg]
+
+/product/beanie/8
+
+/admin/dashboard/products/edit-product/9
+
+30
+
+false	
+
+[0.10,0.20,0.30,0.40]
+
+
+https://stackoverflow.com/questions/47078498/javascript-add-value-from-input-box-to-array
+https://codesandbox.io/s/00xq32n3pn?from-embed
+https://goshakkk.name/array-form-inputs/

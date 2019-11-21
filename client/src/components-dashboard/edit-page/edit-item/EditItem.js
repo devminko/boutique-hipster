@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { updateProduct } from '../../../redux/admin/admin.actions';
@@ -14,18 +15,18 @@ const EditItem = ({ product, updateProduct }) => {
   const { id, product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, edit_url, product_quantity, on_sale, sale_discount } = product;
 
   const [ formData, setFormData ] = useState({
-    'product_category': product_category,
-    'product_name': product_name,
-    'product_color': product_color,
-    'product_price': product_price,
-    'product_description': product_description,
-    'product_info': product_info,
-    'product_images': product_images,
-    'product_url': product_url,
-    'edit_url': edit_url,
-    'product_quantity': product_quantity,
-    'on_sale': on_sale,
-    'sale_discount': sale_discount,
+    product_category: product_category,
+    product_name: product_name,
+    product_color: product_color,
+    product_price: product_price,
+    product_description: product_description,
+    product_info: product_info,
+    product_images: product_images,
+    product_url: product_url,
+    edit_url: edit_url,
+    product_quantity: product_quantity,
+    on_sale: on_sale,
+    sale_discount: sale_discount,
   });
 
   const onChange = (e) => {
@@ -130,9 +131,13 @@ const EditItem = ({ product, updateProduct }) => {
           value={formData.sale_discount}
           onChange={onChange}
         />
-        <Button>Edit Product</Button>
+        <Button editProduct>Edit Product</Button>
       </form>
 
+      <div className={style.linkContainer}>
+        <Link to='/admin/dashboard/products' className={style.link}>Back to Products Page</Link>
+      </div>
+      
     </div>
   )
 };

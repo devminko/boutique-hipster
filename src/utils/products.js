@@ -43,7 +43,8 @@ const productValidatorChecks = () => {
     check('edit_url', 'Max edit URL is 100 characters').isLength({ max: 100 }),
     check('product_quantity', 'Product quantity is required (valid integer').isInt(),
     check('on_sale', 'On sale is required (boolean)').isBoolean(),
-    check('sale_discount', 'Sale discount is required').not().isEmpty().isArray(),
+    check('sale_discount', 'Sale discount is required').not().isEmpty(),
+    check('sale_discount', 'Sale discount is array').isArray(),
   ];
 };
 

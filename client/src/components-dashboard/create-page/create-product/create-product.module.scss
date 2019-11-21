@@ -5,12 +5,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5rem;
 
   // PRODUCT FORM
   .productForm {
     display: flex;
     flex-direction: column;
     width: 50%;
+
+    .textArea {
+      height: 10rem;
+    }
+  }
+
+  // LINK CONTAINER
+  .linkContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 
