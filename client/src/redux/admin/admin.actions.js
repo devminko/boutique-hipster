@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { setAlert } from '../alert/alert.actions';
 import { 
-  GET_PRODUCTS, CREATE_PRODUCT, EDIT_PRODUCT, PRODUCT_ERROR, ADD_NEWSLETTER, REMOVE_NEWSLETTER,
+  GET_PRODUCTS, CREATE_PRODUCT, EDIT_PRODUCT, PRODUCT_ERROR, ADD_NEWSLETTER, REMOVE_NEWSLETTER, NEWSLETTER_ERROR,
 } from './admin.types';
 
 const route = 'http://localhost:5000';
@@ -81,5 +81,47 @@ export const updateProduct = (id, formData) => async (dispatch) => {
       }
     });
     dispatch(setAlert('Error updating product details', 'danger', 2000));
+  };
+};
+
+// *************************** ADD EMAIL TO NEWSLETTER *************************** //
+export const addEmailToNewsletter = (email) => (dispatch) => {
+  try {
+    if (email.includes('@')) {
+      dispatch({
+        type: ADD_NEWSLETTER,
+        payload: email,
+      });
+      dispatch(setAlert('Subscribed to Newsletter', 'success', 2000));
+    };
+  } catch (err) {
+    dispatch({
+      type: NEWSLETTER_ERROR,
+      payload: {
+        msg: err.response.statusText,
+        status: err.response.status,
+      }
+    });
+    dispatch(setAlert('Error adding email address', 'danger', 2000))
+  };
+};
+
+// *************************** REMOVE EMAIL FROM NEWSLETTER *************************** //
+export const removeEmailFromNewsletter = (email) => (dispatch) => {
+  try {
+    dispatch({
+      type: REMOVE_NEWSLETTER,
+      payload: email,
+    });
+    // dispatch(setAlert('Email successfully removed from newsletter list', 'success', 2000));
+  } catch (err) {
+    dispatch({
+      type: NEWSLETTER_ERROR,
+      payload: {
+        msg: err.response.statusText,
+        status: err.response.status,
+      }
+    });
+    dispatch(setAlert('Error removing email from newsletter list', 'danger', 2000));
   };
 };

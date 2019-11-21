@@ -40,7 +40,7 @@ const Navbar = ({ isAuthenticated, cartItems, toggleCart, logoutUser }) => {
         logoContainer
       }
       <li>
-        <Link to='/about' className={style.link}>Our Story</Link>
+        <Link to='/' className={style.link}>Our Story</Link>
       </li>
       <li>
         <Link to='/account' className={style.link}>Account</Link>

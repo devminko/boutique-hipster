@@ -40,7 +40,7 @@ const NavbarMenu = ({ toggleMenu, setToggleMenu, isAuthenticated, logoutUser }) 
             </li>
             <br />
             <li>
-              <Link to='/' className={style.link}>Our Story</Link>
+              <Link to='/about' className={style.link}>Our Story</Link>
             </li>
             <br />
             <li>

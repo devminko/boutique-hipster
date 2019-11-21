@@ -1,6 +1,8 @@
 import { 
-  USER_LOADED, REGISTRATION_SUCCESS, REGISTRATION_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_USER, UPDATE_EMAIL, UPDATE_PASSWORD,UPDATE_SHIPPING, UPDATE_BILLING, CLEAR_ACCOUNT, DELETE_ACCOUNT, ACCOUNT_ERROR, AUTH_ERROR,
+  USER_LOADED, REGISTRATION_SUCCESS, REGISTRATION_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_USER, UPDATE_EMAIL, UPDATE_PASSWORD,UPDATE_SHIPPING, UPDATE_BILLING, CLEAR_ACCOUNT, DELETE_ACCOUNT, ACCOUNT_ERROR, AUTH_ERROR, ADD_ITEM, REMOVE_ITEM,
 } from './auth.types';
+
+import { addItemToCart, removeItemFromCart } from './auth.utils';
 
 const INTIAL_STATE = {
   token: localStorage.getItem('token'),
@@ -36,6 +38,20 @@ export const authReducer = (state = INTIAL_STATE, action) => {
           ...state.user,
           ...action.payload,
         }
+      };
+    case ADD_ITEM :
+      return {
+        ...state,
+        user: {
+          cart: addItemToCart(state.user.cart, action.payload),
+        },
+      };
+    case REMOVE_ITEM :
+      return {
+        ...state,
+        user: {
+          cart: removeItemFromCart(state.user.cart, action.payload),
+        },
       };
     case UPDATE_PASSWORD :
       return {

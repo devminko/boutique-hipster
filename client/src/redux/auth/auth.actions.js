@@ -2,7 +2,7 @@ import axios from 'axios';
 import { setAlert } from '../alert/alert.actions';
 import { setAuthToken } from '../utils/setAuthToken';
 import { 
-  USER_LOADED, REGISTRATION_SUCCESS, REGISTRATION_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_USER, UPDATE_EMAIL, UPDATE_PASSWORD,UPDATE_SHIPPING, UPDATE_BILLING, CLEAR_ACCOUNT, DELETE_ACCOUNT, ACCOUNT_ERROR, AUTH_ERROR, 
+  USER_LOADED, REGISTRATION_SUCCESS, REGISTRATION_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_USER, UPDATE_EMAIL, UPDATE_PASSWORD,UPDATE_SHIPPING, UPDATE_BILLING, CLEAR_ACCOUNT, DELETE_ACCOUNT, ADD_ITEM, REMOVE_ITEM, CLEAR_ITEM, ACCOUNT_ERROR, AUTH_ERROR, CART_ERROR,
 } from './auth.types';
 
 const route = 'http://localhost:5000';
@@ -204,3 +204,44 @@ export const updateBilling = (data) => async (dispatch) => {
     dispatch(setAlert('Error updating billing address', 'danger', 2000));
   }
 };
+
+// // *************************** ADD (1) ITEM TO CART *************************** //
+// export const addItem = (item) => (dispatch) => {
+//   try {
+//     dispatch({
+//       type: ADD_ITEM,
+//       payload: item,
+//     });
+//   } catch (err) {
+//     dispatch({
+//       type: CART_ERROR,
+//       payload: {
+//         msg: err.response.statusText,
+//         status: err.response.status,
+//       }
+//     });
+//   };
+// };
+
+// // *************************** REMOVE (1) ITEM FROM CART *************************** //
+// export const removeItem = (item) => (dispatch) => {
+//   try {
+//     dispatch({
+//       type: REMOVE_ITEM,
+//       payload: item,
+//     });
+//   } catch (err) {
+//     dispatch({
+//       type: CART_ERROR,
+//       payload: {
+//         msg: err.response.statusText,
+//         status: err.response.status,
+//       }
+//     });
+//   };
+// };
+
+// // *************************** CLEAR ITEM TO CART *************************** //
+// export const clearItem = () => async (dispatch) => {
+
+// };

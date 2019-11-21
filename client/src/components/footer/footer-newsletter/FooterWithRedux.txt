@@ -1,0 +1,58 @@
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
+
+import { addEmailToNewsletter, removeEmailFromNewsletter } from '../../../redux/admin/admin.actions';
+
+import FormInput from '../../../components-ui/form-input/FormInput';
+import Button from '../../../components-ui/button/Button';
+
+import style from './footer-newsletter.module.scss';
+
+// *************************** FOOTER NEWSLETTER COMPONENT *************************** //
+const FooterNewsletter = ({ addEmailToNewsletter, removeEmailFromNewsletter }) => {
+  const [ email, setEmail ] = useState('');
+
+  const onChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    // addEmailToNewsletter(email);
+    removeEmailFromNewsletter(email);
+    setEmail('');
+  };
+
+  return (
+    <div className={style.footerNewsletter}>
+
+      <div className={style.signupContainer}>
+        <h2 className={style.title}>Sign up for our newsletter</h2>
+        <form onSubmit={onSubmit} className={style.input}>
+          <FormInput
+            newsletter
+            name='email'
+            value={email}
+            onChange={onChange}
+            placeholder='Your email here'
+          />
+          <Button newsletter>Sign Up</Button>
+        </form>
+      </div>
+
+      <div className={style.textContainer}>
+        <h2 className={style.text}>Boutique Hipster</h2>
+        <p className={style.subtext}>All organic all vegan all boutique and all hipster</p>
+      </div>
+
+    </div>
+  )
+};
+
+// REDUX
+const mapDispatchToProps = (dispatch) => ({
+  addEmailToNewsletter: (email) => dispatch(addEmailToNewsletter(email)),
+  removeEmailFromNewsletter: (email) => dispatch(removeEmailFromNewsletter(email)),
+});
+
+export default connect(null, mapDispatchToProps)(FooterNewsletter);

@@ -11,6 +11,7 @@ import CartPage from '../pages/cart-page/CartPage';
 import BeaniesPage from '../pages/BeaniesPage';
 import GlovesPage from '../pages/GlovesPage';
 import ExclusivesPage from '../pages/ExclusivesPage';
+import AboutPage from '../pages/AboutPage';
 import AccountPage from '../pages/AccountPage';
 import ProductPage from '../pages/ProductPage';
 import NotFoundPage from '../pages/NotFoundPage';
@@ -46,8 +47,10 @@ const App = ({ toggleCart, loadUser }) => {
               <Route exact path='/beanies' component={BeaniesPage} />
               <Route exact path='/gloves' component={GlovesPage} />
               <Route exact path='/exclusives' component={ExclusivesPage} />
+              <Route exact path='/about' component={AboutPage} />
               <Route exact path='/account' component={AccountPage} />
               <Route exact path='/product/:product_name/:product_id' component={ProductPage} />
+              
               <Route exact path='/admin/dashboard' component={DashboardPage} />
               <Route exact path='/admin/dashboard/create-product' component={CreateProduct} />
               <Route exact path='/admin/dashboard/products' component={EditProducts} />
