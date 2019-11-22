@@ -182,6 +182,19 @@
       background: lighten($primary-color-light, 5%);
     }
   }
+
+  // ABOUT PAGE (ABOUT PAGE COMPONENTS)
+  &.aboutPage {
+    background: $white;
+    color: $primary-color-light;
+    border: 1px solid $primary-color-light;
+    
+    &:hover {
+      background: $primary-color-light;
+      color: $white;
+      border: none;
+    }
+  }
 }
 
 // ********************************** MEDIA QUERIES ********************************** //
@@ -253,6 +266,11 @@
     &.createProduct {
       margin-right: auto;
       width: 40%;
+    }
+
+    // ABOUT PAGE (ABOUT PAGE COMPONENTS)
+    &.aboutPage {
+      height: 6rem;
     }
   }
 }

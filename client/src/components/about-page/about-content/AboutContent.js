@@ -1,9 +1,12 @@
 import React, { } from 'react';
+import { withRouter } from 'react-router-dom';
+
+import Button from '../../../components-ui/button/Button';
 
 import style from './about-content.module.scss';
 
 // *************************** ABOUT CONTENT COMPONENT *************************** //
-const AboutContent = () => {
+const AboutContent = ({ history }) => {
   return (
     <div className={style.aboutContent}>
 
@@ -24,8 +27,13 @@ const AboutContent = () => {
         </p>
       </div>
 
+      {/* BUTTON SECTION */}
+      <div className={style.buttonContainer}>
+        <Button onClick={() => history.push('/exclusives')} aboutPage>Checkout Our Exclusives</Button>
+      </div>
+
     </div>
   )
 };
 
-export default AboutContent;
+export default withRouter(AboutContent);
