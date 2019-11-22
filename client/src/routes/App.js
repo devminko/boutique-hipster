@@ -11,7 +11,7 @@ import CartPage from '../pages/cart-page/CartPage';
 import BeaniesPage from '../pages/BeaniesPage';
 import GlovesPage from '../pages/GlovesPage';
 import ExclusivesPage from '../pages/ExclusivesPage';
-import AboutPage from '../pages/AboutPage';
+import AboutPage from '../pages/about-page/AboutPage';
 import AccountPage from '../pages/AccountPage';
 import ProductPage from '../pages/ProductPage';
 import NotFoundPage from '../pages/NotFoundPage';

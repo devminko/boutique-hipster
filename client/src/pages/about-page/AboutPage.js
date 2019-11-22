@@ -1,7 +1,7 @@
 import React, { } from 'react';
 
-import PageContainer from './page-container/PageContainer';
-import AboutHeader from '../components/about-page/about-header/AboutHeader';
+import AboutHeader from '../../components/about-page/about-header/AboutHeader';
+import AboutContent from '../../components/about-page/about-content/AboutContent';
 
 import style from './about-page.module.scss';
 
@@ -11,8 +11,7 @@ const AboutPage = () => {
     <div className={style.aboutPage}>
 
       <AboutHeader />
-
-      OUR STORY PAGE
+      <AboutContent />
 
     </div>
   )

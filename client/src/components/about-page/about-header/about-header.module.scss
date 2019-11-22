@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 2.5rem;
 
   // HEADER CONTAINER
   .header {
@@ -15,7 +15,7 @@
     .title {
       text-transform: uppercase;
       font-family: $secondary-font;
-      font-size: 6rem;
+      font-size: 5rem;
 
       color: $primary-color-light;
       -webkit-text-stroke-width: 1.5px;
@@ -32,7 +32,7 @@
     // SUBHEADER CONTAINER
     .subheader {
       .subtitle {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         font-weight: lighter;
         color: $white;
       }
@@ -58,11 +58,38 @@
 
 // ********************************** MEDIA QUERIES ********************************** //
 @media screen and (min-width: 500px) {
+  .aboutHeader {
 
+    .header {
+      .title {
+        font-size: 6rem;
+  
+        .subheader {
+          .subtitle {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 800px) {
+  .aboutHeader {
+    margin-top: 5rem;
 
+    .header {
+      .title {
+     
+        .subheader {
+  
+          .subtitle {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
