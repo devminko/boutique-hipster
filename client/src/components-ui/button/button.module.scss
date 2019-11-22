@@ -19,7 +19,7 @@
 
   // ACCOUNT
   &.account {
-    background: lighten($primary-color, 10%);
+    background: $primary-color-light;
     color: $white;
     transition: background-color 300ms ease-in-out;
     transition: color 100ms ease-in-out;
@@ -55,7 +55,7 @@
     transition: color 100ms ease-in-out;
 
     &:hover {
-      background: lighten($primary-color, 10%);
+      background: $primary-color-light;
       color: $white;
       border: none;
     }
@@ -81,7 +81,7 @@
 
   // PROFILE RED
   &.profileRed {
-    background: lighten($primary-color, 10%);
+    background: $primary-color-light;
     color: $white;
     height: 6rem;
     font-family: $secondary-font;
@@ -202,7 +202,7 @@
   .button {
     // PROFILE RED
     &.profileRed {
-      background: lighten($primary-color, 10%);
+      background: $primary-color-light;
       color: $white;
       height: 7rem;
       font-family: $secondary-font;

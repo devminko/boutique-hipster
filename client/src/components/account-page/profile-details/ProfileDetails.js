@@ -74,7 +74,6 @@ const ProfileDetails = ({ user, updateEmail, updatePassword, logoutUser, setAler
         <Fragment>
           <FormInput
             profile
-            // style={{ color: 'black '}}
             type='email'
             name='email'  
             placeholder='Change email address'

@@ -15,7 +15,7 @@
       font-family: $primary-font;
       font-size: 1rem;
       font-weight: lighter;
-      color: $primary-color;
+      color: $primary-color-light;
 
       padding: 1rem 0;
     }
@@ -32,7 +32,7 @@
       text-decoration: none;
 
       .logoTitle {
-        color: $primary-color;
+        color: $primary-color-light;
         font-size: 2.4rem;
         font-weight: bolder;
         margin-bottom: 0;
