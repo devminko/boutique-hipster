@@ -15,7 +15,7 @@
     .title {
       text-transform: uppercase;
       font-family: $secondary-font;
-      font-size: 5rem;
+      font-size: 4rem;
 
       color: $primary-color-light;
       -webkit-text-stroke-width: 1.5px;
@@ -29,7 +29,6 @@
       }
     }
 
-    // SUBHEADER CONTAINER
     .subheader {
       .subtitle {
         font-size: 1.4rem;
@@ -47,7 +46,8 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
     
     .image {
       height: 50%;
@@ -60,16 +60,23 @@
 @media screen and (min-width: 500px) {
   .aboutHeader {
 
+    // HEADER
     .header {
       .title {
         font-size: 6rem;
   
-        .subheader {
-          .subtitle {
-            font-size: 1.5rem;
-          }
+      }
+      .subheader {
+        .subtitle {
+          font-size: 1.5rem;
         }
       }
+    }
+
+    // IMAGE CONTAINER
+    .imageContainer {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
     }
   }
 }
@@ -78,15 +85,27 @@
   .aboutHeader {
     margin-top: 5rem;
 
+    // HEADER
     .header {
       .title {
      
-        .subheader {
-  
-          .subtitle {
-            font-size: 1.8rem;
-          }
+      }
+      .subheader {
+
+        .subtitle {
+          font-size: 1.6rem;
         }
+      }
+    }
+
+    // IMAGE CONTAINER
+    .imageContainer {
+      margin-top: none;
+      margin-bottom: none;
+
+      .image {
+        height: 60%;
+        width: 60%;
       }
     }
   }
@@ -98,7 +117,8 @@
     flex-direction: row;
     align-items: center;
 
-    height: 60rem;
+    height: 50rem;
+    margin-bottom: 5rem;
 
     // HEADER CONTAINER
     .header {
@@ -109,7 +129,7 @@
       padding: 0 5rem;
 
       .title {
-        margin-right: 1rem;
+        margin-right: 3rem;
       }
 
       .subheader {
@@ -126,8 +146,29 @@
       width: 40%;
 
       .image {
-        height: 40%;
-        width: 40%;
+        max-height: 45%;
+        max-width: 45%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .aboutHeader {
+    height: 60rem;
+
+    // HEADER CONTAINER
+    .header {
+
+      .title {
+        margin-right: 0;
+      }
+
+      .subheader {
+
+        .subtitle {
+          font-size: 1.8rem;
+        }
       }
     }
   }
