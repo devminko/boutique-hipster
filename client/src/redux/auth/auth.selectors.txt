@@ -1,12 +1,12 @@
 import { createSelector } from 'reselect';
 
 const selectCart = (state) => {
-  return state.auth
+  return state.auth.user
 };
 
 export const selectCartItems = createSelector(
   [selectCart],
-  (auth) => auth.cart,
+  (user) => user.cart,
 );
 
 export const selectCartItemsCount = createSelector(

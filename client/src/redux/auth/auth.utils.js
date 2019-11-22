@@ -35,3 +35,16 @@ export const removeItemFromCart = (currentCartItems, cartItemToRemove) => {
     ))
   };
 };
+
+// *************************** CLEAR ITEM FROM CART *************************** //
+export const clearItemFromCart = (currentCartItems, cartItemToRemove) => {
+  const existingCartItem = currentCartItems.find(currentCartItem => {
+    return currentCartItem.id === cartItemToRemove.id
+  });
+
+  if (existingCartItem.quantity >= 0) {
+    return currentCartItems.filter(currentCartItem => (
+      currentCartItem.id !== cartItemToRemove.id
+    ));
+  };
+};

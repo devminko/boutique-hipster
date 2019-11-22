@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { FaTimes } from "react-icons/fa";
 
 import { toggleCart } from '../../redux/cart/cart.actions';
+import { selectCartTotal } from '../../redux/auth/auth.selectors';
 
 import CartItem from '../../components/cart-page/cart-item/CartItem';
 import Button from '../../components-ui/button/Button';
@@ -11,7 +12,7 @@ import Button from '../../components-ui/button/Button';
 import style from './cart-page.module.scss';
 
 // *************************** CART PAGE *************************** //
-const CartPage = ({ cartItems, toggleCart, history }) => {
+const CartPage = ({ cartItems, cart, totalCartPrice, toggleCart, history }) => {
   const onCheckout = () => {
     history.push('/');
     toggleCart();
@@ -32,10 +33,8 @@ const CartPage = ({ cartItems, toggleCart, history }) => {
         {/* CART ITEMS */}
         <div className={style.cartItems}>
           {
-            cartItems.map(cartItem => (
-              <CartItem key={cartItem.id} cartItem={cartItem} >
-                CART ITEM {cartItem.id}
-              </CartItem>
+            cart.map(cartItem => (
+              <CartItem key={cartItem.id} cartItem={cartItem} />
             ))
           }
         </div>
@@ -44,7 +43,7 @@ const CartPage = ({ cartItems, toggleCart, history }) => {
         <div className={style.cartTotals}>
           <div className={style.totalsHeader}>
             <h2 className={style.totalsTitle}>Total</h2>
-            <p className={style.cartPrice}>$0.00</p>
+            <p className={style.cartPrice}>${totalCartPrice}.00</p>
           </div>
           <Button onClick={onCheckout} checkout>Go to Checkout</Button>
         </div>
@@ -57,6 +56,8 @@ const CartPage = ({ cartItems, toggleCart, history }) => {
 // REDUX
 const mapStateToProps = (state) => ({
   cartItems: state.cart.cartItems,
+  cart: state.auth.cart,
+  totalCartPrice: selectCartTotal(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({

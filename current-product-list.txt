@@ -1,3 +1,7 @@
+// **************************************************************************************************
+// ******************************************* EXCLUSIVES *******************************************
+// **************************************************************************************************
+
 // BALACLAVA SAND
 {
 	"product_category": "exclusives",
@@ -122,6 +126,94 @@
 	"product_url": "/product/travel_blanket/8",
 	"edit_url": "/admin/dashboard/products/edit-product/8",
 	"product_quantity": 40,
+	"on_sale": false,
+	"sale_discount": [0.10, 0.20, 0.30, 0.40]
+}
+
+// **************************************************************************************************
+// ******************************************* BEANIES **********************************************
+// **************************************************************************************************
+
+// BEANIE SNOW
+{
+	"product_category": "beanie",
+	"product_name": "Beanie",
+	"product_color": "Snow",
+	"product_price": 60,
+	"product_description": "Best beanie ever made by mankind. This product features the Caregora™ certificate. Sourced and manufactured in Scotland.",
+	"product_info": ["75% Lambswool, 25% Caregora", "One size fits all"],
+	"product_images": ["../../assets/images/BEANIE_SNOW_1.png", "../../assets/images/BEANIE_SNOW_2.jpg", "../../assets/images/BEANIE_SNOW_3.jpg"],
+	"product_url": "/product/beanie/9",
+	"product_quantity": 40,
+	"on_sale": false,
+	"sale_discount": [0.10, 0.20, 0.30, 0.40]
+}
+
+// BEANIE BLONDE
+{
+	"product_category": "beanies",
+	"product_name": "Beanie",
+	"product_color": "Blonde",
+	"product_price": 60,
+	"product_description": "Best beanie ever made by mankind. This product features the Caregora™ certificate.",
+	"product_info": ["75% Lambswool & 25% Caregora", "One size fits all"],
+	"product_images": ["../../assets/images/BEANIE_BLONDE_1.png", "../../assets/images/BEANIE_BLONDE_2.jpg", "../../assets/images/BEANIE_BLONDE_3.jpg"],
+	"product_url": "/product/beanie/10",
+	"edit_url": "/admin/dashboard/products/edit-product/10",
+	"product_quantity": 20,
+	"on_sale": false,
+	"sale_discount": [0.10, 0.20, 0.30, 0.40]
+}
+
+// **************************************************************************************************
+// ******************************************* GLOVES **********************************************
+// **************************************************************************************************
+
+
+// GLOVES MIDNIGHT
+{
+	"product_category": "gloves",
+	"product_name": "Gloves",
+	"product_color": "Midnight",
+	"product_price": 50,
+	"product_description": "Small pleasure which helps you get through those colder days.",
+	"product_info": ["100% Merino wool", "One size fits all"],
+	"product_images": ["../../assets/images/GLOVES_MIDNIGHT_1.png", "../../assets/images/GLOVES_MIDNIGHT_2.jpg"],
+	"product_url": "/product/gloves/11",
+	"edit_url": "/admin/dashboard/products/edit-product/11",
+	"product_quantity": 30,
+	"on_sale": false,
+	"sale_discount": [0.10, 0.20, 0.30, 0.40]
+}
+
+// GLOVES ONYX
+{
+	"product_category": "gloves",
+	"product_name": "Gloves",
+	"product_color": "Onyx",
+	"product_price": 50,
+	"product_description": "Small pleasure which helps you get through those colder days.",
+	"product_info": ["100% Merino wool", "One size fits all"],
+	"product_images": ["../../assets/images/GLOVES_SMOKE_1.png"],
+	"product_url": "/product/gloves/12",
+	"edit_url": "/admin/dashboard/products/edit-product/12",
+	"product_quantity": 30,
+	"on_sale": false,
+	"sale_discount": [0.10, 0.20, 0.30, 0.40]
+}
+
+// GLOVES SMOKE
+{
+	"product_category": "gloves",
+	"product_name": "Gloves",
+	"product_color": "Smoke",
+	"product_price": 50,
+	"product_description": "Small pleasure which helps you get through those colder days.",
+	"product_info": ["100% Merino wool", "One size fits all"],
+	"product_images": ["../../assets/images/GLOVES_SMOKE_1.png"],
+	"product_url": "/product/gloves/13",
+	"edit_url": "/admin/dashboard/products/edit-product/13",
+	"product_quantity": 30,
 	"on_sale": false,
 	"sale_discount": [0.10, 0.20, 0.30, 0.40]
 }

@@ -7,6 +7,11 @@ import {
 
 const route = 'http://localhost:5000';
 
+
+/* ##############################################################################
+########################## USER LOGIN / REGISTRATION ############################
+################################################################################# */
+
 // *************************** LOAD USER *************************** //
 export const loadUser = () => async (dispatch) => {
   if (localStorage.token) {
@@ -92,6 +97,11 @@ export const logoutUser = () => (dispatch) => {
     type: LOGOUT_USER,
   });
 };
+
+
+/* ##############################################################################
+################################# USER ACCOUNT ##################################
+################################################################################# */
 
 // *************************** UPDATE EMAIL *************************** //
 export const updateEmail = ({email}) => async (dispatch) => {
@@ -205,43 +215,60 @@ export const updateBilling = (data) => async (dispatch) => {
   }
 };
 
-// // *************************** ADD (1) ITEM TO CART *************************** //
-// export const addItem = (item) => (dispatch) => {
-//   try {
-//     dispatch({
-//       type: ADD_ITEM,
-//       payload: item,
-//     });
-//   } catch (err) {
-//     dispatch({
-//       type: CART_ERROR,
-//       payload: {
-//         msg: err.response.statusText,
-//         status: err.response.status,
-//       }
-//     });
-//   };
-// };
+/* ##############################################################################
+################################### USER CART ###################################
+################################################################################# */
 
-// // *************************** REMOVE (1) ITEM FROM CART *************************** //
-// export const removeItem = (item) => (dispatch) => {
-//   try {
-//     dispatch({
-//       type: REMOVE_ITEM,
-//       payload: item,
-//     });
-//   } catch (err) {
-//     dispatch({
-//       type: CART_ERROR,
-//       payload: {
-//         msg: err.response.statusText,
-//         status: err.response.status,
-//       }
-//     });
-//   };
-// };
+// *************************** ADD (1) ITEM TO CART *************************** //
+export const addItem = (item) => (dispatch) => {
+  try {
+    dispatch({
+      type: ADD_ITEM,
+      payload: item,
+    });
+  } catch (err) {
+    dispatch({
+      type: CART_ERROR,
+      payload: {
+        msg: err.response.statusText,
+        status: err.response.status,
+      }
+    });
+  };
+};
 
-// // *************************** CLEAR ITEM TO CART *************************** //
-// export const clearItem = () => async (dispatch) => {
+// *************************** REMOVE (1) ITEM FROM CART *************************** //
+export const removeItem = (item) => (dispatch) => {
+  try {
+    dispatch({
+      type: REMOVE_ITEM,
+      payload: item,
+    });
+  } catch (err) {
+    dispatch({
+      type: CART_ERROR,
+      payload: {
+        msg: err.response.statusText,
+        status: err.response.status,
+      }
+    });
+  };
+};
 
-// };
+// *************************** CLEAR ITEM TO CART *************************** //
+export const clearItem = (item) => async (dispatch) => {
+  try {
+    dispatch({
+      type: CLEAR_ITEM,
+      payload: item,
+    });
+  } catch (err) {
+    dispatch({
+      type: CART_ERROR,
+      payload: {
+        msg: err.response.statusText,
+        status: err.response.status,
+      }
+    });
+  };
+};

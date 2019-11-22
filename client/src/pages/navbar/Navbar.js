@@ -4,13 +4,14 @@ import { connect } from 'react-redux';
 
 import { toggleCart } from '../../redux/cart/cart.actions';
 import { logoutUser } from '../../redux/auth/auth.actions';
+import { selectCartItemsCount } from '../../redux/auth/auth.selectors';
 
 import Button from '../../components-ui/button/Button';
 
 import style from './navbar.module.scss';
 
 // *************************** NAVBAR COMPONENT *************************** //
-const Navbar = ({ isAuthenticated, cartItems, toggleCart, logoutUser }) => {
+const Navbar = ({ isAuthenticated, cartItems, cart, totalCartQuantity, toggleCart, logoutUser }) => {
   const onLogout = () => {
     logoutUser();
     window.location.reload();
@@ -46,7 +47,7 @@ const Navbar = ({ isAuthenticated, cartItems, toggleCart, logoutUser }) => {
         <Link to='/account' className={style.link}>Account</Link>
       </li>
       <li>
-        <span onClick={toggleCart} className={style.link}>Cart ({cartItems.length})</span>
+        <span onClick={toggleCart} className={style.link}>Cart ({totalCartQuantity})</span>
       </li>
     </ul>
   );
@@ -77,6 +78,8 @@ const Navbar = ({ isAuthenticated, cartItems, toggleCart, logoutUser }) => {
 const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
   cartItems: state.cart.cartItems,
+  cart: state.auth.cart,
+  totalCartQuantity: selectCartItemsCount(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({

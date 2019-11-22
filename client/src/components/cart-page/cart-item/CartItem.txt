@@ -1,19 +1,16 @@
 import React, { } from 'react';
-import { connect } from 'react-redux';
 import { IoIosRemove, IoIosAdd, IoMdBackspace } from "react-icons/io";
-
-import { addItem, removeItem, clearItem } from '../../../redux/auth/auth.actions';
 
 import style from './cart-item.module.scss';
 
 // *************************** CART ITEM COMPONENT *************************** //
-const CartItem = ({ cartItem, addItem, removeItem, clearItem, }) => {
+const CartItem = ({ cartItem }) => {
   // 'cartItem' passed down as prop from CartPage.js
   const { id, product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, product_quantity, on_sale, } = cartItem;
 
-  const onAddition = () => { addItem(cartItem) };
-  const onSubtraction = () => { removeItem(cartItem) };
-  const onRemove = () => { clearItem(cartItem) };
+  const onAddition = () => { console.log('Added 1') };
+  const onSubtraction = () => { console.log('Subtract 1') };
+  const onRemove = () => { console.log('Removed') };
 
   return (
     <div className={style.cartItem}>
@@ -35,7 +32,7 @@ const CartItem = ({ cartItem, addItem, removeItem, clearItem, }) => {
         <div className={style.quantityContainer}>
           <div className={style.quantity}>
             <IoIosRemove onClick={onSubtraction} className={style.quantityIcon} />
-            <span className={style.quantityNumber}>{cartItem.quantity}</span>
+            <span className={style.quantityNumber}>{1}</span>
             <IoIosAdd onClick={onAddition} className={style.quantityIcon} />
           </div>
           <div className={style.delete}>
@@ -46,13 +43,6 @@ const CartItem = ({ cartItem, addItem, removeItem, clearItem, }) => {
       
     </div>
   );
-};
+}
 
-// REDUX
-const mapDispatchToProps = (dispatch) => ({
-  addItem: (item) => dispatch(addItem(item)),
-  removeItem: (item) => dispatch(removeItem(item)),
-  clearItem: (item) => dispatch(clearItem(item)),
-});
-
-export default connect(null, mapDispatchToProps)(CartItem);
+export default CartItem;

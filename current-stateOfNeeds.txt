@@ -1,0 +1,15 @@
+UPDATED / CHANGED ITEMS
+
+auth.reducer.js
+auth.selectors.js
+CartPage.js
+CartItem.js
+Navbar.js
+ProductItem.js
+BeaniesItem.js
+Navbar.js
+
+
+- Currently quantity (admin => product => product quantity) does not update with addition or removal of items in the Cart
+- Adding / Removing items from cart should correctly update product_quanity from state
+- Figure out how to get everything to work on the BeaniesPage Items before advancing features into Gloves & Exclusives Page
