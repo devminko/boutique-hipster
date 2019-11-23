@@ -1,4 +1,4 @@
-// SHUFFLE FUNCTION -> randomizes the array order
+// SHUFFLE FUNCTION -> randomizes the array order (Fisher-Yates (aka Knuth) Shuffle)
 
 export const shuffleArray = (array) => {
   let currentIndex = array.length, temporaryValue, randomIndex;

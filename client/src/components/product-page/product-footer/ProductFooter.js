@@ -6,6 +6,8 @@ import { getProducts } from '../../../redux/admin/admin.actions';
 
 import { shuffleArray } from '../../../utils/shuffleFunction';
 
+import ShuffledItems from '../shuffled-items/ShuffledItems';
+
 import style from './product-footer.module.scss';
 
 // *************************** PRODUCT FOOTER COMPONENT *************************** //
@@ -15,7 +17,7 @@ const ProductFooter = ({ products, getProducts, match }) => {
   }, [getProducts]);
 
   const { product_id } = match.params;
-  
+
   // 'product_id' = string so translate into Number for logic below
   const newProductId = Number(product_id);
 
@@ -26,18 +28,18 @@ const ProductFooter = ({ products, getProducts, match }) => {
   return (
     <div className={style.productFooter}>
 
-      {
-        shuffledArray
-          .filter((item, idx) => idx < 4 && item.id !== newProductId)
-          .map(product => (
-            <div key={product.id}>
-              <img src={product.product_images[0]} alt={`${product.product_name}_${product.product_color}_${product.id}`} />
-              <p>{product.id}</p>
-              <p>{product.product_name}</p>
-              <p>${product.product_price}.00</p>
-            </div>
-          ))
-      }
+      <h3 className={style.footerTitle}>Compliment the Look</h3>
+      
+      {/* SHUFFLED PRODUCTS CONTAINER */}
+      <div className={style.shuffledContainer}>
+        {
+          shuffledArray
+            .filter((item, idx) => idx < 4 && item.id !== newProductId)
+            .map(product => (
+              <ShuffledItems key={product.id} product={product} />
+            ))
+        }
+      </div>
 
     </div>
   )
