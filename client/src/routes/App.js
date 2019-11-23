@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import { loadUser } from '../redux/auth/auth.actions';
 
+// WEB SITE PAGES
 import Navbar from '../pages/navbar/Navbar';
 import NavbarMobile from '../components/navbar/navbar-mobile/NavbarMobile';
 import HomePage from '../pages/HomePage';
@@ -17,6 +18,7 @@ import ProductPage from '../pages/ProductPage';
 import NotFoundPage from '../pages/NotFoundPage';
 import Footer from '../pages/footer/Footer';
 
+// DASHBOARD - ADMIN PAGES
 import DashboardPage from '../pages/DashboardPage';
 import UsersContainer from '../components-dashboard/users-page/users-container/UsersContainer';
 import UsersPage from '../components-dashboard/users-page/users-page/UsersPage';

@@ -14,13 +14,17 @@ const EditPage = ({ products, getProducts, match }) => {
     getProducts();
   }, [getProducts]);
 
+  const { product_id } = match.params;
+
+  // 'product_id' = string so translate into Number for logic below
+  const newProductId = Number(product_id);
+
   return (
     <div className={style.editPage}>
       {
         products.map(product => (
-          product.edit_url === match.url
-            ? <EditItem key={product.id} product={product} />
-            : ''
+          product.id === newProductId
+            && <EditItem key={product.id} product={product} />
         ))
       }
     </div>
@@ -34,6 +38,6 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getProducts: () => dispatch(getProducts()),
-})
+});
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(EditPage));

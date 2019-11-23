@@ -14,9 +14,6 @@ const UsersPage = ({ users, getUsers, match, props, user }) => {
     getUsers();
   }, [getUsers]);
 
-  console.log(match);
-  console.log(user)
-
   const { user_id } = match.params;
 
   // 'user_id' = string so translate into Number for logic below

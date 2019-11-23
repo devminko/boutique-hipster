@@ -11,7 +11,7 @@ import style from './beanies-item.module.scss';
 // *************************** BEANIES ITEM COMPONENT *************************** //
 const BeaniesItem = ({ beanie, cart, addItem, history }) => {
   // 'beanie' passed down as prop from BeaniesItems.js
-  const { id, product_category, product_name, product_color, product_price, product_images, product_url, edit_url, product_quantity, on_sale, sale_discount } = beanie;
+  const { id, product_category, product_name, product_color, product_price, product_images, product_url, product_quantity, on_sale, sale_discount } = beanie;
 
   return (
     <div className={style.beaniesItem}>

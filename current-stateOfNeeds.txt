@@ -29,3 +29,7 @@ dashboard-container folder
 
 - Footer Newsletter => Signup functionality needs to be implemented 
 - Footer links => No links lead anywhere except for the About Us link
+
+
+// ######################## USERS-PAGE (COMPONENTS DASHBOARD FOLDER) ######################## //
+- UsersPage + UserPage need to be updated with correct styling, currently only outputting barebones information

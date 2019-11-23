@@ -12,7 +12,7 @@ import style from './edit-item.module.scss';
 // *************************** EDIT ITEM COMPONENT *************************** //
 const EditItem = ({ product, updateProduct }) => {
   // 'product' passed down as prop from EditPage.js
-  const { id, product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, edit_url, product_quantity, on_sale, sale_discount } = product;
+  const { id, product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, product_quantity, on_sale, sale_discount } = product;
 
   const [ formData, setFormData ] = useState({
     product_category: product_category,
@@ -23,7 +23,6 @@ const EditItem = ({ product, updateProduct }) => {
     product_info: product_info,
     product_images: product_images,
     product_url: product_url,
-    edit_url: edit_url,
     product_quantity: product_quantity,
     on_sale: on_sale,
     sale_discount: sale_discount,
@@ -101,13 +100,6 @@ const EditItem = ({ product, updateProduct }) => {
         <FormInput
           name='product_url' 
           value={formData.product_url}
-          onChange={onChange}
-        />
-
-        <h2 className={style.title}>Edit URL</h2>
-        <FormInput 
-          name='edit_url'
-          value={formData.edit_url}
           onChange={onChange}
         />
 

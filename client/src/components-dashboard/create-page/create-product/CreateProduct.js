@@ -20,13 +20,12 @@ const CreateProduct = ({ createProduct }) => {
     product_info: [],
     product_images: [],
     product_url: '',
-    edit_url: '',
     product_quantity: '',
     on_sale: '',
     sale_discount: [],
   });
 
-  const { product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, edit_url, product_quantity, on_sale, sale_discount  } = formData;
+  const { product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, product_quantity, on_sale, sale_discount  } = formData;
 
   const onChange = (e) => {
     setFormData({
@@ -47,7 +46,6 @@ const CreateProduct = ({ createProduct }) => {
       product_info: [],
       product_images: [],
       product_url: '',
-      edit_url: '',
       product_quantity: '',
       on_sale: '',
       sale_discount: [],
@@ -122,14 +120,6 @@ const CreateProduct = ({ createProduct }) => {
           name='product_url' 
           placeholder='Product URL'
           value={product_url}
-          onChange={onChange}
-        />
-
-        <h3 className={style.title}>Edit URL</h3>
-        <FormInput
-          name='edit_url' 
-          placeholder='Edit URL'
-          value={edit_url}
           onChange={onChange}
         />
 

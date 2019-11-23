@@ -8,7 +8,7 @@ import style from './exclusives-item.module.scss';
 // *************************** EXCLUSIVES ITEM COMPONENT *************************** //
 const ExclusivesItem = ({ exclusive, history }) => {
   // 'exclusive' passed down as prop from ExclusivesItems.js
-  const { id, product_category, product_name, product_color, product_price, product_images, product_url, edit_url, product_quantity, on_sale, sale_discount } = exclusive;
+  const { id, product_category, product_name, product_color, product_price, product_images, product_url, product_quantity, on_sale, sale_discount } = exclusive;
 
   return (
     <div className={style.exclusivesItem}>

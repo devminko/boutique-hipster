@@ -8,7 +8,7 @@ import style from './gloves-item.module.scss';
 // *************************** GLOVES ITEM COMPONENT *************************** //
 const GlovesItem = ({ glove, history }) => {
   // 'beanie' passed down as prop from GlovesItems.js
-  const { id, product_category, product_name, product_color, product_price, product_images, product_url, edit_url, product_quantity, on_sale, sale_discount } = glove;
+  const { id, product_category, product_name, product_color, product_price, product_images, product_url, product_quantity, on_sale, sale_discount } = glove;
 
   return (
     <div className={style.glovesItem}>
