@@ -25,6 +25,7 @@ const UsersContainer = ({ users, getUsers }) => {
         <h2 className={style.title}>Shipping City</h2>
         <h2 className={style.title}>Shipping State</h2>
         <h2 className={style.title}>Shipping Zip</h2>
+        <h2 className={style.title}>Details</h2>
       </div>
 
       {/* USERS CONTAINER */}

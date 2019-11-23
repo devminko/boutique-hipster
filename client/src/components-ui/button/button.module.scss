@@ -168,6 +168,21 @@
     }
   }
 
+  // VIEW USER (ADMIN DASHBOARD PAGE)
+  &.viewUser {
+    background: $white;
+    color: $primary-color-light;
+    height: 4rem;
+    width: 14.25%;       // 14.25% if 7 items in header
+    font-size: 1rem;
+    border-left: 1px solid $grey;
+
+    &:hover {
+      background: lighten($primary-color-light, 5%);
+      color: $white;
+    }
+  }
+
   // CREATE PRODUCT (EDIT ITEM & CREATE PRODUCT COMPONENTS)
   &.createProduct {
     background: $primary-color-light;
