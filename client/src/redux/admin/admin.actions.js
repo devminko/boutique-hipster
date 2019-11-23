@@ -1,10 +1,29 @@
 import axios from 'axios';
 import { setAlert } from '../alert/alert.actions';
 import { 
-  GET_PRODUCTS, CREATE_PRODUCT, EDIT_PRODUCT, PRODUCT_ERROR, ADD_NEWSLETTER, REMOVE_NEWSLETTER, NEWSLETTER_ERROR,
+ GET_USERS, USERS_ERROR, GET_PRODUCTS, CREATE_PRODUCT, EDIT_PRODUCT, PRODUCT_ERROR, ADD_NEWSLETTER, REMOVE_NEWSLETTER, NEWSLETTER_ERROR,
 } from './admin.types';
 
 const route = 'http://localhost:5000';
+
+// *************************** GET ALL USERS *************************** //
+export const getUsers = () => async (dispatch) => {
+  try {
+    const res = await axios.get(`${route}/api/users`);
+    dispatch({
+      type: GET_USERS,
+      payload: res.data,
+    });
+  } catch (err) {
+    dispatch({
+      type: USERS_ERROR,
+      payload: {
+        msg: err.response.statusText,
+        status: err.response.status,
+      }
+    });
+  };
+};
 
 // *************************** GET ALL PRODUCTS *************************** //
 export const getProducts = () => async (dispatch) => {

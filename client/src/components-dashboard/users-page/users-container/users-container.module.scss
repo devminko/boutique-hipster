@@ -2,7 +2,59 @@
 
 // USERS CONTAINER
 .usersContainer {
+  max-width: 100%;
+  margin-bottom: 5rem;
 
+  // HEADER
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background: lighten($primary-color-light, 5%);
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+
+    .title {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 1.2rem;
+      // width: 7.5%;     // 7.5% if all 13 items are in the header
+      width: 16.5%;
+      overflow: hidden;
+      border-left: 1px solid $black;
+
+      color: $black;
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+
+  // USERS CONTAINER
+  .usersContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  // LINK CONTAINER
+  .linkContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: auto;
+
+    .link {
+      color: $link;
+      font-size: 1.3rem;
+    }
+  }
 }
 
 // ********************************** MEDIA QUERIES ********************************** //

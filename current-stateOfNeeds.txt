@@ -22,3 +22,10 @@ Navbar.js
 dashboard-container folder
 
 - Functionality to be able to update arrays and create arrays in a form input has to be implemented
+
+
+
+// ######################## FOOTER ######################## //
+
+- Footer Newsletter => Signup functionality needs to be implemented 
+- Footer links => No links lead anywhere except for the About Us link

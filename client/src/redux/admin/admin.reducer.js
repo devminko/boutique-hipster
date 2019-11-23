@@ -1,14 +1,20 @@
 import {
-  GET_PRODUCTS, CREATE_PRODUCT, EDIT_PRODUCT, PRODUCT_ERROR, ADD_NEWSLETTER, REMOVE_NEWSLETTER, NEWSLETTER_ERROR,
+  GET_PRODUCTS, CREATE_PRODUCT, EDIT_PRODUCT, PRODUCT_ERROR, ADD_NEWSLETTER, REMOVE_NEWSLETTER, NEWSLETTER_ERROR, GET_USERS,
 } from './admin.types';
 
 const INITIAL_STATE = {
+  users: [],
   products: [],
-  newsletter: ['johnson@gmail.com', 'johnson2@gmail.com'],
+  newsletters: [],
 };
 
 export const adminReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    case GET_USERS :
+      return {
+        ...state,
+        users: action.payload,
+      };
     case GET_PRODUCTS :
       return {
         ...state,

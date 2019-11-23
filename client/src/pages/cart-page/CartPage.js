@@ -12,7 +12,7 @@ import Button from '../../components-ui/button/Button';
 import style from './cart-page.module.scss';
 
 // *************************** CART PAGE *************************** //
-const CartPage = ({ cartItems, cart, totalCartPrice, toggleCart, history }) => {
+const CartPage = ({ cart, totalCartPrice, toggleCart, history }) => {
   const onCheckout = () => {
     history.push('/');
     toggleCart();
@@ -55,7 +55,6 @@ const CartPage = ({ cartItems, cart, totalCartPrice, toggleCart, history }) => {
 
 // REDUX
 const mapStateToProps = (state) => ({
-  cartItems: state.cart.cartItems,
   cart: state.auth.cart,
   totalCartPrice: selectCartTotal(state),
 });

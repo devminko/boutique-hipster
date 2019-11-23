@@ -144,6 +144,7 @@
 	"product_info": ["75% Lambswool, 25% Caregora", "One size fits all"],
 	"product_images": ["../../assets/images/BEANIE_SNOW_1.png", "../../assets/images/BEANIE_SNOW_2.jpg", "../../assets/images/BEANIE_SNOW_3.jpg"],
 	"product_url": "/product/beanie/9",
+	"edit_url": "/admin/dashboard/products/edit-product/9",
 	"product_quantity": 40,
 	"on_sale": false,
 	"sale_discount": [0.10, 0.20, 0.30, 0.40]

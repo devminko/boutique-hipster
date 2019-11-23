@@ -1,7 +1,4 @@
-import axios from 'axios';
 import { TOGGLE_CART, CART_ERROR } from './cart.types';
-
-const route = 'http://localhost:5000';
 
 // *************************** TOGGLE CART *************************** //
 export const toggleCart = () => (dispatch) => {

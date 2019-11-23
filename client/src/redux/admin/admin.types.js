@@ -1,3 +1,7 @@
+// USERS
+export const GET_USERS = 'GET_USERS';
+export const USERS_ERROR = 'USERS_ERROR';
+
 // PRODUCTS
 export const GET_PRODUCTS = 'GET_PRODUCTS';
 export const CREATE_PRODUCT = 'CREATE_PRODUCT';

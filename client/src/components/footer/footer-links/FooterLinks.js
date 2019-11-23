@@ -19,7 +19,7 @@ const FooterLinks = () => {
       <FooterItem 
         title='Who We Are'
         linkTitleOne='About Us'
-        linkOne='/'
+        linkOne='/about'
       />
       <FooterItem 
         title='Company'

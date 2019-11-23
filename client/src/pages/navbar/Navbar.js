@@ -11,7 +11,7 @@ import Button from '../../components-ui/button/Button';
 import style from './navbar.module.scss';
 
 // *************************** NAVBAR COMPONENT *************************** //
-const Navbar = ({ isAuthenticated, cartItems, cart, totalCartQuantity, toggleCart, logoutUser }) => {
+const Navbar = ({ isAuthenticated, cart, totalCartQuantity, toggleCart, logoutUser }) => {
   const onLogout = () => {
     logoutUser();
     window.location.reload();
@@ -77,7 +77,6 @@ const Navbar = ({ isAuthenticated, cartItems, cart, totalCartQuantity, toggleCar
 // REDUX
 const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
-  cartItems: state.cart.cartItems,
   cart: state.auth.cart,
   totalCartQuantity: selectCartItemsCount(state),
 });
