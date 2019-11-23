@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Gallery, GalleryImage } from 'react-gesture-gallery';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { IoIosRemove, IoIosAdd } from "react-icons/io";
@@ -11,6 +11,10 @@ import style from './product-item.module.scss';
 const ProductItem = ({ product }) => {
   // 'product' passed as prop from ProductPage to render specific product details
   const { id, product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, on_sale, sale_discount } = product;
+
+  useEffect(() => {
+
+  }, []);
 
   const [ index, setIndex ] = useState(0);
 

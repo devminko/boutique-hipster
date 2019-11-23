@@ -338,7 +338,7 @@
       text-align: center;
       
       .galleryContainer {
-        height: 75rem;
+        height: 100rem;
       }
 
       .imageIndex {
