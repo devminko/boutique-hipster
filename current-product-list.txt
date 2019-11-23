@@ -128,7 +128,7 @@
 
 // BEANIE SNOW
 {
-	"product_category": "beanie",
+	"product_category": "beanies",
 	"product_name": "Beanie",
 	"product_color": "Snow",
 	"product_price": 60,
