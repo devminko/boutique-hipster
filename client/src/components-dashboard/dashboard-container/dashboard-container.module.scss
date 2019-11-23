@@ -2,7 +2,19 @@
 
 // DASHBOARD CONTAINER
 .dashboardContainer {
+  width: 100%;
 
+  // DASHBOARD LINKS
+  .dashboardLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .link {
+      color: $black;
+    }
+  }
 }
 
 // ********************************** MEDIA QUERIES ********************************** //

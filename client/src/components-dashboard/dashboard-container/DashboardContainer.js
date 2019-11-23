@@ -8,9 +8,10 @@ const DashboardContainer = () => {
   return (
     <div className={style.dashboardContainer}>
 
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <Link to='/admin/dashboard/create-product'>Create Product</Link>
-        <Link to='/admin/dashboard/products'>Edit Product</Link>
+      <div className={style.dashboardLinks}>
+        <Link to='/admin/dashboard/users' className={style.link}>Users</Link>
+        <Link to='/admin/dashboard/products' className={style.link}>Products</Link>
+        <Link to='/admin/dashboard/create-product' className={style.link}>Create Product</Link>
       </div>
 
     </div>

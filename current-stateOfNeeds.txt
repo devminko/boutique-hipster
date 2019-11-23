@@ -1,5 +1,7 @@
 UPDATED / CHANGED ITEMS
 
+// ######################## CART NEEDS ######################## //
+
 auth.reducer.js
 auth.selectors.js
 CartPage.js
@@ -13,3 +15,10 @@ Navbar.js
 - Currently quantity (admin => product => product quantity) does not update with addition or removal of items in the Cart
 - Adding / Removing items from cart should correctly update product_quanity from state
 - Figure out how to get everything to work on the BeaniesPage Items before advancing features into Gloves & Exclusives Page
+
+
+// ######################## CREATE / EDIT PRODUCT NEEDS ######################## //
+
+dashboard-container folder
+
+- Functionality to be able to update arrays and create arrays in a form input has to be implemented
