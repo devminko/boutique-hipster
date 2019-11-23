@@ -10,8 +10,8 @@
   .footer {
     display: flex;
     flex-direction: column;
-    border: 1px solid $black;
     min-height: 40rem;
+    border-top: 1px solid $black;
   }
 }
 

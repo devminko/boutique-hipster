@@ -29,7 +29,7 @@ const AboutContent = ({ history }) => {
 
       {/* BUTTON SECTION */}
       <div className={style.buttonContainer}>
-        <Button onClick={() => history.push('/exclusives')} aboutPage>Checkout Our Exclusives</Button>
+        <Button onClick={() => history.push('/exclusives')} aboutPage>Check Out Our Exclusives</Button>
       </div>
 
     </div>

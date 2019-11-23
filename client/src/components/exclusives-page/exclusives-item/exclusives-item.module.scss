@@ -3,6 +3,7 @@
 // EXCLUSIVES ITEMS
 .exclusivesItem {
 
+  // ITEM CONTAINER
   .itemContainer {
     cursor: pointer;
     
@@ -23,18 +24,9 @@
     .buttonContainer {
       display: none;
     }
-
-    &:hover {
-      .itemImage {
-        transform: scale(1.25);
-      }
-
-      .buttonContainer {
-        display: inline;
-      }
-    }
   }
 
+  // PRICE CONTAINER
   .priceContainer {
     display: flex;
     flex-direction: column;
@@ -52,6 +44,27 @@
       font-family: $primary-font;
       font-size: 1.3rem;
       letter-spacing: 0.5px;
+    }
+  }
+
+  // HOVER
+  &:hover {
+    // ITEM CONTAINER
+    .itemContainer {
+      .imageContainer {
+        .itemImage {
+          transform: scale(1.25);
+        }
+      }
+
+      .buttonContainer {
+        display: inline;
+      }
+    }
+
+    // PRICE CONTAINER
+    .priceContainer {
+      display: none;
     }
   }
 }
