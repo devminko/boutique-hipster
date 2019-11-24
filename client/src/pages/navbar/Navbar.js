@@ -19,7 +19,7 @@ const Navbar = ({ isAuthenticated, cart, totalCartQuantity, toggleCart, logoutUs
 
   const logoContainer = (
     <div className={style.logoContainer}>
-      <Link to='/admin/dashboard' className={style.logoLink}>     {/* CHANGE LINK TO / LATER THIS LEADS TO DASHBOARD*/}
+      <Link to='/' className={style.logoLink}>
         <h1 className={style.logoTitle}>Boutique Hipster</h1>
         <h2 className={style.logoSubtitle}>Johnsonville</h2>
       </Link>

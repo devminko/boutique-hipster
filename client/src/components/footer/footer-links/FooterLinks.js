@@ -24,7 +24,7 @@ const FooterLinks = () => {
       <FooterItem 
         title='Company'
         linkTitleOne='Contact Us'
-        linkOne='/'
+        linkOne='/admin/dashboard'          /* CHANGE BACK TO /contact ONCE PAGE IS CREATED */
       />
       <FooterItem 
         title='Our Brand'

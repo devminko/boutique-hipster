@@ -1,5 +1,10 @@
 UPDATED / CHANGED ITEMS
 
+// ######################## NAVBAR / FOOTER LINKS ######################## //
+- NavbarMenu.js => change Contact Us link back to /contact once dashboard link is created
+- FooterLinks.js => change Contact Us link back to /contact once dashboard link is created
+
+
 // ######################## CART NEEDS ######################## //
 
 auth.reducer.js

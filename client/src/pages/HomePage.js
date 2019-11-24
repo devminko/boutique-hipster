@@ -1,12 +1,15 @@
 import React, { } from 'react';
 
 import PageContainer from './page-container/PageContainer';
+import HomeLanding from '../components/home-page/home-landing/HomeLanding';
 
 // *************************** HOME PAGE *************************** //
 const HomePage = () => {
   return (
     <PageContainer>
-      HOME PAGE
+
+      <HomeLanding />
+
     </PageContainer>
   )
 };

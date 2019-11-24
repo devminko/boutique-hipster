@@ -69,7 +69,7 @@ const NavbarMenu = ({ toggleMenu, setToggleMenu, isAuthenticated, logoutUser }) 
             </li>
             <br />
             <li>
-              <Link to='/' className={style.link}>Contact Us</Link>
+              <Link to='/admin/dashboard' className={style.link}>Contact Us</Link>     {/* CHANGE BACK TO /contact ONCE PAGE IS CREATED */}
             </li>
             <br />
             <li>
