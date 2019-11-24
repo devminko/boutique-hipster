@@ -21,10 +21,10 @@
     font-size: 4rem;
     font-family: $secondary-font;
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 1px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $white;
-    text-align: center;
     
     transition: color 500ms ease-in;
     cursor: pointer;
