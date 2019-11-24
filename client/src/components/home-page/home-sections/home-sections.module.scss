@@ -1,0 +1,65 @@
+@import '../../../styles/global.styles';
+
+// HOME SECTIONS
+.homeSections {
+
+  // MOBILE CONTAINER (< 800px)
+  .mobileContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // DESKTOP CONTAINER (> 800px)
+  .desktopContainer {
+    display: none;
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+  .homeSections {
+
+    // MOBILE CONTAINER (< 800px)
+    .mobileContainer {
+      display: flex;
+      flex-direction: column;
+    }
+
+    // DESKTOP CONTAINER (> 800px)
+    .desktopContainer {
+      display: none;
+    }
+  }  
+}
+
+@media screen and (min-width: 800px) {
+  .homeSections {
+
+    // MOBILE CONTAINER (< 800px)
+    .mobileContainer {
+      display: none;
+    }
+
+    // DESKTOP CONTAINER (> 800px)
+    .desktopContainer {
+      display: flex;
+      flex-direction: column;
+    }
+  }  
+}
+
+@media screen and (min-width: 1200px) {
+  .homeSections {
+
+    // MOBILE CONTAINER (< 800px)
+    .mobileContainer {
+      display: none;
+    }
+
+    // DESKTOP CONTAINER (> 800px)
+    .desktopContainer {
+      display: flex;
+      flex-direction: column;
+    }
+  }  
+}

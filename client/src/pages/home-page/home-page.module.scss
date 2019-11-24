@@ -1,0 +1,44 @@
+@import '../../styles/global.styles';
+
+// HOME PAGE
+.homePage {
+
+  // SECTIONS CONTAINER
+  .sections {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 7rem;
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+  .homePage {
+
+    // SECTIONS CONTAINER
+    .sections {
+      
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .homePage {
+
+    // SECTIONS CONTAINER
+    .sections {
+      max-width: 2200px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .homePage {
+
+    // SECTIONS CONTAINER
+    .sections {
+      max-width: 2200px;
+    }
+  }
+}

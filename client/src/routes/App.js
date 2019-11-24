@@ -7,7 +7,7 @@ import { loadUser } from '../redux/auth/auth.actions';
 // WEB SITE PAGES
 import Navbar from '../pages/navbar/Navbar';
 import NavbarMobile from '../components/navbar/navbar-mobile/NavbarMobile';
-import HomePage from '../pages/HomePage';
+import HomePage from '../pages/home-page/HomePage';
 import CartPage from '../pages/cart-page/CartPage';
 import BeaniesPage from '../pages/BeaniesPage';
 import GlovesPage from '../pages/GlovesPage';
