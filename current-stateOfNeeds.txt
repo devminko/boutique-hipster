@@ -38,3 +38,7 @@ dashboard-container folder
 
 // ######################## USERS-PAGE (COMPONENTS DASHBOARD FOLDER) ######################## //
 - UsersPage + UserPage need to be updated with correct styling, currently only outputting barebones information
+
+// ######################## USERS-PAGE (COMPONENTS DASHBOARD FOLDER) ######################## //
+- HomePage => HomeSections => DesktopSections
+- DesktopSections needs to be implmenented, currently only MobileSection is available
