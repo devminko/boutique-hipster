@@ -1,0 +1,37 @@
+@import '../../../styles/global.styles';
+
+// MOBILE SECTION
+.mobileSection {
+
+  .mobileTitle {
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $secondary-font;
+    font-size: 3.6rem;
+    letter-spacing: 1px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $primary-color-light;
+    padding: 2.5rem 0;
+    cursor: pointer;
+
+    transition: color 600ms ease-in;
+
+    &:hover {
+      color: $primary-color-light;
+    }
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+
+}
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}
