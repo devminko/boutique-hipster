@@ -14,7 +14,7 @@ import style from './cart-page.module.scss';
 // *************************** CART PAGE *************************** //
 const CartPage = ({ cart, totalCartPrice, toggleCart, history }) => {
   const onCheckout = () => {
-    history.push('/');
+    history.push('/checkout');
     toggleCart();
   };
 

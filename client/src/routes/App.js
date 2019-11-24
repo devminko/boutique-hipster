@@ -15,6 +15,7 @@ import ExclusivesPage from '../pages/ExclusivesPage';
 import AboutPage from '../pages/about-page/AboutPage';
 import AccountPage from '../pages/AccountPage';
 import ProductPage from '../pages/ProductPage';
+import CheckoutPage from '../pages/CheckoutPage';
 import NotFoundPage from '../pages/NotFoundPage';
 import Footer from '../pages/footer/Footer';
 
@@ -54,6 +55,7 @@ const App = ({ toggleCart, loadUser }) => {
               <Route exact path='/about' component={AboutPage} />
               <Route exact path='/account' component={AccountPage} />
               <Route exact path='/product/:product_name/:product_id' component={ProductPage} />
+              <Route exact path='/checkout' component={CheckoutPage} />
               
               <Route exact path='/admin/dashboard' component={DashboardPage} />
               <Route exact path='/admin/dashboard/users' component={UsersContainer} />

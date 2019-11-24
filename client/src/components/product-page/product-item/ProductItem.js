@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { Gallery, GalleryImage } from 'react-gesture-gallery';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { IoIosRemove, IoIosAdd } from "react-icons/io";
+
+import { addItem, removeItem } from '../../../redux/auth/auth.actions';
 
 import Button from '../../../components-ui/button/Button';
 
 import style from './product-item.module.scss';
 
 // *************************** PRODUCT ITEM COMPONENT *************************** //
-const ProductItem = ({ product }) => {
+const ProductItem = ({ product, addItem }) => {
   // 'product' passed as prop from ProductPage to render specific product details
   const { id, product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, on_sale, sale_discount } = product;
 
@@ -17,6 +20,9 @@ const ProductItem = ({ product }) => {
 
   const onAddition = () => { console.log('Added 1') };
   const onSubtraction = () => { console.log('Subtract 1') };
+  const onAddToCart = () => {
+    addItem(product);
+  };
 
   return (
     <div className={style.productItem}>
@@ -66,7 +72,7 @@ const ProductItem = ({ product }) => {
             {1}
             <IoIosAdd onClick={onAddition} className={style.quantityIcon} />
           </div>
-          <Button product>Add to Cart</Button>
+          <Button onClick={onAddToCart} product>Add to Cart</Button>
         </div>
         
         <div className={style.productTertiary}>
@@ -80,4 +86,10 @@ const ProductItem = ({ product }) => {
   )
 };
 
-export default ProductItem
+// REDUX
+const mapDispatchToProps = (dispatch) => ({
+  addItem: (item) => dispatch(addItem(item)),
+  removeItem: (item) => dispatch(removeItem(item)),
+});
+
+export default connect(null, mapDispatchToProps)(ProductItem);
