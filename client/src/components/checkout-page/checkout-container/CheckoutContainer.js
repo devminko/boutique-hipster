@@ -35,10 +35,6 @@ const CheckoutContainer = ({ user, cart, totalCartItems, totalPrice, }) => {
         {/* SUMMARY CONTAINER */}
         <div className={style.summaryContainer}>
 
-          <div className={style.buttonsContainer}>
-            <Button checkout>Checkout</Button>
-          </div>
-
           <div className={style.orderContainer}>
             <h3 className={style.orderTitle}>Order Summary</h3>
             <div className={style.subtitleContainer}>
@@ -50,7 +46,7 @@ const CheckoutContainer = ({ user, cart, totalCartItems, totalPrice, }) => {
               <p className={style.orderSubtitle}>$0.00</p>
             </div>
             <div className={style.subtitleContainer}>
-              <p className={style.orderSubtitle}>{totalCartItems} Items</p>
+              <p className={style.orderSubtitle}>({totalCartItems}) Items</p>
               <p className={style.orderSubtitle}>${totalPrice}.00</p>
             </div>
             <div className={style.subtitleContainer}>
@@ -66,6 +62,11 @@ const CheckoutContainer = ({ user, cart, totalCartItems, totalPrice, }) => {
               <p className={style.orderTitle}>${totalPrice}.00</p>
             </div>
           </div>
+
+          <div className={style.buttonsContainer}>
+            <Button checkoutContainer>Checkout</Button>
+          </div>
+
         </div>
 
       </div>

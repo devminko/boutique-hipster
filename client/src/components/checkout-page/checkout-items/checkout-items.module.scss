@@ -22,6 +22,51 @@
     display: flex;
     flex-direction: column;
     width: 70%;
+    padding: 1rem 0;
+    text-transform: uppercase;
+
+    .contentHeader {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding-right: 1rem;
+
+      letter-spacing: 1px;
+      font-family: $secondary-font;
+
+      .productColor {
+        font-family: $primary-font;
+      }
+    }
+
+    .priceContainer {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+
+    // PRODUCT QUANTITY
+    .productQuantity {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 30%;
+      height: 4rem;
+      border: 1px solid $grey;
+  
+      .quantityIcon {
+        color: $black;
+        font-size: 2rem;
+        cursor: pointer;
+  
+        &:active {
+          color: $primary-color;
+        }
+      }
+    }
   }
 }
 

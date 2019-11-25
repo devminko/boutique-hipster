@@ -210,6 +210,21 @@
       border: none;
     }
   }
+
+  // CREATE PRODUCT (EDIT ITEM & CREATE PRODUCT COMPONENTS)
+  &.checkoutContainer {
+    background: $primary-color-light;
+    color: $white;
+    border: none;
+
+    &:hover {
+      background: lighten($primary-color-light, 2.5%);
+    }
+
+    &:active {
+      background: $primary-color;
+    }
+  }
 }
 
 // ********************************** MEDIA QUERIES ********************************** //

@@ -4,9 +4,9 @@
 .checkoutContainer {
   display: flex;
   flex-direction: column;
-  padding: 0 1rem;
+  padding: 0 2rem;
 
-  border: 1px solid $black;
+  // border: 1px solid $black;
 
   max-width: 2200px;
   margin-left: auto;
@@ -32,41 +32,35 @@
 
     // ***** ITEMS CONTAINER ***** //
     .itemsContainer {
-      border: 1px solid $black;
+      border: 1px solid $lightgrey;
       width: 60%;
       margin-right: 2.5rem;
       
       max-height: 60vh;
-      overflow-y: scroll;
+      overflow-y: auto;
       overflow-x: hidden;
     }
 
     // ***** SUMMARY CONTAINER ***** //
     .summaryContainer {
-      border: 1px solid $black;
+      // border: 1px solid $black;
       width: 40%;
-      margin-bottom: auto;
-
-      // BUTTONS CONTAINER
-      .buttonsContainer {
-        border: 1px solid $black;
-        display: flex;
-        flex-direction: column;
-        height: 10rem;
-        margin-bottom: 5rem;
-      }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       // ORDER CONTAINER
       .orderContainer {
         display: flex;
         flex-direction: column;
+        margin-bottom: 5rem;
 
         .orderTitle {
           margin: 1rem 0;
           text-transform: uppercase;
           font-family: $secondary-font;
           font-size: 1.8rem;
-          letter-spacing: 0.5px;
+          letter-spacing: 1px;
         }
 
         .subtitleContainer {
@@ -75,6 +69,12 @@
           align-items: center;
           justify-content: space-between;
         }
+      }
+
+      // BUTTONS CONTAINER
+      .buttonsContainer {
+        display: flex;
+        flex-direction: column;
       }
     }
   }
