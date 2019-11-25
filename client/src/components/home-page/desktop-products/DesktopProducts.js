@@ -16,13 +16,13 @@ const DesktopProducts = () => {
       </div>
       <div className={style.productItem}>
         <Link to='/gloves'>
-          <img src='../../../assets/images/GLOVES_ONYX_1.png' alt='Gloves Link' className={style.image} />
+          <img src='../../../assets/images/GLOVES_SMOKE_1.png' alt='Gloves Link' className={style.image} />
           <h3 className={style.productLink}>Gloves</h3>
         </Link>
       </div>
       <div className={style.productItem}>
         <Link to='/exclusives'>
-          <img src='../../../assets/images/FELTED_SCARF_ROYAL_SMOKE.png' alt='Exclusives Link' className={style.image} />
+          <img src='../../../assets/images/TRAVEL_BLANKET_MIDNIGHT_CRIMSON.png' alt='Exclusives Link' className={style.image} />
           <h3 className={style.productLink}>Exclusives</h3>
         </Link>
       </div>

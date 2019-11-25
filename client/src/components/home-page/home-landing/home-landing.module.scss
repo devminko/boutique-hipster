@@ -8,7 +8,7 @@
   align-items: center;
 
   height: 40vh;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), url('../../../assets/images/LANDING_IMAGE_1.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.10)), url('../../../assets/images/LANDING_IMAGE_1.jpg');
   background-size: cover;
   background-position: center;
 
@@ -16,7 +16,7 @@
 
   // LANDING TITLE
   .landingTitle {
-    color: rgba(255, 255, 255, 0.40);
+    color: rgba(255, 255, 255, 0.35);
     font-size: 4rem;
     font-family: $secondary-font;
     text-transform: uppercase;
@@ -35,7 +35,7 @@
 
   // SUBTITLE
   .subtitle {
-    color: rgba(255, 255, 255, 0.90);
+    color: rgba(255, 255, 255, 0.75);
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 1px;
