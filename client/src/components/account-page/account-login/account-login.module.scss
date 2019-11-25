@@ -2,9 +2,12 @@
 
 // ACCOUNT REGISTER
 .accountLogin {
-  border: 1px solid $black;
   width: 100%;
   padding-bottom: 10rem;
+
+  background-image: -webkit-radial-gradient(20% 80%, 60% 60%, rgba(255,255,255,.15), rgba(255,255,255,0)), url('../../../assets/images/ACCOUNT_IMAGE_1.jpg');
+  background-size: cover;
+  background-position: center;
 
   .form {
     display: flex;
@@ -18,8 +21,11 @@
       text-align: center;
       text-transform: uppercase;
       font-family: $secondary-font;
+      color: rgba(255, 255, 255, 0);
       font-size: 4.4rem;
       margin-bottom: 3rem;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: $white;
     }
   }
 
@@ -33,6 +39,7 @@
     margin-top: 5rem;
 
     .text {
+      color: $white;
       margin-bottom: 2rem;
       text-align: center;
       text-transform: uppercase;

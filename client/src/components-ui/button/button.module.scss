@@ -211,7 +211,7 @@
     }
   }
 
-  // CREATE PRODUCT (EDIT ITEM & CREATE PRODUCT COMPONENTS)
+  // CHECKOUT CONTAINER COMPONENT
   &.checkoutContainer {
     background: $primary-color-light;
     color: $white;
@@ -310,5 +310,11 @@
 }
 
 @media screen and (min-width: 1200px) {
-  
+  .button {
+
+    // CHECKOUT CONTAINER COMPONENT
+    &.checkoutContainer {
+      width: 50%;
+    }
+  }
 }
