@@ -1,0 +1,38 @@
+@import '../../../styles/global.styles';
+
+// CHECKOUT ITEMS
+.checkoutItems {
+  border: 1px solid $black;
+  display: flex;
+  flex-direction: row;
+
+  // IMAGE CONTAINER
+  .imageContainer {
+    width: 30%;
+    margin-right: 2rem;
+
+    .image {
+
+    }
+  }
+
+  // ITEM CONTENT
+  .itemContent {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+}
+
+// ********************************** MEDIA QUERIES ********************************** //
+@media screen and (min-width: 500px) {
+  
+}
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}

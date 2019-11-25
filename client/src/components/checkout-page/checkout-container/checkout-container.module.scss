@@ -2,6 +2,78 @@
 
 // CHECKOUT CONTAINER
 .checkoutContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+
+  border: 1px solid $black;
+
+  max-width: 2200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  // ******************** CART HEADER ******************** //
+  .cartHeader {
+    margin-bottom: 5rem;
+
+    .title {
+      text-transform: uppercase;
+      font-family: $secondary-font;
+      font-size: 3.6rem;
+      letter-spacing: 1px;
+
+    }
+  }
+
+  // ******************** CONTENT CONTAINER ******************** //
+  .contentContainer {
+    display: flex;
+    flex-direction: row;
+
+    // ***** ITEMS CONTAINER ***** //
+    .itemsContainer {
+      border: 1px solid $black;
+      width: 60%;
+      margin-right: 2.5rem;
+    }
+
+    // ***** SUMMARY CONTAINER ***** //
+    .summaryContainer {
+      border: 1px solid $black;
+      width: 40%;
+      margin-bottom: auto;
+
+      // BUTTONS CONTAINER
+      .buttonsContainer {
+        border: 1px solid $black;
+        display: flex;
+        flex-direction: column;
+        height: 10rem;
+        margin-bottom: 2.5rem;
+      }
+
+      // ORDER CONTAINER
+      .orderContainer {
+        display: flex;
+        flex-direction: column;
+
+        .orderTitle {
+          margin: 1rem 0;
+          text-transform: uppercase;
+          font-family: $secondary-font;
+          font-size: 1.8rem;
+          letter-spacing: 0.5px;
+        }
+
+        .subtitleContainer {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
 
 }
 
