@@ -1,12 +1,46 @@
 @import '../../../styles/global.styles';
 
 // DESKTOP SECTION
-.desktopSection {
+.desktopSections {
+  display: flex;
+  flex-direction: column;
 
-  .desktopTitle {
+  // TOP SECTION
+  .topSection {
+    border: 1px solid $black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 
+  // PRODUCTS SECTION
+  .productsSection {
+    margin: 5rem 0;
   }
 }
+
+// GLOVES
+// drop-shadow(-15px 15px 2px rgba(0,0,0,.18));
+// animation-name: handAnimation;
+// animation-duration: 2s;
+// animation-timing-function: ease;
+// animation-delay: 0s;
+// animation-iteration-count: infinite;
+// animation-direction: normal;
+// animation-fill-mode: none;
+// animation-play-state: running;
+
+// @keyframes handAnimation {
+//   0% {
+//     transform: none;
+//   }
+//   50% {
+//       transform: rotate(10deg);
+//   }
+//   100% {
+//       transform: none;
+//   }
+// }
 
 // ********************************** MEDIA QUERIES ********************************** //
 @media screen and (min-width: 500px) {
