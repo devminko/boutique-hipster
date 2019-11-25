@@ -42,3 +42,7 @@ dashboard-container folder
 // ######################## USERS-PAGE (COMPONENTS DASHBOARD FOLDER) ######################## //
 - HomePage => HomeSections => DesktopSections
 - DesktopSections needs to be implmenented, currently only MobileSection is available
+
+// ######################## CHECKOUT PAGE / CHECKOUT-PAGE COMPONENTS FOLDER ######################## //
+- CheckoutItems.js => layout / styling needs to be completed
+- CheckoutContainer.js => may break this up into 2 separate components as it's looking a bit large

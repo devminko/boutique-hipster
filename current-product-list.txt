@@ -156,6 +156,21 @@
 	"sale_discount": [0.10, 0.20, 0.30, 0.40]
 }
 
+// BEANIE SAND
+{
+	"product_category": "beanies",
+	"product_name": "Beanie",
+	"product_color": "Sand",
+	"product_price": 60,
+	"product_description": "Best beanie ever made by mankind. This product features the Caregora™ certificate.",
+	"product_info": ["75% Lambswool & 25% Caregora", "One size fits all"],
+	"product_images": ["../../assets/images/BEANIE_SAND_1.png", "../../assets/images/BEANIE_SAND_2.jpg", "../../assets/images/BEANIE_SAND_3.jpg"],
+	"product_url": "/product/beanie/11",
+	"product_quantity": 20,
+	"on_sale": false,
+	"sale_discount": [0.10, 0.20, 0.30, 0.40]
+}
+
 // **************************************************************************************************
 // ******************************************* GLOVES **********************************************
 // **************************************************************************************************
@@ -170,7 +185,7 @@
 	"product_description": "Small pleasure which helps you get through those colder days.",
 	"product_info": ["100% Merino wool", "One size fits all"],
 	"product_images": ["../../assets/images/GLOVES_MIDNIGHT_1.png", "../../assets/images/GLOVES_MIDNIGHT_2.jpg"],
-	"product_url": "/product/gloves/11",
+	"product_url": "/product/gloves/12",
 	"product_quantity": 30,
 	"on_sale": false,
 	"sale_discount": [0.10, 0.20, 0.30, 0.40]
@@ -185,7 +200,7 @@
 	"product_description": "Small pleasure which helps you get through those colder days.",
 	"product_info": ["100% Merino wool", "One size fits all"],
 	"product_images": ["../../assets/images/GLOVES_SMOKE_1.png"],
-	"product_url": "/product/gloves/12",
+	"product_url": "/product/gloves/13",
 	"product_quantity": 30,
 	"on_sale": false,
 	"sale_discount": [0.10, 0.20, 0.30, 0.40]
@@ -200,7 +215,7 @@
 	"product_description": "Small pleasure which helps you get through those colder days.",
 	"product_info": ["100% Merino wool", "One size fits all"],
 	"product_images": ["../../assets/images/GLOVES_SMOKE_1.png"],
-	"product_url": "/product/gloves/13",
+	"product_url": "/product/gloves/14",
 	"product_quantity": 30,
 	"on_sale": false,
 	"sale_discount": [0.10, 0.20, 0.30, 0.40]
