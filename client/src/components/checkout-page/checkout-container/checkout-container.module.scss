@@ -54,6 +54,7 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 5rem;
+        text-transform: uppercase;
 
         .orderTitle {
           margin: 1rem 0;
@@ -68,6 +69,11 @@
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
+
+          .orderSubtitle {
+            font-family: $primary-font;
+            margin-bottom: 0.5rem;
+          }
         }
       }
 

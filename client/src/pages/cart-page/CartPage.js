@@ -23,7 +23,7 @@ const CartPage = ({ cart, totalCartPrice, toggleCart, history }) => {
       
       <div onClick={() => toggleCart()} className={style.cartFiller} />
 
-      {/* CART HEADER */}
+      {/******************** CART HEADER *********************/}
       <div className={style.cartContainer}>
         <div className={style.header}>
           <h1 className={style.title}>Cart</h1>
