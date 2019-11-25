@@ -2,7 +2,6 @@
 
 // BEANIES ITEM
 .beaniesItem {
-  margin-bottom: 5rem;
 
   // ITEM CONTAINER
   .itemContainer {
@@ -10,10 +9,6 @@
     
     .imageContainer {
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
 
       .itemImage {
         height: 100%;
@@ -42,12 +37,12 @@
     .itemName {
       text-transform: uppercase;
       font-family: $primary-font;
-      font-size: 1.25rem;
+      font-size: 1.4rem;
     }
 
     .itemPrice {
       font-family: $primary-font;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       letter-spacing: 0.5px;
     }
   }
@@ -76,50 +71,13 @@
 
 // ********************************** MEDIA QUERIES ********************************** //
 @media screen and (min-width: 500px) {
-  .beaniesItem {
-    .itemContainer {
-      .imageContainer {
-        .itemImage {
-          height: 70%;
-          width: 70%;
-        }
-      }
-    }
-  }
+
 }
 
 @media screen and (min-width: 800px) {
-  .beaniesItem {
-    .itemContainer {
-      .imageContainer {
-        .itemImage {
-          height: 70%;
-          width: 70%;
-        }
-      }
-    }
 
-    .priceContainer {
-      .itemName {
-        font-size: 1.4rem;
-      }
-
-      .itemPrice {
-        font-size: 1.3rem;
-      }
-    }
-  }
 }
 
 @media screen and (min-width: 1200px) {
-  .beaniesItem {
-    .itemContainer {
-      .imageContainer {
-        .itemImage {
-          height: 75%;
-          width: 75%;
-        }
-      }
-    }
-  }
+
 }

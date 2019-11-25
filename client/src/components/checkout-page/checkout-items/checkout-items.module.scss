@@ -56,9 +56,12 @@
       width: 30%;
       height: 4rem;
       border: 1px solid $grey;
+
+      margin-top: auto;
+      margin-bottom: 1rem;
   
       .quantityIcon {
-        color: $black;
+        color: $primary-color-light;
         font-size: 2rem;
         cursor: pointer;
   

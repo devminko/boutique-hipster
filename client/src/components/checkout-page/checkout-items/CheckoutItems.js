@@ -26,10 +26,12 @@ const CheckoutItems = ({ cartItem, addItem, removeItem }) => {
   return (
     <div className={style.checkoutItems}>
 
+      {/* IMAGE CONTAINER */}
       <div className={style.imageContainer}>
         <img src={product_images[0]} alt='Product Image' className={style.image} />
       </div>
 
+      {/* ITEM CONTENT CONTAINER */}
       <div className={style.itemContent}>
         <div className={style.contentHeader}>
           <h3>{product_name}</h3>
