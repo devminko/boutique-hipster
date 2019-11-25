@@ -12,36 +12,36 @@
 
   // ******************** CART HEADER ******************** //
   .cartHeader {
-    margin-bottom: 2.5rem;
+    margin-bottom: 5rem;
 
     .title {
       text-transform: uppercase;
       font-family: $secondary-font;
-      font-size: 3rem;
+      font-size: 3.6rem;
       letter-spacing: 1px;
+
     }
   }
 
   // ******************** CONTENT CONTAINER ******************** //
   .contentContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
     // ***** ITEMS CONTAINER ***** //
     .itemsContainer {
       border: 1px solid $lightgrey;
-      width: 100%;
-      margin-bottom: 2.5rem;
+      width: 60%;
+      margin-right: 2.5rem;
       
-      min-height: 20vh;
-      max-height: 40vh;
+      max-height: 60vh;
       overflow-y: auto;
       overflow-x: hidden;
     }
 
     // ***** SUMMARY CONTAINER ***** //
     .summaryContainer {
-      width: 100%;
+      width: 40%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -50,14 +50,14 @@
       .orderContainer {
         display: flex;
         flex-direction: column;
-        margin-bottom: 2.5rem;
+        margin-bottom: 5rem;
         text-transform: uppercase;
 
         .orderTitle {
           margin-bottom: 1rem;
           text-transform: uppercase;
           font-family: $secondary-font;
-          font-size: 1.6rem;
+          font-size: 1.8rem;
           letter-spacing: 1px;
         }
 
@@ -68,9 +68,8 @@
           justify-content: space-between;
 
           .orderSubtitle {
-            margin-bottom: 0.5rem;
             font-family: $primary-font;
-            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
           }
         }
       }
@@ -89,61 +88,23 @@
 @media screen and (min-width: 500px) {
   .checkoutContainer {
 
-    // ******************** CART HEADER ******************** //
-    .cartHeader {
-      margin-bottom: 5rem;
-
-      .title {
-        font-size: 3.6rem;
-      }
-    }
-
     // ******************** CONTENT CONTAINER ******************** //
     .contentContainer {
       display: flex;
       flex-direction: row;
-
-      // ***** ITEMS CONTAINER ***** //
-      .itemsContainer {
-        width: 60%;
-        margin-right: 2.5rem;
-        margin-bottom: 0;
-        
-        min-height: 0;
-        max-height: 60vh;
-      }
-
-      // ***** SUMMARY CONTAINER ***** //
-      .summaryContainer {
-        width: 40%;
-
-        // ORDER CONTAINER
-        .orderContainer {
-          margin-bottom: 5rem;
-
-          .orderTitle {
-            font-size: 1.8rem;
-          }
-
-          .subtitleContainer {
-            .orderSubtitle {
-              font-size: 1.5rem;
-            }
-          }
-        }
-
-        // BUTTONS CONTAINER
-        .buttonsContainer {
-          display: flex;
-          flex-direction: column;
-        }
-      }
     }
   }
 }
 
 @media screen and (min-width: 800px) {
+  .checkoutContainer {
 
+    // ******************** CONTENT CONTAINER ******************** //
+    .contentContainer {
+      display: flex;
+      flex-direction: row;
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
