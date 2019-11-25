@@ -2,22 +2,18 @@
 
 // CHECKOUT ITEMS
 .checkoutItems {
-  border-bottom: 1px solid $lightgrey;
+  border: 1px solid $black;
   display: flex;
   flex-direction: row;
   margin-bottom: 1rem;
 
   // IMAGE CONTAINER
   .imageContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 30%;
-    margin-right: 5rem;
+    margin-right: 2rem;
 
     .image {
-
+      
     }
   }
 
@@ -25,9 +21,8 @@
   .itemContent {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 70%;
-    padding: 2rem 0;
+    padding: 1rem 0;
     margin-bottom: 1rem;
     text-transform: uppercase;
     
@@ -35,29 +30,22 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      justify-content: space-between;
       margin-bottom: 1rem;
+      padding-right: 1rem;
 
       letter-spacing: 1px;
-
-      .productName {
-        font-family: $secondary-font;
-        margin-right: 1rem;
-      }
+      font-family: $secondary-font;
 
       .productColor {
         font-family: $primary-font;
-        font-weight: bold;
       }
     }
 
     .priceContainer {
       display: flex;
       flex-direction: column;
-      margin-bottom: 2rem;
-
-      .priceText {
-
-      }
+      margin-bottom: 1rem;
     }
 
     // PRODUCT QUANTITY
@@ -68,7 +56,7 @@
       justify-content: space-evenly;
       width: 30%;
       height: 4rem;
-      border: 1px solid $lightgrey;
+      border: 1px solid $grey;
   
       .quantityIcon {
         color: $primary-color-light;

@@ -34,12 +34,12 @@ const CheckoutItems = ({ cartItem, addItem, removeItem }) => {
       {/* ITEM CONTENT CONTAINER */}
       <div className={style.itemContent}>
         <div className={style.contentHeader}>
-          <h3 className={style.productName}>{product_name}</h3>
+          <h3>{product_name}</h3>
           <p className={style.productColor}>{product_color}</p>
         </div>
         <div className={style.priceContainer}>
-          <p className={style.priceText}>Quantity: {quantity}</p>
-          <p className={style.priceText}>Total Price: ${totalPrice(quantity, product_price)}.00</p>
+          <p>Quantity: {quantity}</p>
+          <p>Total Price: ${totalPrice(quantity, product_price)}.00</p>
         </div>
         <div className={style.productQuantity}>
           <IoIosRemove onClick={onSubtraction} className={style.quantityIcon} />
