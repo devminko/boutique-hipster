@@ -17,11 +17,27 @@ const ProductItem = ({ product, addItem }) => {
 
   // Index state used for Gallery
   const [ index, setIndex ] = useState(0);
+  
+  // Index state for # of items added to cart
+  const [ itemQuantity, setItemQuantity ] = useState(1);
 
-  const onAddition = () => { console.log('Added 1') };
-  const onSubtraction = () => { console.log('Subtract 1') };
+  const onAddition = () => {
+    setItemQuantity(itemQuantity + 1);
+  };
+
+  const onSubtraction = () => {
+    if (itemQuantity > 1) {
+      setItemQuantity(itemQuantity - 1);
+    } else {
+      setItemQuantity(1);
+    }
+  };
+
   const onAddToCart = () => {
-    addItem(product);
+    for (let i = 0; i < itemQuantity; i++) {
+      addItem(product);
+    };
+    setItemQuantity(1);
   };
 
   return (
@@ -69,7 +85,7 @@ const ProductItem = ({ product, addItem }) => {
         <div className={style.productButtons}>
           <div className={style.productQuantity}>
             <IoIosRemove onClick={onSubtraction} className={style.quantityIcon} />
-            {1}
+            {itemQuantity}
             <IoIosAdd onClick={onAddition} className={style.quantityIcon} />
           </div>
           <Button onClick={onAddToCart} product>Add to Cart</Button>

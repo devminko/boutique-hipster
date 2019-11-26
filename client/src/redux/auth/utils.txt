@@ -13,7 +13,7 @@ export const addItemToCart = (currentCartItems, cartItemToAdd) => {
     ))
   };
 
-  return [...currentCartItems, {...cartItemToAdd, quantity: 1}];
+  return [...currentCartItems, {...cartItemToAdd, quantity: 1, product_quantity: cartItemToAdd.product_quantity - 1}];
 
 };
 
@@ -30,7 +30,7 @@ export const removeItemFromCart = (currentCartItems, cartItemToRemove) => {
   } else {
     return currentCartItems.map(currentCartItem => (
       currentCartItem.id === cartItemToRemove.id
-        ? {...currentCartItem, quantity: currentCartItem.quantity - 1, product_quantity: currentCartItem.product_quantity - 1}
+        ? {...currentCartItem, quantity: currentCartItem.quantity - 1, product_quantity: currentCartItem.product_quantity + 1}
         : currentCartItem
     ))
   };
