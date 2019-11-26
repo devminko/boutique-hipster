@@ -1,14 +1,21 @@
 import React, { } from 'react';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import { addItem } from '../../../redux/auth/auth.actions';
 
 import Button from '../../../components-ui/button/Button';
 
 import style from './exclusives-item.module.scss';
 
 // *************************** EXCLUSIVES ITEM COMPONENT *************************** //
-const ExclusivesItem = ({ exclusive, history }) => {
+const ExclusivesItem = ({ exclusive, addItem, history }) => {
   // 'exclusive' passed down as prop from ExclusivesItems.js
   const { id, product_category, product_name, product_color, product_price, product_images, product_url, product_quantity, on_sale, sale_discount } = exclusive;
+
+  const onAddItem = () => {
+    addItem(exclusive);
+  };
 
   return (
     <div className={style.exclusivesItem}>
@@ -19,7 +26,7 @@ const ExclusivesItem = ({ exclusive, history }) => {
           <img src={product_images[0]} alt={`${product_name}_${product_color}`} className={style.itemImage} />
         </div>
         <div className={style.buttonContainer}>
-          <Button item>Add to Cart - ${product_price}.00</Button>
+          <Button onClick={onAddItem} item>Add to Cart - ${product_price}.00</Button>
         </div>
       </div>
 
@@ -37,4 +44,9 @@ const ExclusivesItem = ({ exclusive, history }) => {
   )
 };
 
-export default withRouter(ExclusivesItem);
+// REDUX
+const mapDispatchToProps = (dispatch) => ({
+  addItem: (item) => dispatch(addItem(item)),
+});
+
+export default withRouter(connect(null, mapDispatchToProps)(ExclusivesItem));

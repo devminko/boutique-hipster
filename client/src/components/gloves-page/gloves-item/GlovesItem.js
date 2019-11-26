@@ -1,14 +1,21 @@
 import React, { } from 'react';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import { addItem } from '../../../redux/auth/auth.actions';
 
 import Button from '../../../components-ui/button/Button';
 
 import style from './gloves-item.module.scss';
 
 // *************************** GLOVES ITEM COMPONENT *************************** //
-const GlovesItem = ({ glove, history }) => {
+const GlovesItem = ({ glove, addItem, history }) => {
   // 'beanie' passed down as prop from GlovesItems.js
   const { id, product_category, product_name, product_color, product_price, product_images, product_url, product_quantity, on_sale, sale_discount } = glove;
+
+  const onAddItem = () => {
+    addItem(glove);
+  };
 
   return (
     <div className={style.glovesItem}>
@@ -19,7 +26,7 @@ const GlovesItem = ({ glove, history }) => {
           <img src={product_images[0]} alt={`${product_name}_${product_color}`} className={style.itemImage} />
         </div>
         <div className={style.buttonContainer}>
-          <Button item>Add to Cart - ${product_price}.00</Button>
+          <Button onClick={onAddItem} item>Add to Cart - ${product_price}.00</Button>
         </div>
       </div>
 
@@ -37,4 +44,9 @@ const GlovesItem = ({ glove, history }) => {
   )
 };
 
-export default withRouter(GlovesItem);
+// REDUX
+const mapDispatchToProps = (dispatch) => ({
+  addItem: (item) => dispatch(addItem(item)),
+});
+
+export default withRouter(connect(null, mapDispatchToProps)(GlovesItem));

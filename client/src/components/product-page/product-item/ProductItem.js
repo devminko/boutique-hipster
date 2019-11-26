@@ -13,11 +13,11 @@ import style from './product-item.module.scss';
 // *************************** PRODUCT ITEM COMPONENT *************************** //
 const ProductItem = ({ product, addItem }) => {
   // 'product' passed as prop from ProductPage to render specific product details
-  const { id, product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, on_sale, sale_discount } = product;
+  const { id, product_category, product_name, product_color, product_price, product_description, product_info, product_images, product_url, product_quantity, on_sale, sale_discount } = product;
 
   // Index state used for Gallery
   const [ index, setIndex ] = useState(0);
-  
+
   // Index state for # of items added to cart
   const [ itemQuantity, setItemQuantity ] = useState(1);
 
@@ -34,10 +34,12 @@ const ProductItem = ({ product, addItem }) => {
   };
 
   const onAddToCart = () => {
-    for (let i = 0; i < itemQuantity; i++) {
-      addItem(product);
-    };
-    setItemQuantity(1);
+    if (itemQuantity <= product_quantity) {
+      for (let i = 0; i < itemQuantity; i++) {
+        addItem(product);
+      };
+      setItemQuantity(1);
+    }
   };
 
   return (
