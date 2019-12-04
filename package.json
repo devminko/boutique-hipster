@@ -2,7 +2,7 @@
   "name": "boutique-hipster",
   "version": "1.0.0",
   "description": "Online boutique & community",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "bootstrap": "npm i",
     "setup": "psql -U postgres -f ./config/dbSetup.sql",

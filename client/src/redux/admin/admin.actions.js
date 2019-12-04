@@ -4,7 +4,8 @@ import {
  GET_USERS, USERS_ERROR, GET_PRODUCTS, CREATE_PRODUCT, EDIT_PRODUCT, PRODUCT_ERROR, ADD_NEWSLETTER, REMOVE_NEWSLETTER, NEWSLETTER_ERROR,
 } from './admin.types';
 
-const route = 'http://localhost:5000';
+// const route = 'http://localhost:5000';
+const route = process.env.REACT_LOCAL_URL;
 
 // *************************** GET ALL USERS *************************** //
 export const getUsers = () => async (dispatch) => {

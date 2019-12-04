@@ -5,7 +5,8 @@ import {
   USER_LOADED, REGISTRATION_SUCCESS, REGISTRATION_FAIL, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_USER, UPDATE_EMAIL, UPDATE_PASSWORD,UPDATE_SHIPPING, UPDATE_BILLING, CLEAR_ACCOUNT, DELETE_ACCOUNT, ADD_ITEM, REMOVE_ITEM, CLEAR_ITEM, ACCOUNT_ERROR, AUTH_ERROR, CART_ERROR,
 } from './auth.types';
 
-const route = 'http://localhost:5000';
+// const route = 'http://localhost:5000';
+const route = process.env.REACT_LOCAL_URL;
 
 
 /* ******************************************************************************
